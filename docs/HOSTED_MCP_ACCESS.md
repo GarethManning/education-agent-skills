@@ -1,6 +1,6 @@
 # Public MCP retirement and migration
 
-The library-operated public MCP service is retiring with v3.1.0. Public signup is no longer offered. The free, open-source library continues through [GitHub releases](https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0), source plugins, manual prompts and local/self-hosted MCP. This guide does not claim that an endpoint pause, credential revocation or provider data deletion has already occurred; operational evidence is separate from the documentation release.
+The library-operated public MCP service was retired with v3.1.0. Public signup is no longer offered. The free, open-source library continues through [GitHub releases](https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0), source plugins, manual prompts and local/self-hosted MCP. Public endpoint retirement was verified separately; see the [publication record](releases/v3.1.0-publication-record.md). No credential revocation or provider data deletion is claimed.
 
 ## Choose a replacement
 

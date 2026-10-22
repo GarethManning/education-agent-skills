@@ -10,7 +10,7 @@ The library uses [Agent Skills](https://agentskills.io/home), the open format or
 
 **22 October 2026 — v3.1.0:** The library now has a portable edition checked against the official Agent Skills reference tool, 37 targeted educational revisions and eight guides with reorganized optional examples. Skill IDs and interfaces stay stable. [Read the update and its limits](docs/releases/v3.1.0.md).
 
-The library-operated public MCP service is retiring with this release; public signup is no longer offered. Use the [portable download](https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip), source plugins, manual prompts or local/self-hosted MCP below. Existing remote-only clients need a supported local route or an endpoint they operate; migration is not automatic.
+The library-operated public MCP service was retired with this release; public signup is no longer offered. Use the [portable download](https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip), source plugins, manual prompts or local/self-hosted MCP below. Existing remote-only clients need a supported local route or an endpoint they operate; migration is not automatic.
 
 ---
 

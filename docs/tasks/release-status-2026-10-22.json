@@ -1,11 +1,21 @@
 {
-  "phase": "release publication in progress; source/package reviewed; public hosted MCP paused",
+  "status": "complete: published, public download verified, hosted MCP retired",
   "release": "v3.1.0",
+  "release_url": "https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0",
+  "portable_zip": "https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip",
   "plugin_version": "2.2.0",
-  "retirement_evidence": "docs/releases/v3.1.0-retirement-evidence.json",
+  "tag_source_commit": "c0c82fb682001177b855576e45f27cc5e786e4c4",
+  "pull_request": "https://github.com/GarethManning/education-agent-skills/pull/23",
+  "ci": "merged main validation and MCP jobs passed",
+  "official_portable_validation": "165/165; to-prompt165/165",
+  "public_download_checksum": "9964a0e9e2f4569b51698506fca2a2d8e95cb626fbf1119e5555773a54c17df5",
+  "hosted_service": "two exact repository-linked Vercel projects paused and Git-disconnected; MCP/signup503 DEPLOYMENT_PAUSED",
+  "local_self_hosted_mcp": "preserved",
   "publication_record": "docs/releases/v3.1.0-publication-record.md",
-  "costs_usage_review": "skipped by explicit user instruction",
-  "builds_deployments_started": 0,
-  "next": "GitHub commit/PR/CI/merge/release/public download and client checks",
-  "updated_utc": "2026-10-22T21:38:11.036483+00:00"
+  "active_worker": null,
+  "cost_usage_review": "skipped as explicitly instructed",
+  "new_vercel_builds_deployments": 0,
+  "x_message": "draft for Gareth only; not posted",
+  "remaining": null,
+  "updated_utc": "2026-10-22T21:45:14.593686+00:00"
 }

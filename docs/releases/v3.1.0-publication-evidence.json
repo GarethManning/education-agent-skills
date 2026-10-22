@@ -1,0 +1,84 @@
+{
+  "release": "v3.1.0",
+  "release_url": "https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0",
+  "release_published_utc": "2026-10-22T21:42:41Z",
+  "tag_source_commit": "c0c82fb682001177b855576e45f27cc5e786e4c4",
+  "reviewed_source_commit": "99984f00b6cdbb1c4fc64fcf0463d73896b1cd0a",
+  "pull_request": "https://github.com/GarethManning/education-agent-skills/pull/23",
+  "merged_main_ci": "https://github.com/GarethManning/education-agent-skills/actions/runs/39859249862",
+  "merged_main_ci_conclusion": "success",
+  "public_download": {
+    "release_url": "https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0",
+    "public_download": "https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip",
+    "anonymous_download_succeeded": true,
+    "checksum_download_succeeded": true,
+    "sha256": "9964a0e9e2f4569b51698506fca2a2d8e95cb626fbf1119e5555773a54c17df5",
+    "zip_entries": 518,
+    "skills": 165,
+    "profile_files_verified": 515,
+    "tag_source_commit": "c0c82fb682001177b855576e45f27cc5e786e4c4",
+    "verified_utc": "2026-10-22T21:43:22.530374+00:00"
+  },
+  "assets": [
+    "education-agent-skills-portable-v3.1.0.zip",
+    "SHA256SUMS.txt",
+    "release-manifest.json"
+  ],
+  "public_source_client_check": {
+    "client": "codex-cli 0.163.0-alpha.11.1",
+    "skills": 165,
+    "domains": 20,
+    "policy_sidecars": 12,
+    "source_files_compared": 185,
+    "reference_files_compared": 8,
+    "all_source_files_byte_equal": true,
+    "temporary_storage_cleaned_on_exit": true,
+    "model_activation_tested": false,
+    "real_settings_changed": false
+  },
+  "plugin_version_verified": "2.2.0",
+  "plugin_installed_enabled": true,
+  "source_content_sha256": "a2e71fa05cde2ea2ebccd875023ebb0368c11379beb1fe165c1e0debd12938dc",
+  "platform_after_publication": {
+    "verified_after_GitHub_publication_utc": "2026-10-22T21:43:46.469852+00:00",
+    "projects": [
+      {
+        "name": "mcp-server",
+        "paused": true,
+        "git_link_removed": true
+      },
+      {
+        "name": "education-agent-skills",
+        "paused": true,
+        "git_link_removed": true
+      }
+    ]
+  },
+  "public_retirement_evidence": "v3.1.0-retirement-evidence.json",
+  "no_new_vercel_build_or_deployment": true,
+  "npm_publication": false,
+  "cost_or_usage_review": false,
+  "x_message_posted": false,
+  "limits": [
+    "No real-client model activation or learning outcomes tested.",
+    "Paused projects retain configuration/storage; no zero-invoice or credential-deletion claim.",
+    "Original dated build/audit receipts remain historical."
+  ],
+  "coordination": {
+    "spawned_workers_this_phase": 2,
+    "peak_active_spawned_workers": 1,
+    "inherited_history_exceptions": 0,
+    "worker_children": 0,
+    "configured_model_roles": [
+      "Sonnet5.5 builder",
+      "Opus independent reviewer",
+      "Codex coordinator"
+    ],
+    "first_review": "ACCEPT",
+    "builder_rework": "One exact expected-version literal updated under bounded amendment; no assertion weakening.",
+    "elapsed_seconds_since_release_evidence_workspace_creation": 999,
+    "initial_discovery_excluded_from_elapsed": true,
+    "token_credit_telemetry": "unavailable"
+  },
+  "verified_utc": "2026-10-22T21:45:14.593686+00:00"
+}

@@ -6,7 +6,7 @@ Last updated: 22 October 2026. Independent open-source education project.
 
 Gareth authorized GitHub publication, a portable download and retirement of the operated public MCP; he explicitly waived cost/usage review. Source/package preparation and independent review are complete. Both verified repository-linked Vercel projects are disconnected from Git and paused; former public MCP/signup endpoints return 503 DEPLOYMENT_PAUSED. Local stdio/self-hosted HTTP source and authentication protections remain available.
 
-Release v3.1.0 and plugin versions 2.2.0 are prepared; GitHub PR/CI/merge/release/download checks are in progress. No new Vercel build/deployment or npm publication is part of this milestone. [Current release status](docs/tasks/release-status-2026-10-22.json), [publication/retirement record](docs/releases/v3.1.0-publication-record.md), [user update](docs/releases/v3.1.0.md).
+[Release v3.1.0](https://github.com/GarethManning/education-agent-skills/releases/tag/v3.1.0) is published with the portable ZIP, checksum and manifest. PR #23 merged; main-branch CI passed. Anonymous asset download/hash checks and isolated public-source Codex installation passed with plugin version 2.2.0. The release source is `c0c82fb682001177b855576e45f27cc5e786e4c4`. No new Vercel build/deployment or npm publication is part of this milestone. [Current release status](docs/tasks/release-status-2026-10-22.json), [publication/retirement record](docs/releases/v3.1.0-publication-record.md), [user update](docs/releases/v3.1.0.md).
 
 ## Earlier local build record
 
