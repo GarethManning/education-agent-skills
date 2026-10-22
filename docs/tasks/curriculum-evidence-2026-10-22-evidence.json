@@ -1,0 +1,1378 @@
+{
+  "baseline": "6bbbce418f82e11044009c9f3b7373a354de5bd0",
+  "records": [
+    {
+      "skill": "developmental-band-translator",
+      "skill_id": "curriculum-alignment/developmental-band-translator",
+      "path": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Tags harness-decomposed curriculum items (KUDs, LTs, criteria) with a school's developmental band metadata while preserving source voice and labels. Supply the band schema; the skill derives mapping rules from it.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:3"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Read the progression structure.** Note `source_type`, `band_labels`, and age ranges. If both `age_range_hint` and per-band `approximate_age_range` are absent, emit `request_age_range_context` in . Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:126"
+          ]
+        },
+        "C3": {
+          "status": "concern",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening. Additional source-backed note: Initial no-age halt conflicts with flat-framework branch and does not use the supplied age override.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:18",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:118",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:42",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:31",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:39",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:126",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:148",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:152"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:12",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:256"
+          ]
+        },
+        "C5": {
+          "status": "concern",
+          "assessment": "Context/default guidance: 1. **Read the progression structure.** Note `source_type`, `band_labels`, and age ranges. If both `age_range_hint` and per-band `approximate_age_range` are absent, emit `request_ag Additional source-backed note: Initial no-age halt conflicts with flat-framework branch and does not use the supplied age override.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:126",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:31",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:39",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:148",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:152"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:42",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:118"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:256"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 4075 vs MCP prompt 1080 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:118",
+            "skills/curriculum-alignment/developmental-band-translator/SKILL.md:256"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Read the progression structure.** Note `source_type`, `band_labels`, and age ranges. If both `age_range_hint` and per-band `approximate_age_range` are absent, emit `request_age_range_context` in `skill_flags`, do no",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Make override and source-type precedence explicit; retain conservative ambiguity/teacher-review flags."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/curriculum-alignment/developmental-band-translator/SKILL.md:118",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/curriculum-alignment/developmental-band-translator/SKILL.md:166",
+          "content": "Extended example section (through line255); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3",
+            "C5"
+          ],
+          "lines": [
+            31,
+            39,
+            126,
+            148,
+            152
+          ],
+          "problem": "Initial no-age halt conflicts with flat-framework branch and does not use the supplied age override.",
+          "recommended_change": "Make override and source-type precedence explicit; retain conservative ambiguity/teacher-review flags.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 4075,
+      "file_tokens_o200k": 5369,
+      "mcp_prompt_tokens_o200k": 1080,
+      "body_words": 2273,
+      "mcp_prompt_words": 678,
+      "source_sha256": "b1879a0422ba0c9e68ddd74752466709d7e2327ccdedab29bd0b6599d2bd2f5e",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Source progression structure, original band labels and source voice; conservative handling of uncertain age alignment and teacher review. Keep an explicit request/flag when age evidence is genuinely necessary and absent.",
+        "permitted_correction": "The unconditional no-age halt may change so that supplied overrides and legitimate flat-framework handling have coherent precedence; do not invent ages or silently erase uncertainty."
+      }
+    },
+    {
+      "skill": "kud-chart-author",
+      "skill_id": "curriculum-alignment/kud-chart-author",
+      "path": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Authors or reviews Know/Understand/Do charts for competency-based learning targets across developmental bands. Handles seven input types from raw curriculum documents to existing LT sets. Routes to upstream skills when stronger inputs are available.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:3"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: HARD \u2014 understanding B is logically impossible without A. The knowledge does not merely help \u2014 its absence makes the target content inaccessible. Warrants a readiness check before beginning. Example: . Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:263"
+          ]
+        },
+        "C3": {
+          "status": "concern",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening. Additional source-backed note: Raw-document route suggests a translator that requires already decomposed JSON.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:19",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:133",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:55",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:129",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:141"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:12",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:401"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: If input_type is raw_curriculum_document AND the document appears longer than approximately 10 pages or structurally complex: set routing_note to \u2014 \"This document is complex enough",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:141"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:55",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:133"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:401"
+          ]
+        },
+        "C8": {
+          "status": "concern",
+          "assessment": "Body 6155 vs MCP prompt 3397 o200k tokens. Review core/reference organization; length is advisory, not demonstrated behavioral failure.",
+          "evidence": [
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:133",
+            "skills/curriculum-alignment/kud-chart-author/SKILL.md:401"
+          ]
+        }
+      },
+      "preserve": [
+        "HARD \u2014 understanding B is logically impossible without A. The knowledge does not merely help \u2014 its absence makes the target content inaccessible. Warrants a readiness check before beginning. Example: evaluating health cl",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Route raw documents to a real decomposition step, then band tagging; keep direct-draft fallback honest."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/curriculum-alignment/kud-chart-author/SKILL.md:133",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/curriculum-alignment/kud-chart-author/SKILL.md:359",
+          "content": "Extended example section (through line400); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3"
+          ],
+          "lines": [
+            129,
+            141
+          ],
+          "problem": "Raw-document route suggests a translator that requires already decomposed JSON.",
+          "recommended_change": "Route raw documents to a real decomposition step, then band tagging; keep direct-draft fallback honest.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 6155,
+      "file_tokens_o200k": 7556,
+      "mcp_prompt_tokens_o200k": 3397,
+      "body_words": 4552,
+      "mcp_prompt_words": 2434,
+      "source_sha256": "f597606246661031163dce8adb8abed9a7ddcd9be2daba3d6e1a8b826494bbcc",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "The distinctions among knowing, understanding and doing; explicit prerequisite reasoning, source alignment and teacher review of a draft. Preserve the direct-draft route with honest assumptions and the distinction between hard prerequisites and merely helpful background.",
+        "permitted_correction": "The invalid raw-document handoff may change to an actual decomposition step before band tagging; do not rename the target skill or pretend its required structured input is optional."
+      }
+    },
+    {
+      "skill": "differentiation-adapter",
+      "skill_id": "curriculum-assessment/differentiation-adapter",
+      "path": "skills/curriculum-assessment/differentiation-adapter/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Adapt a classroom task for specific learner needs while preserving the core learning objective intact. Use when differentiating for SEND, EAL, gifted, ADHD, dyslexia, or anxiety.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: IMPORTANT: Differentiation by learning style (visual/auditory/kinaesthetic preferences) is NOT supported \u2014 this is excluded from this library as debunked (Pashler et al., 2008). Differentiation by rea. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:98"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:22",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:96",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:46"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: CAST2018 is called the most current guideline edition.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:16",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:234",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:78"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\"",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:106"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:46",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:96"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:234"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 3111 vs MCP prompt 1119 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:96",
+            "skills/curriculum-assessment/differentiation-adapter/SKILL.md:234"
+          ]
+        }
+      },
+      "preserve": [
+        "IMPORTANT: Differentiation by learning style (visual/auditory/kinaesthetic preferences) is NOT supported \u2014 this is excluded from this library as debunked (Pashler et al., 2008). Differentiation by readiness, specific lea",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Name edition used and acknowledge later3.0; preserve objective-protection method."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/curriculum-assessment/differentiation-adapter/SKILL.md:96",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/curriculum-assessment/differentiation-adapter/SKILL.md:169",
+          "content": "Extended example section (through line233); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C4"
+          ],
+          "lines": [
+            78
+          ],
+          "problem": "CAST2018 is called the most current guideline edition.",
+          "recommended_change": "Name edition used and acknowledge later3.0; preserve objective-protection method.",
+          "priority": "low",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 3111,
+      "file_tokens_o200k": 3766,
+      "mcp_prompt_tokens_o200k": 1119,
+      "body_words": 2257,
+      "mcp_prompt_words": 758,
+      "source_sha256": "6545b55ca01e6eea998b9c1c808f6327a3dee87c91a4c313c4c7e6e163c35c5f",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Protection of the learning objective, differentiation by relevant readiness/access needs, and rejection of unsupported learning-style matching. Retain the useful UDL-informed adaptation procedure and its named research.",
+        "permitted_correction": "The claim that CAST 2018 is the current edition may change; naming the historical edition accurately does not require replacing the entire method with a new framework."
+      }
+    },
+    {
+      "skill": "historical-document-set-curator",
+      "skill_id": "historical-thinking/historical-document-set-curator",
+      "path": "skills/historical-thinking/historical-document-set-curator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Design a document set for a document-based lesson \u2014 selecting and sequencing sources for analytical tension around a central question. Use when assembling sources for a new lesson or when an existing set produces flat responses.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Document set design:** For each recommended document, provide:. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:145"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:23",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:124",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:53"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: Specific recommended source identities are requested without an explicit verified-versus-proposed status; source-availability warning is outside MCP prompt.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:16",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:288",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:145",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:150",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:215",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:290"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: You understand that a document set is not a collection of sources on a topic but a designed evidentiary environment that creates productive analytical tension around a central ques",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:126"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:53",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:124"
+          ]
+        },
+        "C7": {
+          "status": "concern",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth. Additional source-backed note: Specific recommended source identities are requested without an explicit verified-versus-proposed status; source-availability warning is outside MCP prompt.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:288",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:145",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:150",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:215",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:290"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 4231 vs MCP prompt 1154 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:124",
+            "skills/historical-thinking/historical-document-set-curator/SKILL.md:288"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Document set design:** For each recommended document, provide:",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Label proposed/unverified documents and verify provenance before use; add concise source-supply limitation to core. No hallucinated source was demonstrated."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/historical-thinking/historical-document-set-curator/SKILL.md:124",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/historical-thinking/historical-document-set-curator/SKILL.md:218",
+          "content": "Extended example section (through line287); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C4",
+            "C7"
+          ],
+          "lines": [
+            145,
+            150,
+            215,
+            290
+          ],
+          "problem": "Specific recommended source identities are requested without an explicit verified-versus-proposed status; source-availability warning is outside MCP prompt.",
+          "recommended_change": "Label proposed/unverified documents and verify provenance before use; add concise source-supply limitation to core. No hallucinated source was demonstrated.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 4231,
+      "file_tokens_o200k": 5219,
+      "mcp_prompt_tokens_o200k": 1154,
+      "body_words": 3048,
+      "mcp_prompt_words": 807,
+      "source_sha256": "9cdcb821b2efa3905670e3eb1d898730af01ddbbb92a77d07e58bfe9717921f0",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Question-led document selection, useful provenance fields, contrasting perspectives and historical inquiry. Keep proposed document suggestions helpful while ensuring the user can distinguish a recommendation from a document actually obtained and checked.",
+        "permitted_correction": "Output labels and the active core may change to expose unverified/proposed status and source-supply limitations; do not remove all concrete source suggestions to avoid the issue."
+      }
+    },
+    {
+      "skill": "retrieval-practice-generator",
+      "skill_id": "memory-learning-science/retrieval-practice-generator",
+      "path": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Generate retrieval practice questions at varied difficulty levels for a topic or concept. Use when creating quiz starters, revision activities, or low-stakes testing materials.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Retrieval type distribution:** Include a mix of:. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:109"
+          ]
+        },
+        "C3": {
+          "status": "concern",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening. Additional source-backed note: Recognition questions are explicitly allowed for novices but every question and the self-check prohibit recognition.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:22",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:96",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:46",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:109",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:115",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:150",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:223"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:16",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:219"
+          ]
+        },
+        "C5": {
+          "status": "concern",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\" Additional source-backed note: Recognition questions are explicitly allowed for novices but every question and the self-check prohibit recognition.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:100",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:109",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:115",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:150",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:223"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:46",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:96"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:219"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 2686 vs MCP prompt 836 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:96",
+            "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:219"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Retrieval type distribution:** Include a mix of:",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Make the exception consistent across rules/checks; retain retrieval focus and accessible novice options."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:96",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/memory-learning-science/retrieval-practice-generator/SKILL.md:153",
+          "content": "Extended example section (through line218); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3",
+            "C5"
+          ],
+          "lines": [
+            109,
+            115,
+            150,
+            223
+          ],
+          "problem": "Recognition questions are explicitly allowed for novices but every question and the self-check prohibit recognition.",
+          "recommended_change": "Make the exception consistent across rules/checks; retain retrieval focus and accessible novice options.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 2686,
+      "file_tokens_o200k": 3372,
+      "mcp_prompt_tokens_o200k": 836,
+      "body_words": 1882,
+      "mcp_prompt_words": 593,
+      "source_sha256": "01182f519b7dfc6a5a204b3e49b26282f879f8b59d233fcaf1daafc3d7e43516",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Retrieval-centered practice, a useful range of response types and feedback, accessible novice support, and checking answers against what was taught. Preserve distinctions between recall and recognition rather than flattening them.",
+        "permitted_correction": "The universal anti-recognition rule/self-check may change to honor the existing novice exception consistently. The taught-source verification caveat may move into the active core."
+      }
+    },
+    {
+      "skill": "spaced-practice-scheduler",
+      "skill_id": "memory-learning-science/spaced-practice-scheduler",
+      "path": "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Design a spaced retrieval schedule for any topic list and timeline. Use when planning units, term sequences, or revision programmes.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Expanding intervals:** Space review at increasing intervals \u2014 first review at 1\u20133 days after initial teaching, second review at 1\u20132 weeks, third review at 3\u20134 weeks. This follows Cepeda et al.'s . Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:113"
+          ]
+        },
+        "C3": {
+          "status": "concern",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening. Additional source-backed note: Study count and universal forgetting claim are overstated; exact expanding intervals are presented as research-derived optima.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:22",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:96",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:46",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:18",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:78",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:113",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:206"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: Study count and universal forgetting claim are overstated; exact expanding intervals are presented as research-derived optima.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:16",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:225",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:18",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:78",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:113",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:206"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\"",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:104"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:46",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:96"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:225"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 3184 vs MCP prompt 889 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:96",
+            "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:225"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Expanding intervals:** Space review at increasing intervals \u2014 first review at 1\u20133 days after initial teaching, second review at 1\u20132 weeks, third review at 3\u20134 weeks. This follows Cepeda et al.'s (2006) finding that ",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Correct the sampled research claim; label chosen timetable and fallback rules as adaptable heuristics. Preserve scheduling method."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:96",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/memory-learning-science/spaced-practice-scheduler/SKILL.md:157",
+          "content": "Extended example section (through line224); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3",
+            "C4"
+          ],
+          "lines": [
+            18,
+            78,
+            113,
+            206
+          ],
+          "problem": "Study count and universal forgetting claim are overstated; exact expanding intervals are presented as research-derived optima.",
+          "recommended_change": "Correct the sampled research claim; label chosen timetable and fallback rules as adaptable heuristics. Preserve scheduling method.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 3184,
+      "file_tokens_o200k": 3876,
+      "mcp_prompt_tokens_o200k": 889,
+      "body_words": 2232,
+      "mcp_prompt_words": 618,
+      "source_sha256": "2718ed5b78cf3c4457a12aa5bfe53a9894f55c69d4a655049eee3f8413899bff",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Distributed review, practical scheduling, adaptation to retention goals and learner performance, and the named research supporting spacing. Keep a usable example timetable where helpful.",
+        "permitted_correction": "The exact interval schedule and fallback percentages may be labelled adaptable practitioner choices; disputed study counts, universal forgetting claims and attribution of exact optimality may be corrected. They are not protected as established empirical facts."
+      }
+    },
+    {
+      "skill": "developmental-band-system-designer",
+      "skill_id": "original-frameworks/developmental-band-system-designer",
+      "path": "skills/original-frameworks/developmental-band-system-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Design a developmental band system mapping student growth from early childhood through upper secondary. Use when building competency-based curriculum architecture for a school or programme.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Mission** \u2192 What is this school for? What kind of human are we developing?. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:106"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:22",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:102",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:43"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: Mixed-age research is described as validating this original band architecture.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:16",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:271",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:79",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:85"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\"",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:137"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:43",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:102"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:271"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 4596 vs MCP prompt 1384 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:102",
+            "skills/original-frameworks/developmental-band-system-designer/SKILL.md:271"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Mission** \u2192 What is this school for? What kind of human are we developing?",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Use supporting rationale rather than validation; retain explicitly original methodology."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/original-frameworks/developmental-band-system-designer/SKILL.md:102",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/original-frameworks/developmental-band-system-designer/SKILL.md:186",
+          "content": "Extended example section (through line271); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C4"
+          ],
+          "lines": [
+            79,
+            85
+          ],
+          "problem": "Mixed-age research is described as validating this original band architecture.",
+          "recommended_change": "Use supporting rationale rather than validation; retain explicitly original methodology.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 4596,
+      "file_tokens_o200k": 5423,
+      "mcp_prompt_tokens_o200k": 1384,
+      "body_words": 3336,
+      "mcp_prompt_words": 986,
+      "source_sha256": "6820236c419bd6f35a6a2e3461fe6c9ababe9e888f9dc0caaa08443254f52704",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "The original practitioner architecture connecting mission, developmental progression and school design; transparent assumptions and educational judgment. Preserve mixed-age research as supporting rationale and retain original-framework status.",
+        "permitted_correction": "The claim that component research validates the entire proposed architecture may change to a proportionate rationale statement; do not erase the framework or relabel it as experimentally validated."
+      }
+    },
+    {
+      "skill": "dispositional-knowledge-assessment-designer",
+      "skill_id": "original-frameworks/dispositional-knowledge-assessment-designer",
+      "path": "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Design multi-informant assessment approaches for dispositional competencies like curiosity or resilience. Use when assessing character strengths or competencies that written tests cannot capture.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. **Observation Protocol design (Krechevsky et al., 2013; Domitrovich et al., 2017):**. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:152"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:28",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:131",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:58"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:16",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:631"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\"",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:143"
+          ]
+        },
+        "C6": {
+          "status": "concern",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured. Additional source-backed note: One large compulsory output spans several components; implementation workload appears late, while5-minute metadata is ambiguous.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:58",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:131",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:85",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:219",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:633",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:635"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:631"
+          ]
+        },
+        "C8": {
+          "status": "concern",
+          "assessment": "Body 13219 vs MCP prompt 5789 o200k tokens. Review core/reference organization; length is advisory, not demonstrated behavioral failure. Additional source-backed note: One large compulsory output spans several components; implementation workload appears late, while5-minute metadata is ambiguous.",
+          "evidence": [
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:131",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:631",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:85",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:219",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:633",
+            "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:635"
+          ]
+        }
+      },
+      "preserve": [
+        "1. **Observation Protocol design (Krechevsky et al., 2013; Domitrovich et al., 2017):**",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Make component selection and design-versus-implementation workload clear up front; retain multi-informant judgment and optional caregiver input. Reorganize component-specific detail without weakening core distinctions."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:131",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/original-frameworks/dispositional-knowledge-assessment-designer/SKILL.md:373",
+          "content": "Extended example section (through line630); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C6",
+            "C8"
+          ],
+          "lines": [
+            85,
+            219,
+            633,
+            635
+          ],
+          "problem": "One large compulsory output spans several components; implementation workload appears late, while5-minute metadata is ambiguous.",
+          "recommended_change": "Make component selection and design-versus-implementation workload clear up front; retain multi-informant judgment and optional caregiver input. Reorganize component-specific detail without weakening core distinctions.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 13219,
+      "file_tokens_o200k": 14384,
+      "mcp_prompt_tokens_o200k": 5789,
+      "body_words": 9999,
+      "mcp_prompt_words": 4293,
+      "source_sha256": "06748a891782204684b63fc81352af58bee8759fd4e40e02b9b056887d5ce76b",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Observation-based, multi-informant professional judgment; distinctions among indicators, interpretations and developmental patterns; optional caregiver contribution and existing limitations. Preserve the complete assessment design as an available output.",
+        "permitted_correction": "Workload framing and organization may change. Component selection is a proposal only: it must not silently remove currently required outputs, add a required input or weaken context-sensitive observation."
+      }
+    },
+    {
+      "skill": "competency-framework-translator",
+      "skill_id": "professional-learning/competency-framework-translator",
+      "path": "skills/professional-learning/competency-framework-translator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Translate an external competency framework like DigComp, GreenComp, or ISTE into classroom-ready activities. Use when implementing framework standards in specific teaching contexts.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: **Self-check before returning output:** Verify that (a) every indicator is observable \u2014 you can see or hear it, (b) progression levels are qualitatively distinct, (c) the translation is specific to th. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:164"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:22",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:98",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:46"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: Original Framework Wording can contain a model reconstruction when exact text is absent, despite an uncertainty warning.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:16",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:255",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:116",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:128",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:130"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: The following optional context may or may not be provided. Use whatever is available; ignore any fields marked \"not provided.\"",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:112"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:46",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:98"
+          ]
+        },
+        "C7": {
+          "status": "concern",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth. Additional source-backed note: Original Framework Wording can contain a model reconstruction when exact text is absent, despite an uncertainty warning.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:255",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:116",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:128",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:130"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 4228 vs MCP prompt 992 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/professional-learning/competency-framework-translator/SKILL.md:98",
+            "skills/professional-learning/competency-framework-translator/SKILL.md:255"
+          ]
+        }
+      },
+      "preserve": [
+        "**Self-check before returning output:** Verify that (a) every indicator is observable \u2014 you can see or hear it, (b) progression levels are qualitatively distinct, (c) the translation is specific to the stated subject and",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Separate verified quotation and interpretation into differently labelled outputs; request source/version for exact claims; do not invent official text."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/professional-learning/competency-framework-translator/SKILL.md:98",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/professional-learning/competency-framework-translator/SKILL.md:167",
+          "content": "Extended example section (through line254); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C4",
+            "C7"
+          ],
+          "lines": [
+            116,
+            128,
+            130
+          ],
+          "problem": "Original Framework Wording can contain a model reconstruction when exact text is absent, despite an uncertainty warning.",
+          "recommended_change": "Separate verified quotation and interpretation into differently labelled outputs; request source/version for exact claims; do not invent official text.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 4228,
+      "file_tokens_o200k": 4973,
+      "mcp_prompt_tokens_o200k": 992,
+      "body_words": 3184,
+      "mcp_prompt_words": 708,
+      "source_sha256": "9fd6bf1a6b1fd385789c70a6cdd9ef7646d558ca78273293d2a5d0978b5efbee",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Observable indicators, qualitatively distinct progression levels, subject/context-specific application and traceable connection to the supplied framework. Preserve uncertainty and educator review where a translation is interpretive.",
+        "permitted_correction": "The output may distinguish verified source quotations from model interpretation. Do not preserve reconstruction under an Original Framework Wording label or invent official text when the source is absent."
+      }
+    },
+    {
+      "skill": "panel-review",
+      "skill_id": "professional-learning/panel-review",
+      "path": "skills/professional-learning/panel-review/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "concern",
+          "assessment": "Seven-role depersonalised panel review of framework artefacts (KUD, criterion bank, LT definition, crosswalk, scope-and-sequence) in sequential-isolation mode. Gate rule mean>=88 AND no role<70. Additional source-backed note: Discovery omits wellbeing/SEL calibration scope; numeric gates are unvalidated practitioner thresholds.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:3",
+            "skills/professional-learning/panel-review/SKILL.md:70",
+            "skills/professional-learning/panel-review/SKILL.md:614",
+            "skills/professional-learning/panel-review/SKILL.md:618",
+            "skills/professional-learning/panel-review/SKILL.md:622"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. Load only the role brief for role N (below). Do not reference earlier. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:131"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:20",
+            "skills/professional-learning/panel-review/SKILL.md:94",
+            "skills/professional-learning/panel-review/SKILL.md:32"
+          ]
+        },
+        "C4": {
+          "status": "concern",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified. Additional source-backed note: Discovery omits wellbeing/SEL calibration scope; numeric gates are unvalidated practitioner thresholds. Additional source-backed note: Evidence rating outside published four-value scale: medium",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:12",
+            "skills/professional-learning/panel-review/SKILL.md:612",
+            "skills/professional-learning/panel-review/SKILL.md:3",
+            "skills/professional-learning/panel-review/SKILL.md:70",
+            "skills/professional-learning/panel-review/SKILL.md:614",
+            "skills/professional-learning/panel-review/SKILL.md:618",
+            "skills/professional-learning/panel-review/SKILL.md:622",
+            "skills/professional-learning/panel-review/SKILL.md:11"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: should be reviewed by a safeguarding specialist rather than addressed by",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:296"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:32",
+            "skills/professional-learning/panel-review/SKILL.md:94"
+          ]
+        },
+        "C7": {
+          "status": "supported",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:612"
+          ]
+        },
+        "C8": {
+          "status": "concern",
+          "assessment": "Body 11448 vs MCP prompt 4808 o200k tokens. Review core/reference organization; length is advisory, not demonstrated behavioral failure.",
+          "evidence": [
+            "skills/professional-learning/panel-review/SKILL.md:94",
+            "skills/professional-learning/panel-review/SKILL.md:612"
+          ]
+        }
+      },
+      "preserve": [
+        "1. Load only the role brief for role N (below). Do not reference earlier",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Surface scope and heuristic status before use; keep useful perspectives and limitations; do not portray same-session roles as independent raters.",
+        "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/professional-learning/panel-review/SKILL.md:94",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/professional-learning/panel-review/SKILL.md:457",
+          "content": "Extended example section (through line611); retain a short worked example and all mandatory exceptions in core."
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C1",
+            "C4"
+          ],
+          "lines": [
+            3,
+            70,
+            614,
+            618,
+            622
+          ],
+          "problem": "Discovery omits wellbeing/SEL calibration scope; numeric gates are unvalidated practitioner thresholds.",
+          "recommended_change": "Surface scope and heuristic status before use; keep useful perspectives and limitations; do not portray same-session roles as independent raters.",
+          "priority": "medium",
+          "kind": "content"
+        },
+        {
+          "criteria": [
+            "C4"
+          ],
+          "lines": [
+            11
+          ],
+          "problem": "Evidence rating outside published four-value scale: medium",
+          "recommended_change": "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills.",
+          "priority": "low",
+          "kind": "supporting-metadata"
+        }
+      ],
+      "body_tokens_o200k": 11448,
+      "file_tokens_o200k": 12309,
+      "mcp_prompt_tokens_o200k": 4808,
+      "body_words": 7542,
+      "mcp_prompt_words": 3095,
+      "source_sha256": "2eb97761fb0845075715819f695fc154a57e9a90cd82e80f55383b6304323255",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Multiple explicit review perspectives, structured reasons and actionable feedback, relevant evidence cautions and the useful wellbeing/SEL calibration scope. Retain numeric thresholds as transparent practitioner heuristics where useful.",
+        "permitted_correction": "Scope wording, heuristic labels and independence claims may be clarified. Do not protect a claim that simulated same-session roles are independent reviewers, or treat their numerical gate as validated measurement. A discovery-description edit requires its bounded metadata exception."
+      }
+    },
+    {
+      "skill": "ladder-of-inference-reflection",
+      "skill_id": "systems-thinking/ladder-of-inference-reflection",
+      "path": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Slow down interpretation from observation to action. Use when students or adults need to examine assumptions in conflict, dialogue, or inquiry.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: 1. Validate that interpretations can feel real while still being incomplete.. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:100"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:21",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:90",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:39"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:16",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:171"
+          ]
+        },
+        "C5": {
+          "status": "supported",
+          "assessment": "Context/default guidance: - \"I may be missing something. Can you help me understand...?\"",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:158"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:39",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:90"
+          ]
+        },
+        "C7": {
+          "status": "concern",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth. Additional source-backed note: Significant-harm and power-asymmetry limits are outside the extracted MCP prompt; generic dignity rule does not state the use boundary.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:171",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:100",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:104",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:173",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:175"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 1090 vs MCP prompt 482 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:90",
+            "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:171"
+          ]
+        }
+      },
+      "preserve": [
+        "1. Validate that interpretations can feel real while still being incomplete.",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Carry a concise recent-harm/power-asymmetry suitability check into core; do not remove reflective method or turn alternatives into factual investigation."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/systems-thinking/ladder-of-inference-reflection/SKILL.md:90",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [],
+      "local_issues": [
+        {
+          "criteria": [
+            "C7"
+          ],
+          "lines": [
+            100,
+            104,
+            173,
+            175
+          ],
+          "problem": "Significant-harm and power-asymmetry limits are outside the extracted MCP prompt; generic dignity rule does not state the use boundary.",
+          "recommended_change": "Carry a concise recent-harm/power-asymmetry suitability check into core; do not remove reflective method or turn alternatives into factual investigation.",
+          "priority": "medium",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 1090,
+      "file_tokens_o200k": 1683,
+      "mcp_prompt_tokens_o200k": 482,
+      "body_words": 758,
+      "mcp_prompt_words": 313,
+      "source_sha256": "15068c44ce81c6868eaac7704fc0d925fe13a32affaf8018f3caeb272d5394ae",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Respectful reflection separating observations, interpretations and possible alternatives; acknowledging feelings without asserting that an alternative explanation is true. Preserve teacher agency and the reflective educational purpose.",
+        "permitted_correction": "The active core may gain the existing recent-harm/power-asymmetry suitability boundary. Do not use reflective reframing to minimize documented harm or replace factual investigation."
+      }
+    }
+  ]
+}

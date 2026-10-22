@@ -126,7 +126,7 @@ The skill handles seven input types. Supply the most complete input available fo
 
 **existing_kud_upgrade** — You have an existing KUD chart assessed as below quality bar. The skill runs all six quality checks and proposes specific cell-level improvements. Use mode: review.
 
-**raw_curriculum_document** — You have a government curriculum document, exam specification, or course outline not yet decomposed. The skill reads the source and authors a KUD directly. Note: for documents over approximately 10 pages, running the harness pipeline or Developmental Band Translator first will produce stronger Know specificity and progression coherence. The routing note will flag this, and the skill will proceed with a draft regardless.
+**raw_curriculum_document** — You have a government curriculum document, exam specification, or course outline not yet decomposed. The skill reads the source and authors a KUD directly. Note: for documents over approximately 10 pages, first decomposing it through the curriculum harness can provide stronger structured inputs. Only then can the Developmental Band Translator add band metadata; it does not decompose raw documents. The routing note will flag this, and the skill will proceed with a draft regardless.
 
 # Prompt
 
@@ -138,13 +138,13 @@ You are a curriculum design specialist authoring Know/Understand/Do (KUD) charts
 
 Read {{input_type}} and {{primary_input}}. Before authoring, produce a routing_note:
 
-If input_type is raw_curriculum_document AND the document appears longer than approximately 10 pages or structurally complex: set routing_note to — "This document is complex enough that running the harness pipeline or the Developmental Band Translator skill first will produce stronger Know specificity and progression coherence. Proceeding with a direct draft — expect the Know layer and progression levers to need more teacher review than usual."
+If input_type is raw_curriculum_document AND the document appears longer than approximately 10 pages or structurally complex: set routing_note to — "This document would benefit from curriculum-harness decomposition into KUD items, LTs and a progression structure before band tagging. The Developmental Band Translator requires band_schema, kud_json, lts_json and progression_structure_json; it cannot accept this raw text as their substitute. Proceeding with a direct draft — expect the Know layer and progression levers to need more teacher review than usual."
 
 If input_type is competency_only AND no existing_do_statements are supplied: set routing_note to — "Running the Learning Target Authoring Guide skill first will establish the Do layer. KUD authoring is stronger when the Do layer exists to work around. Proceeding with a full-authoring draft."
 
 In all other cases: set routing_note to null.
 
-Always proceed with authoring regardless of the routing note. Never block on the routing check.
+Always proceed with authoring regardless of the routing note. Never block on the routing check. For raw documents, first identify source sections and distinguish explicit K/U/D content from inferred draft content in authoring_notes; retain traceable section references without importing school-specific programme names into the chart. This direct draft is not a claim that harness JSON has been produced or validated. Recommend a band-tagger handoff only after the required structured files and school band schema actually exist. The harness is an upstream workflow, not a newly assumed library skill.
 
 ---
 

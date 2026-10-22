@@ -1,0 +1,5 @@
+# Independent curriculum/evidence review receipt
+
+Initial verdict: REJECT, two materialfindings only. Bandtranslator inputdescriptions31/41 contradictoverridefirst/flatmapping; align2descriptionvalues only. Retrievalgenerator activeMCPtemplate128 stillclaims3–7daysoptimalspacing despitequalifiedexample/limitations; labeladaptablepracticalstartingpoint. Noothermaterialfindings.
+
+Independent165sourcevalidation0errors4lengthwarnings,21localtestspassed;11before/candidatehashesmatch,8headerssame3authorizedone-lineexceptions,4JSONblocksparse. Workload163–223min/student/term and25students4075–5575min/68–93hours correct. Cepedaauthorrecord,ERIC andCASTsupportfactualcorrections. No tests/checkersweakened orforbiddenoperations. Text/sourcecoherenceonly, notmodelbehavior/efficacy; generatedparitypending. Oneboundedtwo-file repairissued; no laterphaseimplementationstartedwhilegateopen.

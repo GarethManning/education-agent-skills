@@ -1,4 +1,7 @@
 {
+  "git": {
+    "deploymentEnabled": false
+  },
   "rewrites": [
     {
       "source": "/mcp",

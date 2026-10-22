@@ -28,7 +28,7 @@ input_schema:
       description: The harness-produced LT file (lts.json). Each LT must include lt_id, lt_name, lt_definition, kud_item_ids, and knowledge_type.
     - field: progression_structure_json
       type: string
-      description: The harness-produced progression_structure.json for the source. Must include band_labels, source_type, and age_range_hint (or per-band approximate_age_range). If both age-range fields are absent, the skill returns request_age_range_context in skill_flags and halts.
+      description: The harness-produced progression_structure.json for the source. Must include band_labels and source_type. Use user_age_range_override first, otherwise native age_range_hint or per-band approximate_age_range; if neither exists for a flat competency/dispositional framework, use tentative descriptor-based mapping with low confidence and teacher review. Return request_age_range_context in skill_flags and halt only when no route supports a defensible mapping; do not invent ages.
   optional:
     - field: criterion_bank_json
       type: string
@@ -38,7 +38,7 @@ input_schema:
       description: Human-readable source name (e.g. "UK DfE Statutory RSHE, July 2025") for output provenance. Defaults to progression_structure.source_slug if omitted.
     - field: user_age_range_override
       type: string
-      description: Explicit age-range mapping supplied by the user when a source has no native band structure (flat list). Required only when the skill emits a request_age_range_context error.
+      description: Explicit user-supplied age-range mapping, available on the first invocation or after request_age_range_context. Apply before native age ranges or flat-framework descriptor mapping; preserve native labels and ages, record user-supplied provenance in skill_flags, and flag conflicts with native ages for teacher review.
 output_schema:
   type: object
   fields:
@@ -98,18 +98,18 @@ The skill handles three common source-structure scenarios. Most sources have an 
 
 # Input Schema
 
-**Required inputs.** The skill needs four inputs:
+**Required inputs.** The skill needs four inputs. The age-context rules below clarify the legacy age-range descriptions in the unchanged frontmatter: check a supplied override and the flat-framework exception before requesting missing native age ranges.
 
 - **`band_schema`** — The school or programme's developmental band definitions. Must include band labels, approximate age or grade ranges, and any named groupings. The skill reads this to build the mapping table; it does not assume any particular band system. *Example*: "REAL School Budapest uses Bands A–F — A (Water+Air Dragons, K–2, ages 5–7), B (Earth Dragons, G3–4, ages 7–9), C (Fire Dragons, G5–6, ages 9–11), D (Metal+Light Dragons, G7–8, ages 11–13), E (G9–10, ages 13–15), F (G11–12, ages 15–17)."
 - **`kud_json`** — The KUD file. Required fields per item: `item_id`, `content_statement`, `knowledge_type`, `source_block_id`. The skill uses `source_block_id` to look up the block's native band label in the progression structure.
 - **`lts_json`** — The LT file. Required fields per LT: `lt_id`, `lt_name`, `lt_definition`, `kud_item_ids`, `knowledge_type`. LTs inherit their band from their constituent KUD items using a max-span rule (see Prompt).
-- **`progression_structure_json`** — The progression structure. Required: `band_labels`, `source_type`, and either a top-level `age_range_hint` or per-band `approximate_age_range`. If both age-range fields are absent, the skill returns `request_age_range_context` in `skill_flags` and halts.
+- **`progression_structure_json`** — The progression structure. Required: `band_labels` and `source_type`; use a top-level `age_range_hint` or per-band `approximate_age_range` for age-based mapping. If native ages are absent, first check `user_age_range_override` and the flat-framework branch below. Request age context and halt only when neither provides a defensible mapping.
 
 **Optional inputs.**
 
 - **`criterion_bank_json`** — If supplied, criteria are also tagged. Criteria inherit their parent LT's band unless their content narrows to a more specific age-range signal.
 - **`source_name`** — A friendly name for output metadata.
-- **`user_age_range_override`** — A user-supplied age-range mapping, used when the source has no native band structure and the first invocation halted with `request_age_range_context`.
+- **`user_age_range_override`** — A user-supplied age-range mapping; it may be supplied on the first invocation or after `request_age_range_context`. Apply it as mapping context before the no-age check, preserving native labels and recording its user-supplied status and any conflict with native ages in `skill_flags`.
 
 **Worked example of required inputs.** For a REAL School Budapest run against `uk-statutory-rshe`: `band_schema` = "REAL School Budapest uses Bands A–F — A (Water+Air Dragons, K–2, ages 5–7), B (Earth Dragons, G3–4, ages 7–9), C (Fire Dragons, G5–6, ages 9–11), D (Metal+Light Dragons, G7–8, ages 11–13), E (G9–10, ages 13–15), F (G11–12, ages 15–17)"; `kud_json` = the 279-item KUD file; `lts_json` = the 44-LT file; `progression_structure_json` = a structure declaring `band_labels: ["End of Primary (Year 6)", "End of Secondary (Year 11)"]`, `source_type: "national_statutory_curriculum"`, and age ranges 5–11 and 11–16 respectively.
 
@@ -123,8 +123,8 @@ Read the supplied `band_schema` carefully. It defines the school's band labels, 
 
 ## Procedure
 
-1. **Read the progression structure.** Note `source_type`, `band_labels`, and age ranges. If both `age_range_hint` and per-band `approximate_age_range` are absent, emit `request_age_range_context` in `skill_flags`, do not tag anything, and stop.
-2. **Build a band-mapping table for this source.** Using the `band_schema` and the source's per-band age ranges, identify which school bands overlap with each source band. Where a source band's age range spans multiple school bands, list all overlapping school bands as candidates and note the ambiguity. Where the source band maps cleanly to one school band, record low ambiguity. Record this mapping table in your reasoning before proceeding; every tagging decision in steps 3–5 must trace back to it.
+1. **Read the progression structure and choose mapping context.** Preserve `source_type` and `band_labels`. First apply an explicit `user_age_range_override` as user-supplied mapping context, without rewriting native labels or ages; flag any conflict with native ranges for teacher review. Otherwise use native `age_range_hint` or per-band `approximate_age_range`. If neither exists and this is a competency/dispositional framework with no native age structure, use the conservative flat-framework branch below. Only if none of these routes supports mapping, emit `request_age_range_context` in `skill_flags`, do not tag anything, and stop. Do not invent ages.
+2. **Build a band-mapping table for this source.** Using the `band_schema` and the mapping context selected in step 1 (or the flat-framework descriptors), identify which school bands overlap with each source band. Where a source band's age range spans multiple school bands, list all overlapping school bands as candidates and note the ambiguity. Where the source band maps cleanly to one school band, record low ambiguity. Record this mapping table in your reasoning before proceeding; every tagging decision in steps 3–5 must trace back to it.
 3. **Tag every KUD item.**
    - Look up its `source_block_id` to find the source band.
    - Apply the band-mapping table to get candidate school bands.
@@ -133,7 +133,7 @@ Read the supplied `band_schema` carefully. It defines the school's band labels, 
    - `source_band_preserved`: the exact native label from the source (e.g. "Key Stage 2", "End of Primary", "Progression Step 3").
    - `source_voice_preserved`: always `true`. If you would need to rewrite the content to make it fit a school band, do NOT rewrite — instead set this to `false` and add a skill flag. This field exists to prove no rewriting occurred.
    - `ambiguity_flag`: `true` if `school_band` is an array.
-   - `teacher_review_flag`: `true` when (a) `school_band` spans three or more bands, (b) confidence is `low`, (c) `source_type` is a dispositional/competency framework with no age-banding (e.g. CASEL), or (d) the content statement contains developmental language that would narrow the band beyond what the source label allows.
+   - `teacher_review_flag`: `true` when (a) `school_band` spans three or more bands, (b) confidence is `low`, (c) `source_type` is a dispositional/competency framework with no age-banding (e.g. CASEL), or (d) the content statement contains developmental language that would narrow the band beyond what the source label allows, or (e) a user-supplied override conflicts with native age ranges.
    - `band_rationale`: one sentence explaining the assignment.
 4. **Tag every LT.** An LT's school band is the union of its constituent KUD items' bands (max-span rule). If any constituent is ambiguous, the LT is ambiguous. `teacher_review_flag` fires if any constituent has it or if the LT aggregates across three or more school bands.
 5. **Tag criteria** (if `criterion_bank_json` supplied). Each criterion inherits its parent LT's band unless its content narrows it. Same field set as LTs.
@@ -146,7 +146,7 @@ You are **tagging** content, not rewriting it. Do not paraphrase, shorten, or "t
 ## CASEL / flat-framework handling
 
 If `source_type` indicates a competency or dispositional framework with no age structure (e.g. CASEL), and no `user_age_range_override` was supplied:
-- Set `teacher_review_flag: true` on every item.
+- Set `teacher_review_flag: true` on every item. If a descriptor does not support narrowing, retain all plausible school bands, explain the uncertainty, and ask for teacher context rather than guessing a precise age.
 - Set `band_confidence: low` on every item.
 - Base `school_band` on the developmental sophistication of the descriptor, mapped to the school bands from the supplied `band_schema`: early-developmental content (emotion-labeling, basic self-regulation) → earliest bands in the schema; mid-developmental content (perspective-taking, collaborative problem-solving) → mid-range bands; late-developmental content (systems-level social awareness, abstract ethical reasoning) → later bands in the schema.
 - Emit `skill_flag: casel_style_framework_full_teacher_review_required`.
@@ -167,7 +167,7 @@ Produce the band-tagged output as a single JSON object conforming to the output 
 
 **Context**: REAL School Budapest band schema supplied as `band_schema`. Source: UK DfE Statutory RSHE (July 2025), `progression_structure.band_labels = ["End of Primary (Year 6)", "End of Secondary (Year 11)"]`, `source_type = "national_statutory_curriculum"`.
 
-**Inputs supplied**:
+**Illustrative input excerpt** (the required KUD and LT files are omitted here for space; they must be supplied in a real run):
 
 ```json
 {
@@ -177,7 +177,7 @@ Produce the band-tagged output as a single JSON object conforming to the output 
 }
 ```
 
-**Output**:
+**Output excerpt** (summary counts below cover only these three KUD items and one LT):
 
 ```json
 {
@@ -194,7 +194,7 @@ Produce the band-tagged output as a single JSON object conforming to the output 
       "content_statement": "Young people understand the correct terms for different parts of the body",
       "knowledge_type": "Type 1",
       "school_band": ["A", "B", "C"],
-      "band_confidence": "medium",
+      "band_confidence": "low",
       "source_band_preserved": "End of Primary (Year 6)",
       "source_voice_preserved": true,
       "ambiguity_flag": true,
@@ -206,7 +206,7 @@ Produce the band-tagged output as a single JSON object conforming to the output 
       "content_statement": "Pupils can communicate their boundaries about physical contact and privacy needs",
       "knowledge_type": "Type 2",
       "school_band": ["A", "B", "C"],
-      "band_confidence": "medium",
+      "band_confidence": "low",
       "source_band_preserved": "End of Primary (Year 6)",
       "source_voice_preserved": true,
       "ambiguity_flag": true,
@@ -217,13 +217,13 @@ Produce the band-tagged output as a single JSON object conforming to the output 
       "item_id": "blk_0210_item_02",
       "content_statement": "Students understand the concepts of, and laws relating to, sexual consent",
       "knowledge_type": "Type 1",
-      "school_band": ["D", "E"],
-      "band_confidence": "medium",
+      "school_band": ["D", "E", "F"],
+      "band_confidence": "low",
       "source_band_preserved": "End of Secondary (Year 11)",
       "source_voice_preserved": true,
       "ambiguity_flag": true,
-      "teacher_review_flag": false,
-      "band_rationale": "End-of-Secondary covers ages 11–16; REAL Bands D (11–13) and E (13–15) overlap this range."
+      "teacher_review_flag": true,
+      "band_rationale": "End-of-Secondary covers ages 11–16; REAL Bands D (11–13), E (13–15), and F (15–17) overlap this range; the partial overlap with F is retained for teacher review."
     }
   ],
   "band_tagged_lts": [
@@ -231,7 +231,7 @@ Produce the band-tagged output as a single JSON object conforming to the output 
       "lt_id": "cluster_01_lt_01",
       "lt_name": "Identifying Body Parts and Privacy",
       "school_band": ["A", "B", "C"],
-      "band_confidence": "medium",
+      "band_confidence": "low",
       "source_band_preserved": "End of Primary (Year 6)",
       "source_voice_preserved": true,
       "ambiguity_flag": true,
@@ -240,12 +240,12 @@ Produce the band-tagged output as a single JSON object conforming to the output 
     }
   ],
   "summary_counts": {
-    "total_kud_items": 279,
-    "total_lts": 44,
-    "kud_by_band": {"A-B-C_ambiguous": 176, "D-E_ambiguous": 103},
-    "lts_by_band": {"A-B-C_ambiguous": 28, "D-E_ambiguous": 16},
-    "teacher_review_flagged": 279,
-    "low_confidence": 0
+    "total_kud_items": 3,
+    "total_lts": 1,
+    "kud_by_band": {"A-B-C_ambiguous": 2, "D-E-F_ambiguous": 1},
+    "lts_by_band": {"A-B-C_ambiguous": 1},
+    "teacher_review_flagged": 4,
+    "low_confidence": 4
   },
   "skill_flags": [
     "high_ambiguity_rate_structural: 100% of items are ambiguous because source has 2 bands spanning 3 school bands each. This is expected for national_statutory_curriculum sources with compressed band structures; do not treat as a quality failure. Downstream planning must resolve via teacher judgement."
@@ -259,6 +259,6 @@ Produce the band-tagged output as a single JSON object conforming to the output 
 
 **Ambiguity is not resolvable by this skill.** When a source's band structure is coarser than the school's — particularly UK RSHE's 2-band structure or any framework with fewer bands than the school schema — the skill deliberately preserves the ambiguity rather than guessing. High ambiguity rates (up to 100% for RSHE against a 6-band schema) are an honest report of the source's granularity, not a quality failure. They are resolved downstream by teacher judgement, which is why `teacher_review_flag` exists.
 
-**Developmental-descriptor inference (CASEL case) is approximate.** When a framework has no age-banding, the skill maps by descriptor using the supplied `band_schema` as a guide — early-developmental descriptors → earliest bands in the schema; systems-level descriptors → later bands. These are defensible starting points drawn from developmental-psychology consensus, but they are not framework-specific determinations. Content tagged this way should be treated as a scaffold for teacher review, not a validated mapping.
+**Developmental-descriptor inference (CASEL case) is approximate.** When a framework has no age-banding, the skill maps by descriptor using the supplied `band_schema` as a guide — early-developmental descriptors → earliest bands in the schema; systems-level descriptors → later bands. These are provisional descriptor-based starting points, not validated age norms or framework-specific determinations. Content tagged this way should be treated as a scaffold for teacher review, not a validated mapping.
 
 **The skill assumes harness-validated input.** It does not re-validate the source decomposition. If the upstream harness produced a broken KUD or LT file (cycles in prerequisite graph, content_statement missing, etc.), the skill will pass those errors through as band-tagged nonsense. Run the harness's own validation gates before invoking this skill.

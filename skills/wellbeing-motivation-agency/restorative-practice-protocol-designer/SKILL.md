@@ -74,11 +74,11 @@ tags: ["restorative-practice", "conflict-resolution", "relationships", "accounta
 
 ## What This Skill Does
 
-Designs a specific restorative practice protocol for a classroom or school incident — selecting the right restorative approach (restorative chat, conference, or circle), providing the exact question sequence adapted for the situation and age group, guiding preparation of participants, and establishing an agreement framework for moving forward. The critical principle is that restorative practice is not the absence of consequences — it is a different KIND of consequence, one that requires the person who caused harm to understand the impact of their actions, take responsibility, and actively repair the damage. This is more demanding than a detention (which requires only that you sit in a room) and more effective (because it addresses the harm rather than just punishing the behaviour). The output is a ready-to-use protocol that a teacher or pastoral leader can follow step by step. AI is specifically valuable here because selecting the right restorative approach and calibrating the questions for the specific situation and age group requires both restorative justice expertise and practical school knowledge.
+Designs a specific restorative practice protocol for a classroom or school incident — selecting the right restorative approach (restorative chat, conference, or circle), providing the exact question sequence adapted for the situation and age group, guiding preparation of participants, and establishing an agreement framework for moving forward. The critical principle is that restorative practice is not the absence of consequences — it is a different KIND of consequence, one that requires the person who caused harm to understand the impact of their actions, take responsibility, and actively repair the damage. This aims to address harm and accountability; it is not universally more effective than another response. The generated adaptation needs local suitability and policy review. The output is a practical draft protocol that a teacher or pastoral leader can follow step by step. AI is specifically valuable here because selecting the right restorative approach and calibrating the questions for the specific situation and age group requires both restorative justice expertise and practical school knowledge.
 
 ## Evidence Foundation
 
-Zehr (2002) established the foundational framework: restorative justice asks three questions: What happened? Who was harmed and how? What needs to happen to make it right? This contrasts with punitive justice, which asks: What rule was broken? Who broke it? What punishment do they deserve? Hopkins (2004) applied restorative principles to schools through the "Just Schools" model, showing that whole-school restorative approaches reduce exclusions, improve relationships, and create safer learning environments. Morrison (2007) demonstrated that restorative practice operates on three levels: primary (prevention — building relationships and community), secondary (intervention — addressing harm when it occurs), and tertiary (intensive — rebuilding relationships after serious harm). Thorsborne & Blood (2013) provided practical implementation guidance, emphasising that restorative practice is a continuum from informal conversations (restorative chat — 5 minutes) through facilitated conferences (30–60 minutes) to formal circles (for serious harm or whole-class issues). González (2015) reviewed evidence on restorative practices in schools and found reductions in exclusions, suspensions, and racial disparities in discipline — though implementation quality was the key predictor of success.
+Zehr (2002) established the foundational framework: restorative justice asks three questions: What happened? Who was harmed and how? What needs to happen to make it right? This contrasts with punitive justice, which asks: What rule was broken? Who broke it? What punishment do they deserve? Hopkins (2004) applied restorative principles to schools through the "Just Schools" model, describing whole-school approaches intended to reduce exclusions and improve relationships and safety; those aims are not guaranteed by a generated protocol. Morrison (2007) demonstrated that restorative practice operates on three levels: primary (prevention — building relationships and community), secondary (intervention — addressing harm when it occurs), and tertiary (intensive — rebuilding relationships after serious harm). Thorsborne & Blood (2013) provided practical implementation guidance, emphasising that restorative practice is a continuum from informal conversations (restorative chat — 5 minutes) through facilitated conferences (30–60 minutes) to formal circles (for serious harm or whole-class issues). González (2015) reviewed evidence on restorative practices in schools and found reductions in exclusions, suspensions, and racial disparities in discipline — though implementation quality was the key predictor of success.
 
 ## Input Schema
 
@@ -97,16 +97,18 @@ Optional (injected by context engine if available):
 ## Prompt
 
 ```
-You are an expert in restorative practice in education, with deep knowledge of Zehr's (2002) restorative justice framework, Hopkins' (2004) whole-school approach, Morrison's (2007) three-level model, and Thorsborne & Blood's (2013) implementation continuum. You understand that restorative practice is not "being soft on behaviour" — it is a structured, demanding process that requires the person who caused harm to face the impact of their actions, take genuine responsibility, and commit to specific actions to repair the harm. This is harder than serving a detention.
+You are an expert in restorative practice in education, with deep knowledge of Zehr's (2002) restorative justice framework, Hopkins' (2004) whole-school approach, Morrison's (2007) three-level model, and Thorsborne & Blood's (2013) implementation continuum. You understand that restorative practice is not "being soft on behaviour" — it is a structured, demanding process that requires the person who caused harm to face the impact of their actions, take genuine responsibility, and commit to specific actions to repair the harm. It can coexist with school-policy consequences and requires suitability, preparation and genuine willingness.
 
-IMPORTANT: Restorative practice does NOT mean there are no consequences. It means the consequences are RESTORATIVE (repairing the harm) rather than PUNITIVE (inflicting suffering). A student who has harmed someone and goes through a restorative process should emerge having understood the impact, apologised genuinely, and committed to specific changes. If the school's behaviour policy requires additional sanctions alongside the restorative process, these can coexist — the restorative process addresses the relationship; the sanction addresses the rule breach.
+IMPORTANT: Restorative practice does NOT mean there are no consequences. It means the consequences are RESTORATIVE (repairing the harm) rather than PUNITIVE (inflicting suffering). Aim for understanding impact and specific repair commitments. Never compel an apology, forgiveness or a face-to-face meeting; completion of a script does not prove genuine remorse. If the school's behaviour policy requires additional sanctions alongside the restorative process, these can coexist — the restorative process addresses the relationship; the sanction addresses the rule breach.
 
 IMPORTANT: Restorative practice requires PREPARATION. Throwing two angry students into a room and asking "How do you both feel?" without preparation will fail. Each participant must be individually prepared before the restorative process.
 
-Select the appropriate restorative approach:
+Before selecting a meeting, screen current safety, safeguarding concerns, repeated bullying/harassment, power imbalance, retaliation risk, facilitator competence and each participant's freely given willingness. Apply the school's existing protective/safeguarding procedures where indicated; protection and appropriate policy consequences do not depend on restorative participation. If information is missing, leave the meeting choice provisional. A harmed learner can decline, pass, use a supporter or stop without pressure or loss of support. Offer separate supported conversations or another protective response; indirect communication also requires consent and suitability. Consequential protocol drafts require authorised human review against local policy before use.
+
+Select the appropriate restorative approach only after that screen; times below are planning estimates:
 - **Restorative chat (5–10 minutes):** For low-level incidents — a quick, structured conversation between the teacher and the student, or between two students. Uses the 5 restorative questions.
 - **Restorative conference (20–45 minutes):** For moderate incidents — a facilitated meeting between the person who caused harm, the person affected, and possibly supporters or witnesses. Structured with clear phases.
-- **Restorative circle (30–60 minutes):** For serious incidents or whole-class issues — a facilitated circle where all affected parties participate. Uses a talking piece and structured rounds.
+- **Restorative circle (30–60 minutes):** For suitable community or group issues — a facilitated circle with willing participants. Serious harm alone never justifies a circle or bringing everyone together. Uses a talking piece and structured rounds.
 
 Your task is to design a restorative protocol for:
 
@@ -119,8 +121,8 @@ The following optional context may or may not be provided. Use whatever is avail
 **Relationship context:** {{relationship_context}} — if not provided, design for the relationships as described.
 **Previous incidents:** {{previous_incidents}} — if not provided, treat as a standalone incident but note that pattern-checking is important.
 **Severity:** {{severity}} — if not provided, infer from the description.
-**Available time:** {{available_time}} — if not provided, recommend the appropriate time based on severity.
-**School policy:** {{school_policy}} — if not provided, design a standalone restorative process.
+**Available time:** {{available_time}} — if not provided, estimate preparation and facilitation time after checking suitability; lack of time does not justify skipping protection or consent.
+**School policy:** {{school_policy}} — if not provided, mark the draft for authorised local-policy review; do not invent local rules.
 
 Apply these principles:
 
@@ -135,11 +137,11 @@ Apply these principles:
    - Meet individually with each participant before bringing them together.
    - Assess emotional readiness — the process won't work if participants are still in fight/flight.
    - Explain the process: what will happen, what's expected, what the outcome should be.
-   - Check willingness — restorative practice works best when participation is voluntary (though schools may require it).
+   - Check willingness privately and without pressure; participation in a restorative meeting must be voluntary. Separate any required school-policy process from that choice, and do not require meeting the person who caused harm.
 
 3. **Facilitate, don't interrogate (Hopkins, 2004):**
-   - The facilitator asks questions and holds the space — they do not judge, lecture, or take sides.
-   - Allow silence. Allow emotion. Allow the process to be uncomfortable — discomfort is part of facing impact.
+   - The facilitator asks questions fairly and listens without lecturing; they still name harmful conduct and act on bullying, discrimination or safety concerns.
+   - Allow silence. Allow emotion. Allow manageable discomfort, but check consent and stop for distress, intimidation or unsafe dynamics; discomfort is not evidence the process is working.
    - The facilitator ensures both parties are heard — not equally in volume, but equally in respect.
 
 4. **Reach a genuine agreement (Morrison, 2007):**
@@ -157,7 +159,7 @@ Return your output in this exact format:
 
 **Incident:** [Summary]
 **People involved:** [Roles]
-**Approach:** [Chat / Conference / Circle]
+**Approach:** [Chat / Conference / Circle, provisional if not yet screened; or no joint process — protected alternative and reason]
 **Estimated time:** [Duration]
 
 ### Preparation Phase
@@ -182,9 +184,9 @@ Return your output in this exact format:
 
 ### If It Doesn't Work
 
-[What to do if the process stalls — participant refuses, emotions escalate, no agreement reached]
+[Stop without pressuring participation; maintain protection and policy response, offer a suitable alternative, and review recurrence/retaliation. Keep minimal agreement records under school confidentiality rules.]
 
-**Self-check before returning output:** Verify that (a) the appropriate restorative approach is selected for the severity, (b) preparation is included, (c) questions are adapted for the specific situation, (d) the agreement is specific and achievable, (e) follow-up is planned, and (f) the process holds the person who caused harm accountable while giving voice to the person affected.
+**Self-check before returning output:** Verify that (a) safety, power imbalance, readiness and voluntary consent precede approach selection, (b) preparation is included, (c) questions are adapted for the specific situation, (d) the agreement is specific and achievable, (e) follow-up is planned, and (f) the process holds the person who caused harm accountable while giving voice to the person affected.
 ```
 
 ## Example Output
@@ -195,102 +197,33 @@ Return your output in this exact format:
 
 ## Restorative Protocol: Persistent Mockery of Accent
 
-**Incident:** Repeated mockery of Student B's accent during group work, causing withdrawal and distress
-**People involved:** Student A (caused harm), Student B (affected), 3 witnesses/participants
-**Approach:** Restorative conference — moderate severity, persistent pattern, multiple people involved
-**Estimated time:** 30–40 minutes (plus 10 minutes preparation with each participant)
+**Incident:** Repeated accent mockery; Student B has become withdrawn and asked to work alone.
+**People involved:** Student A, Student B and three witnesses/participants.
+**Approach:** No face-to-face conference assumed. First use the school's bullying/discrimination and safeguarding procedures as applicable, assess power imbalance and retaliation risk, and protect Student B's participation in learning. Separate supported conversations are the provisional route.
+**Estimated time:** Plan individual preparation/check-ins first; joint-process time is not booked until suitability and consent are established.
 
 ### Preparation Phase
 
-**Meeting with Student A (10 minutes, individual):**
-"I want to talk to you about something that's been happening in group work. I'm not here to tell you off — I want to understand what's been going on and figure out how to move forward. Can you tell me what's been happening with [Student B's name] in your group?"
+**Meeting with Student B, privately:** "The comments need to stop. You do not have to meet Student A or describe this in front of others. What would help you feel safe in group work? You may choose a supporter, a private account, or no restorative participation. We will still act to protect you." Check preferred group arrangements and an accessible reporting route without making B responsible for monitoring A.
 
-Listen. Then:
-"I've noticed that [Student B] has stopped talking in group work. Did you know that? ... How do you think they might be feeling about the comments about their accent? ... I'd like you to hear from [Student B] about how this has affected them. Would you be willing to sit down together and talk about it? The goal isn't to punish you — it's to understand the impact and figure out what needs to happen next."
-
-If Student A minimises ("It was just a joke"): "I hear you — you might have meant it as a joke. But the effect on [Student B] is that they've stopped speaking in class. Whether you intended it or not, the impact is real. That's what we need to address."
-
-Check emotional readiness: Is Student A calm enough to listen? If they're angry or defensive, allow time: "Let's meet again after lunch — I want you to have time to think about this."
-
-**Meeting with Student B (10 minutes, individual):**
-"I know things have been difficult in group work. I've seen that you've been quieter recently, and I want to make sure you feel safe and supported. Can you tell me what's been happening?"
-
-Listen. Validate: "That sounds really hurtful. No one should be made to feel uncomfortable about how they speak."
-
-Then: "I'm going to talk to [Student A] about this. I'd like you to be part of a conversation where you can tell them how this has affected you — in your own words. You won't be alone — I'll be there to facilitate. But you'll have the chance to be heard. Would you be willing to do that?"
-
-If Student B is reluctant: "You don't have to speak to them if you're not ready. But I think it would help [Student A] to hear directly from you what this has been like. I'll make sure the conversation is safe and respectful. If at any point you want to stop, you can."
-
-Prepare Student B for what will happen: who will be there, what questions will be asked, that they'll speak first, that they can stop at any time.
+**Meeting with Student A, separately:** "Comments about another person's accent are harmful and must stop. Tell me what happened. What were you thinking or feeling? What have you thought since? Who has been affected and how? What specific steps will you take to prevent recurrence and repair harm?" Do not promise a meeting with B or require B to teach A about the harm.
 
 ### The Restorative Process
 
-**Setting:** A quiet room. Chairs in a small circle (no table — tables create barriers). The facilitator sits between Student A and Student B. Witnesses are invited if both parties agree; otherwise, this is between Student A and Student B.
-
-**Opening (2 minutes):**
-"Thank you both for being here. This conversation is about understanding what happened, how it's affected people, and what needs to happen to make things right. I'm going to ask you both some questions. The rules are: one person speaks at a time, we listen to each other, and we're honest. This isn't about blame — it's about understanding and repair. [Student B], I'd like you to go first."
-
-**Phase 1 — Hearing the impact (10 minutes):**
-
-To Student B: "Can you describe what's been happening in group work?"
-[Let them speak. Don't interrupt.]
-
-"How did you feel when [Student A] made those comments?"
-[Let them speak.]
-
-"How has it affected you since? I've noticed you've been working alone — can you tell us about that?"
-[Let them speak.]
-
-To Student A: "You've heard what [Student B] has said. What are you thinking right now?"
-[This is the key moment. Student A is hearing the impact directly. Allow silence. Allow discomfort. Do not rescue Student A from the discomfort — it is the mechanism of accountability.]
-
-**Phase 2 — Understanding the behaviour (10 minutes):**
-
-To Student A: "Can you tell us what happened from your perspective? What were you thinking when you made those comments?"
-[Listen without judging.]
-
-"Did you know how [Student B] was feeling?"
-[Listen.]
-
-"What do you think about what you've heard today — about the effect this has had?"
-[This is where genuine accountability emerges. Look for: recognition of impact, expression of remorse, willingness to change. If Student A minimises again: "I hear you — but [Student B] has told you that they stopped speaking in class because of this. That's a significant impact. What do you think about that?"]
-
-**Phase 3 — Making it right (10 minutes):**
-
-To Student B: "What do you need from [Student A] to feel safe and comfortable in group work again?"
-[Let them speak. Their needs might include: an apology, a commitment to stop the comments, the group members being addressed.]
-
-To Student A: "You've heard what [Student B] needs. What are you willing to do?"
-[The agreement must come from Student A — it is not imposed. If Student A offers less than Student B needs, facilitate: "Can you think about what [Student B] asked for? What specifically can you commit to?"]
-
-To both: "Is there anything else either of you wants to say before we agree on next steps?"
+Continue individual accountability and protection through school procedures. A trained facilitator may later offer a joint process only if assessment shows it is suitable and everyone freely agrees. Explain participants, format, support and the right to stop first. If it proceeds, use the core question sequence above, allow B's chosen way of being heard and focus on impact and repair without requiring apology or forgiveness. Otherwise retain the protected separate route; a joint meeting is not the success criterion.
 
 ### Agreement Framework
 
-Record the agreement in writing (both students sign):
-- What Student A commits to doing (specific actions, e.g., "I will not comment on anyone's accent. If I catch myself about to, I will stop. If [Student B] feels I've broken this agreement, they can tell [facilitator].")
-- What Student B needs to see to feel safe (specific indicators)
-- What happens if the agreement is broken (return to restorative process, or escalation to senior leadership if persistent)
-- Follow-up date: "We'll meet again in one week to check how things are going."
-
-Address the witnesses separately: "Some people in the group laughed when [Student A] made those comments. The laughter made it harder for [Student B]. In our group from now on, if someone makes a comment that's unkind, we don't laugh — we check on the person it was aimed at."
+Invite specific voluntary repair commitments, such as A stopping accent comments and practising a respectful response. Protective school boundaries apply regardless of agreement. Agree what information can be shared; keep only necessary actions, responsibilities and review arrangements under school confidentiality policy. B need not sign or agree to renewed contact. Address bystanders separately without exposing B's private account.
 
 ### Follow-Up
 
-**One week later:** Brief check-in with both students individually.
-- To Student B: "How has group work been this week? Do you feel safer? Have the comments stopped?"
-- To Student A: "How have you found this week? Have you stuck to the agreement?"
-
-If the agreement is being kept: acknowledge and close.
-If the agreement has been broken: reconvene. "We agreed on [specific terms] last week. [Student B] tells me [what happened]. Let's talk about why the agreement wasn't kept and what needs to change."
+Set an early private check-in with B and a separate review with A; one week is an example, sooner if concern arises. Check recurrence, retaliation, access to group work and B's own view of safety. Do not close merely because an agreement was signed. Continued mockery or retaliation triggers the appropriate protective/policy response, not automatic reconvening.
 
 ### If It Doesn't Work
 
-**If Student A refuses to participate:** "I can't force you to have this conversation. But the behaviour needs to stop. I'm going to [describe the alternative — speaking with parents, involving head of year, formal warning]. I'd prefer us to sort this out together — would you be willing to try?"
+Refusal ends the restorative invitation without penalty for declining it; the harmful behaviour still requires a school response. Distress or intimidation stops the meeting. No forced breathing, immediate restart or promised benefit. Review unresolved needs with authorised pastoral/safeguarding staff and continue protection.
 
-**If emotions escalate during the process:** Pause. "Let's take a moment. This is difficult for both of you. I'm going to ask you to take three breaths, and then we'll continue." If a participant becomes too distressed to continue, end the session and reschedule: "We're going to stop here today. I can see this is really hard. Let's come back to this tomorrow when we've both had time to think."
-
-**If no agreement is reached:** Summarise what WAS agreed and what remains unresolved. Escalate the unresolved element to a senior leader for mediation. The restorative process has still been valuable — Student A has heard the impact, even if they haven't fully accepted responsibility yet.
 
 ---
 
@@ -300,4 +233,4 @@ If the agreement has been broken: reconvene. "We agreed on [specific terms] last
 
 2. **Restorative practice is not appropriate for all situations.** Situations involving significant power imbalances (persistent bullying, abuse, harassment) may not be suitable for a face-to-face restorative conference, as the affected person may feel unsafe speaking directly to the person who harmed them. In these cases, the facilitator can shuttle between the parties rather than bringing them together, or an alternative approach may be needed.
 
-3. **Restorative practice takes more time than punishment.** A detention takes zero preparation and zero facilitator skill. A restorative conference takes 30–40 minutes plus preparation. The investment pays off in reduced repeat incidents and improved relationships, but the initial time cost is significant and must be supported by school leadership.
+3. **Restorative practice takes more time than punishment.** A detention takes zero preparation and zero facilitator skill. A restorative conference takes 30–40 minutes plus preparation. Reduced recurrence and improved relationships are possible aims, not assured returns. Account for preparation, facilitation and follow-up time and check actual outcomes with leadership support.

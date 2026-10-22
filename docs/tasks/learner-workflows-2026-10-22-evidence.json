@@ -1,0 +1,1745 @@
+{
+  "baseline": "6bbbce418f82e11044009c9f3b7373a354de5bd0",
+  "records": [
+    {
+      "skill": "ai-claim-checker",
+      "skill_id": "student-learning/ai-claim-checker",
+      "path": "skills/student-learning/ai-claim-checker/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:4",
+            "skills/student-learning/ai-claim-checker/SKILL.md:62"
+          ],
+          "assessment": "Explicit trigger after a substantive AI claim and concrete three-question purpose."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:88",
+            "skills/student-learning/ai-claim-checker/SKILL.md:90",
+            "skills/student-learning/ai-claim-checker/SKILL.md:92"
+          ],
+          "assessment": "Claim-specific uncertainty, verification method and domain source are more useful than generic be critical."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:96",
+            "skills/student-learning/ai-claim-checker/SKILL.md:119",
+            "skills/student-learning/ai-claim-checker/SKILL.md:157"
+          ],
+          "assessment": "The skill teaches identifying uncertainty and proposing verification. Clarify planned-versus-performed status and what warrants error actually found; do not imply that naming a source completes a fact-check."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:66",
+            "skills/student-learning/ai-claim-checker/SKILL.md:102",
+            "skills/student-learning/ai-claim-checker/SKILL.md:139"
+          ],
+          "assessment": "A correct-looking response is labelled low epistemic vigilance and uncertainty is mandatory; this confuses compliance with justified skepticism. Recent citations require the main source-audit reconciliation; no independent paper verification here."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:127",
+            "skills/student-learning/ai-claim-checker/SKILL.md:139",
+            "skills/student-learning/ai-claim-checker/SKILL.md:153"
+          ],
+          "assessment": "Novice warm start and acknowledgement of accurate content are strengths, but the must-identify-uncertainty rule overrides honest acceptance after checking."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:157",
+            "skills/student-learning/ai-claim-checker/SKILL.md:161"
+          ],
+          "assessment": "A proposed checking method/source is an appropriate deliverable for this teaching exercise. Actual source consultation is a separate task; scope labels should stay honest."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:100",
+            "skills/student-learning/ai-claim-checker/SKILL.md:141",
+            "skills/student-learning/ai-claim-checker/SKILL.md:214"
+          ],
+          "assessment": "AI self-evaluation cannot independently confirm an AI error; preserve domain-expert limitation and route uncertain/high-stakes claims to an appropriate source/person."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/ai-claim-checker/SKILL.md:64",
+            "skills/student-learning/ai-claim-checker/SKILL.md:166",
+            "skills/student-learning/ai-claim-checker/SKILL.md:206"
+          ],
+          "assessment": "Vaccine dialogue and detailed evidence narrative can move to references after correcting them; core three-step method is compact."
+        }
+      },
+      "preserve": [
+        "Specific claim focus; independent domain sources; method beyond a generic search; novice scaffolding."
+      ],
+      "proposed_change": [
+        "Preserve the three-step checking-plan exercise. Permit justified agreement/no issue identified, remove low-vigilance diagnosis from agreement alone, and separate proposed verification from performed verification/error confirmation. Do not require source consultation as a new job in every use."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:80",
+          "instruction": "Three-step claim/source/method check"
+        },
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:109",
+          "instruction": "Domain-appropriate source selection"
+        },
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:123",
+          "instruction": "Do not accept fabricated criticism"
+        },
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:127",
+          "instruction": "Novice support"
+        },
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:153",
+          "instruction": "Permit accurate content"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:64",
+          "content": "Full literature narrative"
+        },
+        {
+          "evidence": "skills/student-learning/ai-claim-checker/SKILL.md:166",
+          "content": "Vaccine transcript, corrected before reuse"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2620,
+      "file_tokens_o200k": 3181,
+      "mcp_prompt_tokens_o200k": 1326,
+      "body_words": 2062,
+      "mcp_prompt_words": 1030,
+      "source_sha256": "03209658ad2be7c9b7ae5f5252ecda8be996afa5124a6fb895bf852c6c2dc0f9",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Specific claim focus; independent domain sources; method beyond a generic search; novice scaffolding.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "confidence-calibration-check",
+      "skill_id": "student-learning/confidence-calibration-check",
+      "path": "skills/student-learning/confidence-calibration-check/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:4",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:64"
+          ],
+          "assessment": "Specific before/after study-monitoring use is clear."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:82",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:92",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:109",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:127"
+          ],
+          "assessment": "Attempt-based feedback, calibration patterns and micro-goal add actionable metacognitive structure."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:96",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:111",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:135",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:139"
+          ],
+          "assessment": "Informal performance labels are not mapped to 0\u2013100 confidence; warm start manufactures ratings of 0\u201330 or 5. Missing/uncertain confidence must remain missing."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:64",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:114",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:214",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:216"
+          ],
+          "assessment": "Scale/evaluator limits are acknowledged, but labels such as overconfident infer a stable pattern from one informal assessment; a pre/post change after feedback is not automatically improved calibration."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:135",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:145",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:151"
+          ],
+          "assessment": "Anxiety is acknowledged, yet mandatory numerical commitments and hedging accusation can distort honest self-report. Offer verbal uncertainty or skip."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:127",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:165"
+          ],
+          "assessment": "Specific study micro-goal and before/after/performance summary can support a practical next session."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:147",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:151",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:216"
+          ],
+          "assessment": "Questioning evaluator accuracy is allowed, but the operational prompt needs a correction/dispute branch and explicit informal/non-diagnostic status rather than only reassurance."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/confidence-calibration-check/SKILL.md:66",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:174",
+            "skills/student-learning/confidence-calibration-check/SKILL.md:198"
+          ],
+          "assessment": "Long chemistry dialogue and research exposition can be referenced; preserve performance-specific feedback example."
+        }
+      },
+      "preserve": [
+        "Attention to underconfidence as well as overconfidence; next action; candid scale and accuracy limitations."
+      ],
+      "proposed_change": [
+        "Never invent learner confidence; add not captured and optional verbal rating. Anchor the question to a specific prospective task and compare performance on comparable tasks over time. Treat pattern labels as tentative and let learners challenge the evaluation."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:82",
+          "instruction": "Collect voluntary pre-attempt estimate"
+        },
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:92",
+          "instruction": "Evaluate actual attempt with specifics"
+        },
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:101",
+          "instruction": "Capture post-feedback estimate separately"
+        },
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:127",
+          "instruction": "Agree one micro-goal"
+        },
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:214",
+          "instruction": "Informal non-psychometric limits"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:66",
+          "content": "Detailed research narrative"
+        },
+        {
+          "evidence": "skills/student-learning/confidence-calibration-check/SKILL.md:174",
+          "content": "Complete chemistry transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2671,
+      "file_tokens_o200k": 3259,
+      "mcp_prompt_tokens_o200k": 1318,
+      "body_words": 2005,
+      "mcp_prompt_words": 966,
+      "source_sha256": "6df4825de26d60df14ef5566f8b35e17b58031d156996551fa34ffedf6e96db5",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Attention to underconfidence as well as overconfidence; next action; candid scale and accuracy limitations.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "explain-first-interrogator",
+      "skill_id": "student-learning/explain-first-interrogator",
+      "path": "skills/student-learning/explain-first-interrogator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:4",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:63"
+          ],
+          "assessment": "Explain-before-feedback trigger and audience are explicit."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:91",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:95",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:101"
+          ],
+          "assessment": "Diagnosing specific mechanism/jargon/circularity gaps and limiting probes to three adds expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:63",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:101",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:115",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:175"
+          ],
+          "assessment": "Never rewrite/replace clashes with example supplying a full natural-selection synthesis; after three unsuccessful probes the bridge hint has no clear route to direct foundation teaching."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:23",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:67",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:131"
+          ],
+          "assessment": "Established self-explanation rationale is useful; unnamed arXiv support and guarantee that the learner will retain it more deeply should not be treated as validated exact-script effects."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:107",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:131",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:197"
+          ],
+          "assessment": "Warm start helps, but zero-knowledge learners are pushed into more guesses and analogies rather than choosing instruction or a different response mode."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:103",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:144"
+          ],
+          "assessment": "Revised learner explanation and gap record create a concrete learning artifact."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:195",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:199"
+          ],
+          "assessment": "Subject accuracy and moving-goalposts risks are acknowledged outside prompt; operationalize uncertain-evaluation correction and end/teach option."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/explain-first-interrogator/SKILL.md:65",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:153",
+            "skills/student-learning/explain-first-interrogator/SKILL.md:191"
+          ],
+          "assessment": "Long natural-selection transcript can move to reference; retain compact example for each probe type."
+        }
+      },
+      "preserve": [
+        "Specific rather than generic questions; strengths-before-gap; three-round cap; learner-owned synthesis."
+      ],
+      "proposed_change": [
+        "Define when short explanation/direct instruction is appropriate after the probe limit or absent prerequisite knowledge. Align example with the no-replacement rule, allow alternative explanation formats, and qualify research-to-script extrapolation."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:81",
+          "instruction": "Obtain current explanation"
+        },
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:89",
+          "instruction": "Name strength then targeted weakest-point probe"
+        },
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:101",
+          "instruction": "Bound probe rounds"
+        },
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:103",
+          "instruction": "Ask learner synthesis"
+        },
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:195",
+          "instruction": "Recognize evaluator accuracy dependency"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:65",
+          "content": "Full research account"
+        },
+        {
+          "evidence": "skills/student-learning/explain-first-interrogator/SKILL.md:153",
+          "content": "Natural-selection transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2514,
+      "file_tokens_o200k": 3111,
+      "mcp_prompt_tokens_o200k": 1150,
+      "body_words": 1948,
+      "mcp_prompt_words": 873,
+      "source_sha256": "aba08e222d596ede68b759d7adf2285d747eb37a2ccddcc573c28a0ef807b63f",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Specific rather than generic questions; strengths-before-gap; three-round cap; learner-owned synthesis.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "fading-manager",
+      "skill_id": "student-learning/fading-manager",
+      "path": "skills/student-learning/fading-manager/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:4",
+            "skills/student-learning/fading-manager/SKILL.md:29",
+            "skills/student-learning/fading-manager/SKILL.md:66"
+          ],
+          "assessment": "Sustained learning with accessible prior history is a precise activation condition."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:85",
+            "skills/student-learning/fading-manager/SKILL.md:109",
+            "skills/student-learning/fading-manager/SKILL.md:121"
+          ],
+          "assessment": "Named scaffolds, evidence criteria and reversible restoration make gradual release practical."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:111",
+            "skills/student-learning/fading-manager/SKILL.md:113",
+            "skills/student-learning/fading-manager/SKILL.md:115",
+            "skills/student-learning/fading-manager/SKILL.md:195",
+            "skills/student-learning/fading-manager/SKILL.md:201",
+            "skills/student-learning/fading-manager/SKILL.md:234"
+          ],
+          "assessment": "Example advances after two Level3 sessions/hints1\u20132 vs required three/hints0\u20131; removes retrieve-first despite permanent habit rule101. Source retrieve-first emits accurate while criteria expect strong; schema mapping required."
+        },
+        "C4": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:256",
+            "skills/student-learning/fading-manager/SKILL.md:258"
+          ],
+          "assessment": "Criteria explicitly labelled unvalidated heuristics with teacher/learner supplementation; nonlinearity is recognized."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:100",
+            "skills/student-learning/fading-manager/SKILL.md:131",
+            "skills/student-learning/fading-manager/SKILL.md:156"
+          ],
+          "assessment": "Collaboration/pace option exists, but warm start becomes categorically unavailable at lower levels; adapt by task and accessibility need rather than withholding useful support because of a level."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:143",
+            "skills/student-learning/fading-manager/SKILL.md:184"
+          ],
+          "assessment": "Visible scaffold plan, evidence for change and hold/reduce/restore decision are useful longitudinal artifacts."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:29",
+            "skills/student-learning/fading-manager/SKILL.md:123",
+            "skills/student-learning/fading-manager/SKILL.md:254"
+          ],
+          "assessment": "Required persistent learner history lacks bounded host storage/consent responsibility; preserve restoration and prevent factual independence claims from incomplete/external-support histories."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/fading-manager/SKILL.md:68",
+            "skills/student-learning/fading-manager/SKILL.md:193",
+            "skills/student-learning/fading-manager/SKILL.md:238"
+          ],
+          "assessment": "Thresholds/table/restoration should remain core; corrected full transcript and fraction-arithmetic scenario can be references."
+        }
+      },
+      "preserve": [
+        "Transparent fading; restoration; topic-specific scaffolding; heuristic limitation; external-support caveat."
+      ],
+      "proposed_change": [
+        "Align examples and source labels to explicit criteria; keep thresholds visibly heuristic. Permit learner/teacher adjustment, task-specific support and accessible warm starts; require verified minimal history and host-level data consent."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:85",
+          "instruction": "Define levels and actual available support"
+        },
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:109",
+          "instruction": "Heuristic evidence for transition"
+        },
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:121",
+          "instruction": "Restore support for difficulty"
+        },
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:131",
+          "instruction": "Collaborative pace"
+        },
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:256",
+          "instruction": "Teacher/learner judgment supplements thresholds"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:68",
+          "content": "Detailed research background"
+        },
+        {
+          "evidence": "skills/student-learning/fading-manager/SKILL.md:193",
+          "content": "Corrected worked transition/restoration transcripts"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3196,
+      "file_tokens_o200k": 3841,
+      "mcp_prompt_tokens_o200k": 1594,
+      "body_words": 2359,
+      "mcp_prompt_words": 1159,
+      "source_sha256": "83681b24f6746e727480efdf657299f47fad1da9d858932bac2e3217a482b1d2",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Transparent fading; restoration; topic-specific scaffolding; heuristic limitation; external-support caveat.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "productive-failure-protocol",
+      "skill_id": "student-learning/productive-failure-protocol",
+      "path": "skills/student-learning/productive-failure-protocol/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:4",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:28",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:214"
+          ],
+          "assessment": "Complex conceptual problems with multiple plausible approaches are identified; safety/arbitrary-convention exclusions are valuable."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:101",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:104",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:110"
+          ],
+          "assessment": "Contrast approaches and build consolidation from actual attempts rather than generic explanation."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:77",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:84",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:110",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:132"
+          ],
+          "assessment": "The two-attempt gate has no default time/attempt exit and may prevent consolidation. Analyzing a flawed alternative after a correct first solution is legitimate contrasting-case pedagogy; the issue is compulsory unbounded completion, not that activity itself."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:66",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:136",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:216"
+          ],
+          "assessment": "The exact two-attempt minimum is a design rule, not established by general productive-failure evidence; script claims this specific rule is research-proven while limitation only calls it a minimum."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:129",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:135",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:148"
+          ],
+          "assessment": "Warm collaborative language does not supply a genuine choice; repeated resistance prompts and obligatory research explanation override the learner request for help."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:110",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:114",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:155"
+          ],
+          "assessment": "Attempt-linked consolidation plus transfer task and evidence summary is practically meaningful when well calibrated."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:84",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:118",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:214"
+          ],
+          "assessment": "Stop/defer/teach branch is missing for no prerequisite knowledge, mounting distress or exhausted exploration time; preserve safety-risk exclusion in operative prompt."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/productive-failure-protocol/SKILL.md:70",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:164",
+            "skills/student-learning/productive-failure-protocol/SKILL.md:210"
+          ],
+          "assessment": "Long statistics transcript is optional; preserve a short contrasted-attempt/consolidation example, not every scripted exchange."
+        }
+      },
+      "preserve": [
+        "Explicit consolidation dependency; contrast of genuine methods; conceptual/transfer scope; honest time cost."
+      ],
+      "proposed_change": [
+        "Preserve productive exploration, contrasting approaches and connecting consolidation. Make attempt/time limit teacher/learner-adjustable, provide finite exit for unavailable prerequisites or distress, and do not claim that the exact two-attempt rule is research-proven without source verification. A correct-first contrasting case can remain optional."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:28",
+          "instruction": "Select a suitable multiple-approach conceptual task"
+        },
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:89",
+          "instruction": "Bounded exploration"
+        },
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:101",
+          "instruction": "Learner compares attempted methods"
+        },
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:108",
+          "instruction": "Connect consolidation to actual attempts"
+        },
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:214",
+          "instruction": "Exclude arbitrary conventions and safety-risk experimentation"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:70",
+          "content": "Detailed research narrative"
+        },
+        {
+          "evidence": "skills/student-learning/productive-failure-protocol/SKILL.md:164",
+          "content": "Full variance transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3037,
+      "file_tokens_o200k": 3640,
+      "mcp_prompt_tokens_o200k": 1376,
+      "body_words": 2327,
+      "mcp_prompt_words": 1062,
+      "source_sha256": "981c2fbd183617787b40b094bbec3e76dc4630e9a73bc8797f51fb5c06b97c9f",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Explicit consolidation dependency; contrast of genuine methods; conceptual/transfer scope; honest time cost.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "progressive-hint-ladder",
+      "skill_id": "student-learning/progressive-hint-ladder",
+      "path": "skills/student-learning/progressive-hint-ladder/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:4",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:63",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:243"
+          ],
+          "assessment": "Clear recurring use for stuck learners; procedural/well-defined scope is explicit."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:91",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:122",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:132"
+          ],
+          "assessment": "Distinct six-level assistance policy, help-seeking diagnosis, reflection and foundation fallback add expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:76",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:87",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:93"
+          ],
+          "assessment": "Clarify a brief diagnostic followed by tailored placement; six hint levels and no-full-answer policy are legitimate design choices within the stated remit. The starting-level wording is a clarity issue rather than proof the method is incoherent."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:67",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:147",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:149"
+          ],
+          "assessment": "Broad ITS effects do not establish this exact six-level script; optimal help is asserted to be systematically less than learners prefer, and frustration is incorrectly treated as evidence of appropriate difficulty."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:84",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:128",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:147",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:247"
+          ],
+          "assessment": "Warm start and familiar-analogy checks help, but mandatory attempts/reflection have no accessible response alternative or learner stop option."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:145",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:163"
+          ],
+          "assessment": "Next independent step plus explicit hint-depth/result summary is practically usable."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:143",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:145",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:149"
+          ],
+          "assessment": "Foundation fallback is useful; normalize frustration without diagnosing its cause and allow pause/change of mode when questioning is not helping."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:67",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:171",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:207",
+            "skills/student-learning/progressive-hint-ladder/SKILL.md:225"
+          ],
+          "assessment": "Three example scenarios and long rationale can be referenced; retain one short escalation example. This is an editorial finding, not evidence that shorter prompts improve outcomes."
+        }
+      },
+      "preserve": [
+        "Graduated minimum-needed help; reflection before escalation; no shame for higher hint levels; foundation fallback."
+      ],
+      "proposed_change": [
+        "Preserve six-level minimum-needed assistance and foundation fallback. Clarify diagnostic/starting-level wording, replace frustration-means-right-difficulty inference with a neutral readiness/access check, and permit a bounded pause/change of response mode. No wholesale replacement with immediate answers."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:81",
+          "instruction": "Diagnose actual attempt and desired help"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:91",
+          "instruction": "Hint sequence and no unnecessary escalation"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:122",
+          "instruction": "Check interpretation before escalation"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:145",
+          "instruction": "Fallback to underlying foundation"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:163",
+          "instruction": "Record assistance level honestly"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:65",
+          "content": "Detailed research narrative"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:171",
+          "content": "Full transcripts; retain a short example in core"
+        },
+        {
+          "evidence": "skills/student-learning/progressive-hint-ladder/SKILL.md:207",
+          "content": "Second correct-work scenario and gaming transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2868,
+      "file_tokens_o200k": 3476,
+      "mcp_prompt_tokens_o200k": 1388,
+      "body_words": 2143,
+      "mcp_prompt_words": 1065,
+      "source_sha256": "5178e50cb0e4fd48e10dd6a0d16d1d884b805a2be0935989409030fb56274b55",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Graduated minimum-needed help; reflection before escalation; no shame for higher hint levels; foundation fallback.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "retrieve-first-gate",
+      "skill_id": "student-learning/retrieve-first-gate",
+      "path": "skills/student-learning/retrieve-first-gate/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:4",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:25",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:63"
+          ],
+          "assessment": "Explicit recall-before-review/help interaction and diagnostic gap map are useful recurring purposes."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:85",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:87",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:95",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:104"
+          ],
+          "assessment": "Confidence, unprompted recall, accurate/missing/misconceived map and targeted help add expertise beyond explanation on demand."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:72",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:108",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:118",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:151"
+          ],
+          "assessment": "Every interaction is gated even first exposure; warm start can loop back without instruction. Output vocabulary accurate differs from fading-manager strong and needs mapping. Keep initial recall distinct from supported warm start."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:63",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:67",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:83",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:188"
+          ],
+          "assessment": "Strong retrieval tradition supports rationale, not universal most-effective mandatory first step or guaranteed strengthening from any blank/guessed attempt. Distinguish novel learning, prior study and task demands."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:76",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:126",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:130",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:136",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:210"
+          ],
+          "assessment": "Default secondary/undergraduate, no accessible alternative and pasted-content suspicion can misread language, disability or memorized expertise. Offer sketch/oral/recognition support or direct foundation teaching when needed."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:95",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:104",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:148"
+          ],
+          "assessment": "Specific gap map, learner attempt and targeted follow-up are useful formative artifacts."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:210",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:212",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:214",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:216"
+          ],
+          "assessment": "Anxiety, evaluator accuracy, challenge right and informal-assessment limits are clearly acknowledged. Keep these limitations operational, especially right to dispute AI marking."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/retrieve-first-gate/SKILL.md:65",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:158",
+            "skills/student-learning/retrieve-first-gate/SKILL.md:206"
+          ],
+          "assessment": "Full photosynthesis transcript can be referenced; compact recall/gap-map example is enough for core, without assuming fewer tokens improve learning."
+        }
+      },
+      "preserve": [
+        "Recall before generic re-teaching; accurate/missing/misconceived map; warm-start scaffolding; informal assessment caveat."
+      ],
+      "proposed_change": [
+        "Scope activation to review of previously encountered material; add novice/accessible response/direct-instruction and stop routes. Make uncertain AI marking contestable in prompt, avoid pasted-content certainty, and align evidence terms with consuming skills."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:81",
+          "instruction": "Request attempt at suitable scope"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:91",
+          "instruction": "Acknowledge and map actual recall"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:104",
+          "instruction": "Target help to demonstrated gaps"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:108",
+          "instruction": "Support a blank start without indefinite gate"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:212",
+          "instruction": "Allow challenge to AI evaluation"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:214",
+          "instruction": "Not a formal assessment instrument"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:65",
+          "content": "Detailed evidence foundation"
+        },
+        {
+          "evidence": "skills/student-learning/retrieve-first-gate/SKILL.md:158",
+          "content": "Full photosynthesis transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2647,
+      "file_tokens_o200k": 3241,
+      "mcp_prompt_tokens_o200k": 1218,
+      "body_words": 2032,
+      "mcp_prompt_words": 938,
+      "source_sha256": "04bde0cc2ec1911ad45bcb3375763b977a7b92d87d760ed4886e5c8fe0ddae3c",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Recall before generic re-teaching; accurate/missing/misconceived map; warm-start scaffolding; informal assessment caveat.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "srl-session-wrapper",
+      "skill_id": "student-learning/srl-session-wrapper",
+      "path": "skills/student-learning/srl-session-wrapper/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:4",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:29",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:69"
+          ],
+          "assessment": "Opening/mid/closing/full-wrap modes and purpose are explicit."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:88",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:108",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:122",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:157"
+          ],
+          "assessment": "Task-specific plan-monitor-reflect cycle and one-prompt refusal policy add useful expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:33",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:80",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:112",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:125"
+          ],
+          "assessment": "session_goal_from_opening is conditionally required in schema but never inserted into prompt; isolated mid/closing invocation cannot reliably recover the goal. Timer/check-in capability is also assumed (104,209)."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:23",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:69",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:73"
+          ],
+          "assessment": "Unnamed 2025 meta-analysis and significant benefit/under-two-minutes promises exceed auditable evidence for this exact wrapper; retain SRL rationale but qualify implementation claims."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:118",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:157",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:161",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:265"
+          ],
+          "assessment": "Explicit proceed/skip handling and optional interruption preserve learner choice."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:177",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:261"
+          ],
+          "assessment": "Brief phase summaries, next goal and content-container distinction are usable."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:104",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:145",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:209"
+          ],
+          "assessment": "Promise to check in after 15 minutes needs host timer capability or learner-return instruction; do not promise autonomous activity. Prior-session handling should keep user-provided summary rather than assume hidden storage."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/srl-session-wrapper/SKILL.md:71",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:187",
+            "skills/student-learning/srl-session-wrapper/SKILL.md:255"
+          ],
+          "assessment": "Full three-phase French Revolution script mostly restates the prompt; move to references and retain a small mode-switch example."
+        }
+      },
+      "preserve": [
+        "Short phases; genuine learner evaluation; refusal handling; wrapper distinguished from effective study content."
+      ],
+      "proposed_change": [
+        "Insert opening-goal input and recover/ask once if absent in mid/closing mode; state how user returns to trigger later phases unless timer integration exists. Resolve vague evidence entry and qualify measured benefit claims."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:88",
+          "instruction": "Phase routing"
+        },
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:108",
+          "instruction": "Natural-breakpoint strategy check"
+        },
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:122",
+          "instruction": "Closing reflection and next step"
+        },
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:157",
+          "instruction": "One prompt then respect refusal"
+        },
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:170",
+          "instruction": "Keep wrapper brief"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:71",
+          "content": "Detailed evidence narrative"
+        },
+        {
+          "evidence": "skills/student-learning/srl-session-wrapper/SKILL.md:187",
+          "content": "Full French Revolution transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2972,
+      "file_tokens_o200k": 3606,
+      "mcp_prompt_tokens_o200k": 1382,
+      "body_words": 2208,
+      "mcp_prompt_words": 1015,
+      "source_sha256": "dd0dd6fecec960929755becfbe59a032f3d97cdc3868903f812adf2a4a524b4c",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Short phases; genuine learner evaluation; refusal handling; wrapper distinguished from effective study content.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "stuck-and-error-diagnosis-coach",
+      "skill_id": "student-learning/stuck-and-error-diagnosis-coach",
+      "path": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:4",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:28",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:236"
+          ],
+          "assessment": "Clear stuck/error activation; low-value typos and simple slips are sensibly distinguished."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:91",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:115",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:129"
+          ],
+          "assessment": "Four error categories, targeted repair and future self-check are substantive added expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:72",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:103",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:212"
+          ],
+          "assessment": "Prompt requires learner diagnosis before help, but second example labels strategic error before diagnosis; permit tentative compound/unknown classifications consistent with limitation234."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:83",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:188",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:224"
+          ],
+          "assessment": "Frustration/stuck is not proof of right difficulty. Physics transcript is internally inconsistent (2.5 vs10/5=2) and falsely generalizes kinematics needs time; time-free v\u00b2=u\u00b2+2as is a counterexample."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:91",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:137",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:151",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:157"
+          ],
+          "assessment": "Stops diagnostic questioning when enough information; small-step warm start and self-correction support learner control."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:117",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:129",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:169"
+          ],
+          "assessment": "Concrete repair plus learner-owned check produces a reusable next-action artifact."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:143",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:157",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:232",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:234"
+          ],
+          "assessment": "Parallel example fallback and domain/compound-error limitations are explicit; practical risk scope is ordinary academic work."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:65",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:178",
+            "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:208"
+          ],
+          "assessment": "Two long physics scenarios duplicate workflow; move corrected variants to reference, retain taxonomy and targeted-help cases."
+        }
+      },
+      "preserve": [
+        "Targeted feedback at process level; self-correction before explanation; representation included; future error-checking question."
+      ],
+      "proposed_change": [
+        "Correct numerical and kinematics examples; frame categories as hypotheses with mixed/unclear allowed; replace right-difficulty assertion with neutral acknowledgement. Keep diagnosis brief for obvious slips."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:89",
+          "instruction": "Ask for actual work and breakdown point"
+        },
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:101",
+          "instruction": "Test diagnosis against actual work"
+        },
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:113",
+          "instruction": "Provide category-linked support"
+        },
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:127",
+          "instruction": "Generate a future self-check"
+        },
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:234",
+          "instruction": "Allow compound errors"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:65",
+          "content": "Detailed literature narrative"
+        },
+        {
+          "evidence": "skills/student-learning/stuck-and-error-diagnosis-coach/SKILL.md:178",
+          "content": "Corrected physics transcripts"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2690,
+      "file_tokens_o200k": 3273,
+      "mcp_prompt_tokens_o200k": 1376,
+      "body_words": 2063,
+      "mcp_prompt_words": 1063,
+      "source_sha256": "fb9f958472a5e8a712dd64653cb331dce737ac468a6e32868eabb340cb097473",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Targeted feedback at process level; self-correction before explanation; representation included; future error-checking question.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "teach-back-evaluator",
+      "skill_id": "student-learning/teach-back-evaluator",
+      "path": "skills/student-learning/teach-back-evaluator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:4",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:62",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:241"
+          ],
+          "assessment": "Clear concept-understanding test through a novice-peer teaching interaction."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:91",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:111",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:113",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:118",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:123"
+          ],
+          "assessment": "Novice question types and anchored three-dimension feedback add expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:62",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:134",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:141"
+          ],
+          "assessment": "All scores>=2 includes minor gaps/imprecision, yet passing feedback declares complete/accurate understanding; session must close only when clear conflicts with revision invitation. Misconception risk scale runs higher=safer and should be renamed/clarified."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:97",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:141",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:239"
+          ],
+          "assessment": "Visual thinker wording invokes an excluded learning-style label unnecessarily; passing a scaffolded explanation does not prove knowing or durable learning. Rubric is explicitly approximate."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:139",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:145",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:157"
+          ],
+          "assessment": "Warm start and partial revision help, but no bounded end/learner stop; prior_understanding_level input is unused and expectations can drift."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:128",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:175"
+          ],
+          "assessment": "Explained scores plus specific revision target are usable formative feedback."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:235",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:239",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:241"
+          ],
+          "assessment": "Role separation, approximate judgement and conceptual-content limitations bound the ordinary academic use; do not repurpose as formal assessment."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/teach-back-evaluator/SKILL.md:64",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:185",
+            "skills/student-learning/teach-back-evaluator/SKILL.md:231"
+          ],
+          "assessment": "Full osmosis dialogue is optional; retain one novice question and one anchored scoring example with caveat."
+        }
+      },
+      "preserve": [
+        "Curious/non-adversarial novice role; explained score anchors; targeted revision; appropriate content-type limits."
+      ],
+      "proposed_change": [
+        "Remove visual-thinker label; allow a real example without learner-type attribution. Align pass message to scores and mark informal formative judgement; bound revision and allow ending with unresolved gap. Use or remove unused input via governed future edit."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:87",
+          "instruction": "Authentic novice question types"
+        },
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:107",
+          "instruction": "Explicit role change for evaluation"
+        },
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:111",
+          "instruction": "Anchored feedback dimensions"
+        },
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:139",
+          "instruction": "Specific revision target"
+        },
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:239",
+          "instruction": "Approximate subject-dependent scoring"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:64",
+          "content": "Detailed research narrative"
+        },
+        {
+          "evidence": "skills/student-learning/teach-back-evaluator/SKILL.md:185",
+          "content": "Full osmosis transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2959,
+      "file_tokens_o200k": 3527,
+      "mcp_prompt_tokens_o200k": 1438,
+      "body_words": 2197,
+      "mcp_prompt_words": 1038,
+      "source_sha256": "09c4d8639ccd8502c061fbf4a98a26203b60381de9da5054d50759dbe5bc87ee",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Curious/non-adversarial novice role; explained score anchors; targeted revision; appropriate content-type limits.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "transfer-bridge",
+      "skill_id": "student-learning/transfer-bridge",
+      "path": "skills/student-learning/transfer-bridge/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:4",
+            "skills/student-learning/transfer-bridge/SKILL.md:66",
+            "skills/student-learning/transfer-bridge/SKILL.md:246"
+          ],
+          "assessment": "After conceptual understanding, near/far application provides a distinct recurring use."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:93",
+            "skills/student-learning/transfer-bridge/SKILL.md:110",
+            "skills/student-learning/transfer-bridge/SKILL.md:118"
+          ],
+          "assessment": "Structural comparison and learner-generated third context add expertise beyond another practice problem."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:131",
+            "skills/student-learning/transfer-bridge/SKILL.md:152",
+            "skills/student-learning/transfer-bridge/SKILL.md:167"
+          ],
+          "assessment": "Unused concept placeholder (131,152), and evidence states differ between metadata and record; define near/far support conditions and status vocabulary."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:75",
+            "skills/student-learning/transfer-bridge/SKILL.md:131",
+            "skills/student-learning/transfer-bridge/SKILL.md:193",
+            "skills/student-learning/transfer-bridge/SKILL.md:201",
+            "skills/student-learning/transfer-bridge/SKILL.md:244"
+          ],
+          "assessment": "Core equates transfer success with durable learning despite scaffold caveat. Ecology allocation example is not the same price-formation principle; test valid structural match and explicitly name where analogy breaks."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:87",
+            "skills/student-learning/transfer-bridge/SKILL.md:133",
+            "skills/student-learning/transfer-bridge/SKILL.md:139"
+          ],
+          "assessment": "Failure normalized; bridge prompts and own third context support adaptation."
+        },
+        "C6": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:166",
+            "skills/student-learning/transfer-bridge/SKILL.md:170",
+            "skills/student-learning/transfer-bridge/SKILL.md:244"
+          ],
+          "assessment": "Output can guide next study, but pass/fail without recording bridge help may be mistaken for independent transfer; separate attempted before cue from achieved after cue."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:240",
+            "skills/student-learning/transfer-bridge/SKILL.md:242",
+            "skills/student-learning/transfer-bridge/SKILL.md:244"
+          ],
+          "assessment": "Cross-domain quality and supported-vs-independent limits are explicitly stated; make them operative."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/transfer-bridge/SKILL.md:68",
+            "skills/student-learning/transfer-bridge/SKILL.md:175",
+            "skills/student-learning/transfer-bridge/SKILL.md:220"
+          ],
+          "assessment": "Full economics/ecology transcript and repeated failure route can move after correction; keep same/different/principle triad in core."
+        }
+      },
+      "preserve": [
+        "Near/far distinction; explicit structure comparison; scaffold limitation; student-generated third application."
+      ],
+      "proposed_change": [
+        "Replace price/allocation analogy with valid shared-mechanism task or explicitly label limited analogy. Record cue/support level and distinguish immediate scaffolded application from independent delayed transfer; fix placeholders/status vocabulary."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:91",
+          "instruction": "Design structural near application"
+        },
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:108",
+          "instruction": "Verify far application uses same underlying mechanism"
+        },
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:118",
+          "instruction": "Same/different/travelling-principle questions"
+        },
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:166",
+          "instruction": "Record separate near/far results and support"
+        },
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:244",
+          "instruction": "No independent-transfer inference from helped performance"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:68",
+          "content": "Detailed research exposition"
+        },
+        {
+          "evidence": "skills/student-learning/transfer-bridge/SKILL.md:175",
+          "content": "Corrected example dialogues"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2785,
+      "file_tokens_o200k": 3410,
+      "mcp_prompt_tokens_o200k": 1226,
+      "body_words": 2116,
+      "mcp_prompt_words": 906,
+      "source_sha256": "87b536419939a82c2f4bdef058a3250bc27643d2c4fa0c07bfe8ec871869b2f2",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Near/far distinction; explicit structure comparison; scaffold limitation; student-generated third application.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "unassisted-evidence-checkpoint",
+      "skill_id": "student-learning/unassisted-evidence-checkpoint",
+      "path": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:4",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:64",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:241"
+          ],
+          "assessment": "Clear after-scaffolded-practice trigger; explicitly informal independent-performance evidence."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:92",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:111",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:148"
+          ],
+          "assessment": "Comparable task design, help embargo and assisted/unassisted tagging are substantive safeguards."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:117",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:203",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:205"
+          ],
+          "assessment": "Example evaluates before collecting post-attempt confidence, contrary to Step4; distinguish post-attempt from post-feedback confidence in schema and transcript."
+        },
+        "C4": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:64",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:68",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:245"
+          ],
+          "assessment": "Correctly labels design extrapolation and single-item limits; no durable-learning claim from this one result."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:111",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:148",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:154",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:247"
+          ],
+          "assessment": "Limitations permit calmer deferral but operational prompt says no help regardless of stuckness; add explicit pause/withdraw branch without falsifying independence tag."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:166",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:169",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:170"
+          ],
+          "assessment": "Separate independent attempt, actual gap and follow-up reflection are useful study evidence."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:111",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:148",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:247"
+          ],
+          "assessment": "Tag validity can be protected by ending/tagging assisted, without requiring distressed learners to continue; accommodation/access support must be distinguished from target-skill hints."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:175",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:221",
+            "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:239"
+          ],
+          "assessment": "Two long chemistry scenarios can be reference-only after aligning confidence timing; exact independent-tag rule must stay core."
+        }
+      },
+      "preserve": [
+        "Evidence/learning distinction; explicit Bastani extrapolation; comparable new task; tag contamination rule; single-point caution."
+      ],
+      "proposed_change": [
+        "Add voluntary stop/defer or assisted-resume option and define allowed access accommodations; retain honest tagging. Align confidence timing and provide actual result rather than prefilled completed metadata when checkpoint was skipped."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:64",
+          "instruction": "One current-performance observation, no durable-learning inference"
+        },
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:92",
+          "instruction": "Generate comparable solvable task"
+        },
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:101",
+          "instruction": "Keep help out of independent window"
+        },
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:148",
+          "instruction": "Relabel any assisted attempt"
+        },
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:245",
+          "instruction": "Do not generalize from one item"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:175",
+          "content": "Complete chemistry dialogues"
+        },
+        {
+          "evidence": "skills/student-learning/unassisted-evidence-checkpoint/SKILL.md:66",
+          "content": "Extended evidence history with citations retained in compact form"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2987,
+      "file_tokens_o200k": 3600,
+      "mcp_prompt_tokens_o200k": 1390,
+      "body_words": 2247,
+      "mcp_prompt_words": 1075,
+      "source_sha256": "460a4d6d32b618859b5bc9de8fb148c97b5106d0b0139d6ecb6167536b808465",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Evidence/learning distinction; explicit Bastani extrapolation; comparable new task; tag contamination rule; single-point caution.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "weekly-agency-review",
+      "skill_id": "student-learning/weekly-agency-review",
+      "path": "skills/student-learning/weekly-agency-review/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:4",
+            "skills/student-learning/weekly-agency-review/SKILL.md:69",
+            "skills/student-learning/weekly-agency-review/SKILL.md:241"
+          ],
+          "assessment": "Weekly or enough-session trigger is explicit and makes sense beyond one course."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:106",
+            "skills/student-learning/weekly-agency-review/SKILL.md:109",
+            "skills/student-learning/weekly-agency-review/SKILL.md:127",
+            "skills/student-learning/weekly-agency-review/SKILL.md:134"
+          ],
+          "assessment": "Learner interprets real session patterns before coach analysis and sets a strategy goal."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:82",
+            "skills/student-learning/weekly-agency-review/SKILL.md:91",
+            "skills/student-learning/weekly-agency-review/SKILL.md:155"
+          ],
+          "assessment": "No-data routes alternate between goal-setting and reconstruction; require clear provenance for actual records versus recalled estimates and avoid numerical trends from guesses."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:117",
+            "skills/student-learning/weekly-agency-review/SKILL.md:123",
+            "skills/student-learning/weekly-agency-review/SKILL.md:125",
+            "skills/student-learning/weekly-agency-review/SKILL.md:239"
+          ],
+          "assessment": "Causal caution exists, but scripted interpretations infer consolidation, scaffold dependence or abstractness from sparse unlike tasks. Mark these as hypotheses and check task comparability."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:109",
+            "skills/student-learning/weekly-agency-review/SKILL.md:128",
+            "skills/student-learning/weekly-agency-review/SKILL.md:134",
+            "skills/student-learning/weekly-agency-review/SKILL.md:171"
+          ],
+          "assessment": "Learner interpretation and own strategy goal preserve agency; resistance has a quick exit."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:183",
+            "skills/student-learning/weekly-agency-review/SKILL.md:235"
+          ],
+          "assessment": "Portable review summary and single confirmed strategy goal are useful when evidence exists."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:35",
+            "skills/student-learning/weekly-agency-review/SKILL.md:82",
+            "skills/student-learning/weekly-agency-review/SKILL.md:237"
+          ],
+          "assessment": "Longitudinal learner records and explicit storage-service suggestions lack consent/minimization/access/deletion boundaries. The skill does not itself implement storage; require host responsibility and a local summary fallback."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/student-learning/weekly-agency-review/SKILL.md:71",
+            "skills/student-learning/weekly-agency-review/SKILL.md:193",
+            "skills/student-learning/weekly-agency-review/SKILL.md:219"
+          ],
+          "assessment": "Full genetics script repeats the workflow and overstates the inferred cause; move corrected transcript and theory narrative to references."
+        }
+      },
+      "preserve": [
+        "Interpret-before-analysis; strategy rather than vague effort goal; first-review fallback; cadence by accumulated evidence."
+      ],
+      "proposed_change": [
+        "Distinguish observed records from recalled estimates; add minimum comparability/provenance check and tentative alternative explanations. Add a short data-handling boundary, no automatic persistence, and learner review of retained summary."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:89",
+          "instruction": "First-review goal-setting fallback"
+        },
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:104",
+          "instruction": "Present real data and ask learner interpretation"
+        },
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:132",
+          "instruction": "Learner-set strategy goal"
+        },
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:183",
+          "instruction": "Structured summary"
+        },
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:239",
+          "instruction": "No causal attribution from trends alone"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:71",
+          "content": "Detailed research prose"
+        },
+        {
+          "evidence": "skills/student-learning/weekly-agency-review/SKILL.md:193",
+          "content": "Full genetics transcript"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 2860,
+      "file_tokens_o200k": 3519,
+      "mcp_prompt_tokens_o200k": 1476,
+      "body_words": 2163,
+      "mcp_prompt_words": 1104,
+      "source_sha256": "08082d91b2873907dbbce27c33fd5def5d928fa029c1425583aae03649b9cc65",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Interpret-before-analysis; strategy rather than vague effort goal; first-review fallback; cadence by accumulated evidence.",
+        "permitted_correction": ""
+      }
+    }
+  ]
+}

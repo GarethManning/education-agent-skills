@@ -1,4 +1,7 @@
 # Codex Compatibility Audit
+
+> Historical record: counts, proposed layouts and “v2/1.0” standards claims below describe an earlier project state. For the current source/portable contract and verified limits, use the [developer guide](docs/AGENT_SKILLS.md) and [22 October 2026 build receipt](docs/audits/agent-skills-build-verification-2026-10-22.md). This notice preserves the historical text.
+
 **Date:** 2026-05-10  
 **Scope:** Read-only audit of current repo structure vs. OpenAI Codex / agentskills.io requirements.  
 **No files were modified.**

@@ -107,10 +107,14 @@ The following optional context may or may not be provided. Use whatever is avail
 
 **Subject area:** {{subject_area}} — if not provided, infer from the task.
 **Learning objective:** {{learning_objective}} — if not provided, infer from the task.
-**Student profiles:** {{student_profiles}} — if not provided, design for a class at the stated agency level.
+**Student profiles:** {{student_profiles}} — if not provided, use the stated agency level as a provisional starting point and allow different learners/decisions to need different support.
 **Agency dimension:** {{agency_dimension}} — if not provided, scaffold across all five dimensions (topic, process, product, criteria, timeline).
 
-Apply these evidence-based principles:
+Before negotiating choice, state the learning goal, safety boundaries, curriculum/assessment requirements and existing access supports that remain protected. If an objective is inferred, label it for teacher confirmation. Choice must not remove accommodations or change the assessed construct. The five dimensions and four levels below are an adapted planning heuristic informed by the cited research, not a validated Zimmerman taxonomy or fixed progression schedule. Check readiness by dimension and learner; a class need not advance together.
+
+Optional chaining note: self-regulated-learning-strategy-selector and metacognitive-prompt-generator are not supplied library skills. Do not invoke them as dependencies or invent outputs; this scaffold is usable on its own.
+
+Apply these principles:
 
 1. **Five dimensions of agency (adapted from Zimmerman, 2002; Deci & Ryan, 2000):**
    - **Topic:** What aspect of the subject to focus on. Ranges from "everyone studies the same thing" to "students choose their own inquiry question."
@@ -119,21 +123,21 @@ Apply these evidence-based principles:
    - **Criteria:** What counts as success. Ranges from "use this rubric" to "co-construct the criteria."
    - **Timeline:** When to complete each stage. Ranges from "do this in 20 minutes" to "manage your own deadlines."
 
-2. **Progressive release across 4 levels (Zimmerman, 2002):**
+2. **Progressive release across 4 heuristic levels (informed by Zimmerman, 2002):**
    - **Level 1 — Directed:** Teacher makes all decisions. Students follow instructions. (Appropriate when the skill or content is new.)
    - **Level 2 — Guided choice:** Teacher provides 2–3 options for one or two dimensions. Students choose within the structure. ("Choose which cause of WW1 to focus your essay on.")
    - **Level 3 — Structured freedom:** Teacher sets the learning objective and broad parameters. Students decide process, product, or both. ("Demonstrate your understanding of the causes of WW1 in a format of your choice.")
-   - **Level 4 — Negotiated autonomy:** Teacher and students co-construct the task, criteria, and timeline. The teacher sets the learning domain; students shape everything else.
+   - **Level 4 — Negotiated autonomy:** Teacher and students co-construct the task, criteria, and timeline. Students shape the negotiable aspects; required learning goals, safety, access supports and assessment rules remain protected.
 
-3. **Start one level above current (Vygotsky ZPD principle):**
+3. **Offer a manageable next step (a practical progression heuristic):**
    - If students are currently at Level 1, scaffold to Level 2 — not Level 4.
    - Each level should feel like a stretch but achievable.
-   - Moving too many levels at once produces anxiety and poor outcomes.
+   - A large increase in decision load may be unhelpful; adjust from actual planning, use of feedback and learner preference rather than a fixed timetable.
 
 4. **Build safety nets, not safety rails:**
    - Safety rails prevent students from making any mistakes (which removes agency).
    - Safety nets allow students to make mistakes and recover (which builds agency).
-   - For each level: what happens if a student makes a poor choice? The answer should be "they learn from it and adjust" — not "the teacher takes over."
+   - For each level: what happens if a student makes a poor choice? Prefer coaching and recovery over reflexively taking over. Intervene when required for safety, access or protected assessment requirements, explain why, and restore negotiable choice when appropriate.
 
 5. **Shift the teacher's role at each level (Reeve & Tseng, 2011):**
    - Level 1: Director — "Here's what to do."
@@ -147,7 +151,7 @@ Return your output in this exact format:
 
 **Task:** [Summary]
 **Current agency level:** [Where students are]
-**Target agency level:** [Where this scaffold aims to take them]
+**Target agency level:** [Immediate next step; distinguish any later goal and the evidence needed to advance]
 **For:** [Student level]
 
 ### Progressive Release Scaffold
@@ -187,7 +191,7 @@ For each level (starting from current level to target level):
 
 **Task:** History essay on the causes of WW1
 **Current agency level:** Level 1 — Directed (students follow all teacher instructions, ask "What do you want me to do?" when given any choice)
-**Target agency level:** Level 3 — Structured Freedom (students make meaningful decisions about process and product)
+**Target agency level:** Level 2 now; Level 3 is a later option when learners can justify a choice, make a workable plan and use feedback. Different learners may progress at different times.
 **For:** Year 9 History
 
 ### Progressive Release Scaffold
@@ -198,7 +202,7 @@ For each level (starting from current level to target level):
 - **Structured choices offered:** None — this is fully directed.
 - **Teacher role:** Director — "Here's what to do, here's how to do it, here's when to do it."
 - **Teacher language:** "Follow this structure. Include these three causes. Use this paragraph frame."
-- **Safety net:** Not needed — the teacher controls all decisions.
+- **Safety net:** Check understanding and access even at this level; teacher control does not guarantee success.
 
 **Level 2: Guided Choice (First scaffold step — introduce this for the NEXT essay)**
 - **What the teacher decides:** Essay question, paragraph structure (PEEL), word count, the requirement to use evidence.
@@ -208,8 +212,8 @@ For each level (starting from current level to target level):
 - **Teacher language:** "I'm going to give you a choice that historians have to make: you can't write about everything, so you have to decide what's most important. Look at the five causes. Which three do you think best explain why WW1 happened? There's no single right answer — but you'll need to defend your choice with evidence."
 - **Safety net:** If a student freezes ("I don't know which to choose"), say: "OK, let's think about this. Which cause have you found most interesting in our lessons? Start there. You can always change your mind after the first draft." If a student chooses three causes but their essay lacks coherence, provide feedback on the draft: "You've chosen militarism, alliances, and the assassination. How do these three CONNECT to each other? That connection is your argument."
 
-**Level 3: Structured Freedom (Target level — after 2–3 successful Level 2 experiences)**
-- **What the teacher decides:** The learning objective (analyse the causes of WW1 using evidence), the requirement for a coherent argument, the minimum evidence threshold (at least 3 specific pieces of evidence), and the deadline.
+**Level 3: Structured Freedom (Later option — after evidence of readiness, not a fixed number of experiences)**
+- **What the teacher decides:** Whether alternative products fit this task's requirements: if essay construction is assessed, retain the essay and its access supports. Otherwise keep the learning objective (analyse the causes of WW1 using evidence), the requirement for a coherent argument, the minimum evidence threshold (at least 3 specific pieces of evidence), and the deadline.
 - **What the student decides:** Essay question or focus, which causes to include, how to structure the argument, which format to use (essay, annotated timeline with analysis, recorded debate with script), and which sources to prioritise.
 - **Structured choices offered:** "Your task is to demonstrate your understanding of why WW1 happened. You need to construct an argument using at least 3 pieces of historical evidence. Here are your decisions: (1) What specific question will you answer? I've suggested three, or you can write your own: 'Was WW1 inevitable?', 'Which cause was most important?', 'Could WW1 have been prevented?' (2) How will you present your argument? Essay, annotated evidence display, or structured debate script. All formats must include analysis, not just description."
 - **Teacher role:** Facilitator — "What's your plan? Let me know what you need from me."
@@ -220,25 +224,25 @@ For each level (starting from current level to target level):
 
 **Present choices as decisions, not preferences.** "Which do you prefer?" makes choice feel like a consumer decision. "Which of these causes do you think was most significant?" makes choice feel like an intellectual decision. Frame agency as disciplinary practice: "Historians have to decide which evidence matters most — that's what you're doing."
 
-**Limit options at Level 2.** Three to five options is manageable. Ten options overwhelms. Zero options disengages. At Level 2, the teacher curates the choices; at Level 3, students generate their own within broader parameters.
+**Limit options at Level 2.** Three to five options is an illustrative starting range; reduce or expand it based on decision load, accessibility and learner feedback. At Level 2, the teacher curates the choices; at Level 3, students generate their own within broader parameters.
 
-**Make all options educationally equivalent.** At Level 2, any combination of three causes should produce a valid essay. If one combination is clearly better than others, the choice is not genuine — it's a trick question. Design the options so that all routes lead to the learning objective.
+**Make all options educationally equivalent.** At Level 2, each offered route should support a defensible essay. Comparing the strength of different combinations can itself be a genuine disciplinary decision when that is made clear. Design the options so that all routes lead to the learning objective.
 
-**Provide a "planning checkpoint."** At Level 3, require students to submit their plan before beginning. This is NOT the teacher approving their choices (which removes agency). It IS the teacher ensuring the choices will lead to the learning objective and redirecting where necessary: "Your plan is solid — go ahead" or "I can see where you're heading, but your evidence doesn't quite support that argument yet. Can you find one more source?"
+**Provide a "planning checkpoint."** At Level 3, require students to submit their plan before beginning. This is transparent teacher feedback within protected requirements, with genuine student ownership of the negotiable choices. The teacher checks that choices can lead to the learning objective and redirects where necessary: "Your plan is solid — go ahead" or "I can see where you're heading, but your evidence doesn't quite support that argument yet. Can you find one more source?"
 
 ### Common Pitfalls
 
-1. **Moving too fast.** The most common mistake is jumping from Level 1 to Level 3 because the teacher is excited about agency. Students who have spent years being told exactly what to do will not suddenly thrive with open-ended choice. They will freeze, produce lower-quality work, and confirm their own belief that they "can't do it without help." Move one level at a time. Level 2 is the critical transition.
+1. **Moving too fast.** The most common mistake is jumping from Level 1 to Level 3 because the teacher is excited about agency. Open-ended choice may be too large a step for some learners; others may already be ready. Check the plan and learner feedback before increasing decision load. Move one level at a time. Level 2 is the critical transition.
 
 2. **Removing agency after a poor outcome.** If a student makes a poor choice at Level 2 (e.g., chooses three causes that don't connect well) and produces a weak essay, the temptation is to say "Next time, I'll tell you which causes to use." This teaches the student that choice leads to failure. Instead: use the outcome as a learning opportunity. "Your three causes are all valid, but they don't connect to each other. Next time, when you're choosing, ask yourself: 'How do these causes LINK?' That's a historian's skill."
 
 3. **Offering pseudo-choice.** "You can choose any three causes — but you really should choose militarism, alliances, and the assassination" is not agency. If you have a strong opinion about what students should choose, either make the decision yourself (Level 1) or genuinely let them choose (Level 2). Pretending to offer choice while steering is worse than no choice at all — it teaches students that their decisions don't matter.
 
-4. **Neglecting to teach the SKILLS of choosing.** Students at Level 1 have never had to evaluate options and select. They need explicit teaching: "When you're choosing which causes to focus on, consider: which ones have the strongest evidence? Which ones connect to each other? Which one do you find most convincing?" This meta-cognitive coaching is essential at Level 2.
+4. **Neglecting to teach the SKILLS of choosing.** Students needing decision support may benefit from explicit modelling of how to evaluate and select options. They need explicit teaching: "When you're choosing which causes to focus on, consider: which ones have the strongest evidence? Which ones connect to each other? Which one do you find most convincing?" This meta-cognitive coaching is essential at Level 2.
 
 ### Building Toward Independence
 
-This scaffold should be applied repeatedly across different topics and essay types. After 3–4 cycles of Level 2 → Level 3 in History, students will have developed the skills to operate at Level 3 as their default. The next frontier is Level 4 (negotiated autonomy), where students co-construct the assessment criteria: "What should a good WW1 essay include? Let's design the rubric together." This is the ultimate expression of agency — and it requires that students have deep enough subject knowledge to evaluate quality, which is why it comes last.
+This scaffold should be applied repeatedly across different topics and essay types. Review after several tasks (3–4 cycles is an example checkpoint, not an empirical threshold). Advance when a learner can explain their choices, plan within requirements, monitor progress and use feedback; keep or adjust support otherwise. The next frontier is Level 4 (negotiated autonomy), where students co-construct negotiable quality descriptors while preserving mandated criteria: "What should a good WW1 essay include? Let's design the rubric together." This is the ultimate expression of agency — and it requires that students have deep enough subject knowledge to evaluate quality, which is why it comes last.
 
 The long-term goal is not permanent Level 4 in all contexts. Some tasks are appropriately Level 1 (learning a new skill for the first time). Some are Level 4 (independent inquiry projects). Agency is about having the capacity to be self-directed WHEN THE CONTEXT ALLOWS IT — and the judgement to recognise when more structure is needed.
 
@@ -246,8 +250,8 @@ The long-term goal is not permanent Level 4 in all contexts. Some tasks are appr
 
 ## Known Limitations
 
-1. **The scaffold assumes a class moving together.** In practice, some students will be ready for Level 3 while others are still at Level 1. The teacher may need to differentiate agency levels within the same task — some students receiving structured choices while others operate with greater freedom. This is logistically challenging but educationally important.
+1. **Readiness varies within a class and across decisions.** In practice, some students will be ready for Level 3 while others are still at Level 1. The teacher may need to differentiate agency levels within the same task — some students receiving structured choices while others operate with greater freedom. This is logistically challenging but educationally important.
 
-2. **Agency scaffolding takes multiple cycles to show results.** A single experience of Level 2 choice will not transform dependent learners into self-directed ones. The scaffold must be repeated across multiple tasks and topics, with consistent teacher language and gradually opening choice architecture. This is a term-long or year-long project, not a single lesson intervention.
+2. **Agency scaffolding takes multiple cycles to show results.** A single experience of Level 2 choice will not transform dependent learners into self-directed ones. Repeated practice and feedback may be useful across tasks. Duration and progression depend on context; no fixed number of cycles or term/year schedule establishes independence.
 
 3. **Some curriculum contexts constrain agency.** In subjects with high-stakes examinations and prescribed content, the dimensions available for student choice may be limited. A student studying for a specific exam cannot choose to study different content. In these contexts, agency can still be scaffolded in the process and product dimensions, even when topic is fixed.

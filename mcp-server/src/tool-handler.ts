@@ -3,17 +3,17 @@ import type { LoadedSkill } from "./types.js";
 type ToolResult = { content: Array<{ type: "text"; text: string }> };
 
 export function assemblePrompt(skill: LoadedSkill, args: Record<string, unknown>): string {
-  let prompt = skill.prompt;
-
-  // Replace {{placeholder}} tokens with provided values
+  const values = new Map<string, string>();
   for (const [key, value] of Object.entries(args)) {
-    const placeholder = new RegExp(`\\{\\{${key}\\}\\}`, "gi");
     const strValue = Array.isArray(value) ? JSON.stringify(value) : String(value);
-    prompt = prompt.replace(placeholder, strValue);
+    // Preserve the first matching case-insensitive key, as before.
+    if (!values.has(key.toLowerCase())) values.set(key.toLowerCase(), strValue);
   }
-
-  // Strip any remaining {{placeholders}} for optional params not provided
-  prompt = prompt.replace(/\{\{[^}]+\}\}/g, "[not provided]");
+  // Only original tokens are substituted. Callback results are literal: dollar
+  // replacement patterns and tokens inside supplied text are never re-parsed.
+  const prompt = skill.prompt.replace(/\{\{([^}]+)\}\}/g, (_token, key: string) =>
+    values.get(key.toLowerCase()) ?? "[not provided]",
+  );
 
   // Build an input summary for any placeholders that weren't in the template
   // (some prompts use different placeholder conventions)

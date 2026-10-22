@@ -71,11 +71,11 @@ tags: ["belonging", "inclusion", "classroom-culture", "relationships", "equity",
 
 ## What This Skill Does
 
-Generates specific, implementable classroom practices that build belonging for all students — with particular attention to students who are most likely to experience belonging uncertainty (new students, minority students, students with SEN, EAL students, students transitioning between schools). The critical insight from Walton & Cohen's research is that belonging is not a personality trait — it is a perception that is highly sensitive to environmental cues. Small signals from the classroom environment ("You matter here," "People like you succeed here," "Difficulty is normal, not a sign you don't belong") can have disproportionate effects on engagement, persistence, and achievement. The output includes specific practices (not generic advice like "be welcoming"), language guides (what to say and what to avoid), integration into existing routines (so belonging-building doesn't require extra time), and monitoring indicators (how to know it's working). AI is specifically valuable here because belonging research identifies subtle environmental cues that most teachers don't consciously design for — and because the practices that build belonging for marginalised students often benefit ALL students.
+Generates specific, implementable classroom practices that build belonging for all students — with particular attention to students who are most likely to experience belonging uncertainty (new students, minority students, students with SEN, EAL students, students transitioning between schools). The critical insight from Walton & Cohen's research is that belonging is not a personality trait — it is a perception that is highly sensitive to environmental cues. Small signals from the classroom environment ("You matter here," "People like you succeed here," "Difficulty is normal, not a sign you don't belong") can have disproportionate effects on engagement, persistence, and achievement. The output includes specific practices (not generic advice like "be welcoming"), language guides (what to say and what to avoid), integration into existing routines (with preparation and follow-up costs made explicit), and monitoring indicators (how to know it's working). AI is specifically valuable here because belonging research identifies subtle environmental cues that most teachers don't consciously design for — and because the practices that build belonging for marginalised students often benefit ALL students.
 
 ## Evidence Foundation
 
-Walton & Cohen (2011) demonstrated that a single, brief belonging intervention — normalising the worry that "people like me don't belong here" — closed the achievement gap between Black and White students by 52% over three years. The mechanism is not complicated: when students worry they don't belong, they interpret setbacks as confirming evidence ("I got a low mark because I don't fit in here"). When that worry is addressed, the same setback is interpreted as a normal part of learning ("Everyone struggles sometimes"). Baumeister & Leary (1995) established belongingness as a fundamental human need — as basic as food and safety. When the need is unmet, cognitive resources are diverted from learning to belonging-monitoring: "Does the teacher like me? Do the other students accept me? Am I welcome here?" This monitoring consumes working memory and attention that should be directed toward learning. Goodenow (1993) found that classroom belonging predicted motivation, effort, and achievement in early adolescence — students who felt they belonged tried harder, persisted longer, and learned more. Yeager & Walton (2011) showed that social-psychological interventions (belonging, growth mindset, purpose) are most effective when they are "stealthy" — embedded in normal classroom practice rather than announced as special programmes. Murphy & Zirkel (2015) extended this to demonstrate that anticipated belonging (expecting to belong vs. expecting not to) affects students' choices before they even arrive — students who anticipate not belonging are less likely to choose challenging courses, join clubs, or seek help.
+Walton & Cohen (2011) studied a specific brief intervention with college students; its reported achievement-gap result is not an effect estimate for these school classroom routines. Transfer to this setting is a design inference to check, not a promised reduction. The mechanism is not complicated: when students worry they don't belong, they interpret setbacks as confirming evidence ("I got a low mark because I don't fit in here"). When that worry is addressed, the same setback is interpreted as a normal part of learning ("Everyone struggles sometimes"). Baumeister & Leary (1995) established belongingness as a fundamental human need — as basic as food and safety. When the need is unmet, cognitive resources are diverted from learning to belonging-monitoring: "Does the teacher like me? Do the other students accept me? Am I welcome here?" This monitoring consumes working memory and attention that should be directed toward learning. Goodenow (1993) found that classroom belonging predicted motivation, effort, and achievement in early adolescence — students who felt they belonged tried harder, persisted longer, and learned more. Yeager & Walton (2011) showed that social-psychological interventions (belonging, growth mindset, purpose) are most effective when they are "stealthy" — embedded in normal classroom practice rather than announced as special programmes. Murphy & Zirkel (2015) extended this to demonstrate that anticipated belonging (expecting to belong vs. expecting not to) affects students' choices before they even arrive — students who anticipate not belonging are less likely to choose challenging courses, join clubs, or seek help.
 
 ## Input Schema
 
@@ -95,7 +95,7 @@ Optional (injected by context engine if available):
 ```
 You are an expert in belonging, classroom culture, and social-psychological interventions in education, with deep knowledge of Walton & Cohen's (2011) belonging intervention research, Baumeister & Leary's (1995) belongingness theory, Goodenow's (1993) work on classroom belonging, and Yeager & Walton's (2011) principles for effective social-psychological interventions. You understand that belonging is a perception shaped by environmental cues — and that teachers can deliberately design those cues.
 
-IMPORTANT: Belonging interventions are most effective when they are "stealthy" (Yeager & Walton, 2011) — embedded in normal classroom routines, not announced as special programmes. Do NOT recommend singling out students who seem isolated or making belonging the explicit topic of a lesson. This approach often backfires because it draws attention to the very belonging threat it's trying to address. Instead, design practices that communicate belonging to everyone, with particular benefit to those who need it most.
+IMPORTANT: Embed routine practices unobtrusively (informed by Yeager & Walton, 2011) — embedded in normal classroom routines, not announced as special programmes. Do not publicly single out a learner as isolated. This does not prohibit voluntary discussion of belonging or explicit, respectful individual support. This approach often backfires because it draws attention to the very belonging threat it's trying to address. Instead, design practices that communicate belonging to everyone, with particular benefit to those who need it most.
 
 IMPORTANT: Belonging practices must be genuine, not performative. Students — especially adolescents — can detect inauthenticity. "Forced fun" activities that feel artificial will be counterproductive. The practices should feel like a natural part of how the classroom operates.
 
@@ -110,14 +110,16 @@ The following optional context may or may not be provided. Use whatever is avail
 **Subject area:** {{subject_area}} — if not provided, infer from the context.
 **Student profiles:** {{student_profiles}} — if not provided, design for the stated belonging concern.
 **Current practices:** {{current_practices}} — if not provided, design from a baseline of standard classroom practice.
-**Time available:** {{time_available}} — if not provided, design practices that fit within existing lesson time (no extra time required).
+**Time available:** {{time_available}} — if absent, prioritise small routine changes and state preparation/check-in time rather than claiming no cost.
 
-Apply these evidence-based principles:
+Check learners' own views privately and voluntarily, including preferred communication, access supports and safe grouping. Quietness, eye contact, speech or arrival patterns are ambiguous observations, not belonging scores or diagnoses. Do not withhold needed help to avoid stigma. Suspected bullying, discrimination or unsafe relationships require the appropriate school protective/pastoral response; do not normalise harm as something everyone must endure.
+
+Apply these principles:
 
 1. **Normalise difficulty (Walton & Cohen, 2011):**
-   - When students struggle, the message must be "Struggling is normal — everyone finds this hard at first" not "You need extra help" (which can signal "You don't belong in this group").
+   - Normalise learning difficulty without claiming everyone struggles identically. Offer needed help respectfully: "You belong here; let's find the support that helps you access this task."
    - Use stories of struggle: "When I first learned this, I found it confusing too" or "Last year's class also found this challenging at first."
-   - Difficulty should be framed as UNIVERSAL, not individual.
+   - Difficulty does not define who belongs. Acknowledge individual needs and retain accommodations without public labelling.
 
 2. **Signal that "people like you" succeed here (Murphy & Zirkel, 2015):**
    - Students need to see examples of people like them succeeding in this subject and classroom.
@@ -127,7 +129,7 @@ Apply these evidence-based principles:
 3. **Create structured interaction (Goodenow, 1993):**
    - Isolated students rarely self-initiate interaction. The teacher must CREATE opportunities for interaction through structured pair/group work.
    - Structure is essential: "Talk to your partner about..." gives isolated students permission to interact without the social risk of initiating.
-   - Rotate partnerships regularly — don't allow self-selection (which reinforces existing cliques) but don't make it obvious that you're engineering relationships.
+   - Use structured pairing with private learner input on safety and access. Rotation and bounded self-selection are options; never pair a learner with someone unsafe or remove a trusted support merely to rotate.
 
 4. **Build belonging through contribution, not just inclusion (Yeager & Walton, 2011):**
    - Being included (having a seat, being allowed to participate) is not the same as belonging (feeling valued, needed, important to the group).
@@ -136,7 +138,7 @@ Apply these evidence-based principles:
 
 5. **Monitor and adjust (Goodenow, 1993):**
    - Belonging is not built in one lesson. It requires consistent signals over time.
-   - Watch for indicators: who speaks in class, who makes eye contact, who arrives willingly vs. reluctantly, who is chosen for group work, who is left out.
+   - Notice participation, exclusion and help-seeking in context, then check the learner's perspective. Do not interpret eye contact, quietness or arrival alone as belonging; culture, disability, language and practical barriers may affect them.
 
 Return your output in this exact format:
 
@@ -168,7 +170,7 @@ For each practice (4–6):
 
 ### Monitoring Indicators
 
-[What to watch for to know whether belonging is improving — observable signs, not survey data]
+[Contextual observations plus optional private learner feedback; include access, exclusion and safety checks without turning behaviour into belonging scores]
 
 **Self-check before returning output:** Verify that (a) practices are specific and implementable, not generic advice, (b) practices are "stealthy" — embedded in normal routines, not announced as belonging programmes, (c) practices benefit all students while particularly addressing the stated concern, (d) no practice singles out or draws attention to isolated students, and (e) the language guide distinguishes belonging-building language from belonging-threatening language.
 ```
@@ -187,31 +189,31 @@ For each practice (4–6):
 ### Recommended Practices
 
 **Practice 1: Structured Pair Talk With Rotating Partners**
-- **What to do:** At least twice per lesson, use "talk to your partner" — but ASSIGN partners rather than letting students choose. Use a seating plan that changes every 2 weeks. Pair isolated students with warm, socially confident students (not other isolated students — this reinforces isolation rather than building bridges). Use a timer (90 seconds) and a specific prompt: "Tell your partner one thing you noticed about the opening of this text."
+- **What to do:** At least twice per lesson, use "talk to your partner" — but ASSIGN partners rather than letting students choose. Use a seating plan reviewed with private safety/access preferences; two-week rotation is an option, not a rule. Pair for compatible task access and safe relationships, without classifying students as socially confident/isolated. Offer an adjustable 90-second talk/write interval and a specific prompt: "Tell your partner one thing you noticed about the opening of this text."
 - **When to do it:** After any question that requires thinking. Replace "hands up" (which lets 4–5 students dominate) with "talk to your partner first, then I'll ask some of you to share."
-- **Why it builds belonging:** Structured pairing creates interaction without social risk. The student doesn't have to choose who to talk to (anxiety-inducing for isolated students), the task is clear (no ambiguity about what to say), and the timer provides a safe endpoint. Over 2-week rotations, every student will have worked with multiple classmates — building the low-level familiarity that is the foundation of belonging.
-- **What it looks like when it's working:** Isolated students begin talking to their assigned partner without hesitation. After several weeks, you may notice students chatting briefly before or after the structured task. This is the belonging signal — they've moved from "assigned interaction" to "voluntary interaction."
+- **Why it builds belonging:** Structured pairing can lower the initiation demand, but check safety and learner preference; social risk is not removed by assigning a partner. The student doesn't have to choose who to talk to (anxiety-inducing for isolated students), the task is clear (no ambiguity about what to say), and the timer provides a safe endpoint. Over 2-week rotations, every student will have worked with multiple classmates — building the low-level familiarity that is the foundation of belonging.
+- **What it looks like when it's working:** Isolated students begin talking to their assigned partner without hesitation. After several weeks, you may notice students chatting briefly before or after the structured task. This is a possible opening for private learner feedback, not proof of belonging; quiet or nonverbal participation can also be meaningful.
 
 **Practice 2: Contribution Tokens**
-- **What to do:** During group discussion or group work, give each group member a role that the group cannot complete without: Reader (reads the text aloud), Recorder (writes the group's ideas), Reporter (shares with the class), Challenger (asks "But what about...?"). Rotate roles across lessons. Do NOT assign isolated students to "Reporter" early on — start them with Reader or Recorder (lower social exposure) and move to Reporter once they are comfortable.
+- **What to do:** During group discussion or group work, give each group member a role that the group cannot complete without: Reader (reads the text aloud), Recorder (writes the group's ideas), Reporter (shares with the class), Challenger (asks "But what about...?"). Rotate roles across lessons. Offer accessible roles and private choice: reading aloud or recording can be demanding too. Written/nonverbal contributions, assistive tools and a pass on public reporting remain available; do not assume a fixed role progression.
 - **When to do it:** Every time group work happens.
 - **Why it builds belonging:** Belonging is built through CONTRIBUTION (Yeager & Walton, 2011). When a student has a role the group depends on, they shift from "tolerated presence" to "valued member." The role makes their contribution visible without requiring them to self-advocate.
 - **What it looks like when it's working:** Isolated students begin taking ownership of their role. Group members start addressing the isolated student by name: "What did you write down?" (which signals they are needed). The student begins to volunteer for roles rather than waiting to be assigned.
 
 **Practice 3: Normalising Difficulty Through Story**
-- **What to do:** When introducing a challenging task, briefly normalise the difficulty: "This is one of the hardest things in Year 7 English — every year, students find this tricky at first. By the end of the unit, you'll look back and wonder why it seemed so hard. But right now, if it feels confusing, that's completely normal." Do this BEFORE students attempt the task, not after they've failed.
+- **What to do:** When introducing a challenging task, briefly normalise the difficulty: "This is one of the hardest things in Year 7 English — every year, students find this tricky at first. We will practise it and check which support helps. But right now, if it feels confusing, that's completely normal." Do this BEFORE students attempt the task, not after they've failed.
 - **When to do it:** At the start of any challenging new concept or task.
 - **Why it builds belonging:** Walton & Cohen (2011) showed that students who worry about belonging interpret difficulty as evidence they don't belong ("I'm struggling because I'm not meant to be here"). Normalising difficulty pre-empts this: difficulty becomes evidence of the task being hard (universal) rather than evidence of the student not belonging (individual). The phrase "every year" is important — it signals that struggling students are part of a normal pattern, not outliers.
 - **What it looks like when it's working:** Students begin to say things like "This is hard" without shame — they've internalised that difficulty is expected, not threatening. Students who would previously shut down when stuck start asking for help instead — because asking for help no longer feels like admitting they don't belong.
 
 **Practice 4: Name-Rich Classroom**
-- **What to do:** Use students' names constantly and correctly. Learn them within the first week (use a seating plan photograph). Use names when asking questions ("Aisha, what did you think?"), when giving feedback ("That's a really interesting point, Marcus"), when greeting students at the door ("Morning, Priya — glad you're here"), and when narrating positive behaviour ("I can see Leon has already started annotating the text").
+- **What to do:** Use students' names constantly and correctly. Learn preferred names and pronunciation using existing approved records; do not create a new photo record for this routine. Use names when asking questions ("Aisha, what did you think?"), when giving feedback ("That's a really interesting point, Marcus"), when greeting students at the door ("Morning, Priya — glad you're here"), and when narrating positive behaviour ("I can see Leon has already started annotating the text").
 - **When to do it:** Every interaction, every lesson.
 - **Why it builds belonging:** A student's name is the most basic signal of being known. In primary school, teachers knew every student's name. In secondary, students can go weeks without hearing a teacher use their name. For isolated students, hearing their name — spoken warmly, in a positive context — is a direct signal: "You are seen. You are known. You exist in this room."
-- **What it looks like when it's working:** Students make eye contact when you say their name. Students respond more readily when addressed by name than when addressed as "you" or "everyone." Isolated students begin to seem less invisible — they look up, they engage, they exist in the social space of the classroom.
+- **What it looks like when it's working:** Students report that the teacher uses their preferred name respectfully; eye contact is not required. Students respond more readily when addressed by name than when addressed as "you" or "everyone." Isolated students begin to seem less invisible — check their own view rather than inferring inclusion from gaze or visible speech.
 
 **Practice 5: Exit Routines That Include Everyone**
-- **What to do:** End every lesson with a 30-second routine that includes every student: a quick round ("One word to describe what you learned today — go round the table"), a written exit ticket that the teacher reads and responds to (a personal connection), or a "3-2-1" (3 things learned, 2 questions, 1 thing you found interesting — written, not spoken). Respond to exit tickets with brief personal comments: "Great question, Fatima — we'll explore that next lesson."
+- **What to do:** End every lesson with a 30-second routine that includes every student: an optional spoken/written/nonverbal response (with a pass on public sharing), a written exit ticket that the teacher reads and responds to (a personal connection), or a "3-2-1" (3 things learned, 2 questions, 1 thing you found interesting — written, not spoken). Respond to exit tickets with brief personal comments: "Great question, Fatima — we'll explore that next lesson."
 - **When to do it:** Last 2 minutes of every lesson.
 - **Why it builds belonging:** An exit routine that touches every student ensures that no one leaves invisible. The teacher's personal response ("Great question, Fatima") is a belonging signal — it says "I read what you wrote. Your thoughts matter to me." For isolated students, this may be the only personal interaction they have with the teacher in a lesson.
 - **What it looks like when it's working:** Students begin writing more detailed exit tickets (they know the teacher reads them). Students who were previously reluctant to share begin contributing to the round. The routine becomes something students expect — and its absence is noticed.
@@ -222,37 +224,34 @@ For each practice (4–6):
 - "In this class, we all..." — signals group membership. "In this class, we all make mistakes — that's how we learn."
 - "I noticed that..." — signals being seen. "I noticed you chose an unusual quotation — tell me why."
 - "That's a really interesting way to think about it" — signals that the student's perspective has VALUE, not just correctness.
-- "Everyone found this hard last year too" — normalises difficulty. Universal, not individual.
-- "What do you think?" (addressed to a specific student by name, after pair talk) — invites contribution after they've had time to prepare. This is safe because they've already rehearsed their answer with a partner.
+- "This can be challenging, and support is available" — normalises difficulty without inventing a class history or denying individual needs.
+- "What do you think?" (addressed to a specific student by name, after pair talk) — invites contribution after they've had time to prepare. Prior rehearsal may help; a pass or written response remains available and safety must not be assumed.
 - "We need your ideas on this" — signals that the student's contribution is needed, not just tolerated.
 
 **Phrases to avoid:**
 - "Come on, don't be shy" — labels the student as shy (an identity) rather than addressing the environment (a condition). Belonging is about the environment, not the person.
-- "Does anyone want to...?" — self-selection privileges confident students and forces isolated students to publicly decide not to participate. Use structured turns instead.
+- "Does anyone want to...?" — self-selection privileges confident students and forces isolated students to publicly decide not to participate. Use structured invitations with a pass or accessible response choice where suitable.
 - "You should try to make more friends" — makes belonging the student's responsibility. Belonging is an environmental design problem, not a social skills problem.
 - "I know this is hard for some of you" — divides the class into those who find it hard and those who don't. Use "this is hard" (universal) instead.
 - "Well done for trying" (when the student failed) — patronising. Suggests the teacher expected failure. "That's not quite right yet — here's how to get there" is more respectful.
 
 ### Routine Integration
 
-These practices require NO additional time:
-- **Pair talk** replaces "hands up" — same time, better participation.
-- **Contribution roles** replace unstructured group work — same time, more equitable.
+Prioritise one or two routine changes first. They have preparation and follow-up costs:
+- **Pair talk** replaces "hands up" — may replace existing discussion time; check access and usefulness.
+- **Contribution roles** replace unstructured group work — requires role preparation and access checks.
 - **Normalising difficulty** takes 15 seconds before a task — no extra time.
 - **Name use** is embedded in existing interactions — no extra time.
-- **Exit routine** takes 2 minutes, replacing "pack up and go" — minimal extra time, significant belonging payoff.
+- **Exit routine** takes 2 minutes, replacing "pack up and go" — plus time to read/respond to tickets; benefit must be checked rather than promised.
 
-The key shift is not ADDING belonging activities but REDESIGNING existing routines so they build belonging. This is Yeager & Walton's (2011) "stealth" principle: the most effective belonging interventions don't look like belonging interventions. They look like good teaching.
+The key shift is not ADDING belonging activities but REDESIGNING existing routines so they build belonging. This is Yeager & Walton's (2011) "stealth" principle: routine integration can avoid public labelling; it does not justify hiding information or withholding explicit support. They look like good teaching.
 
 ### Monitoring Indicators
 
-Watch for these changes over 4–6 weeks:
-1. **Arrival behaviour:** Do isolated students arrive on time, or are they still avoiding entry? Do they hover outside or walk in?
-2. **Body language during pair talk:** Do they face their partner, make eye contact, speak at normal volume? Or do they turn away, whisper, look at the teacher for rescue?
-3. **Voluntary interaction:** Do isolated students ever speak to another student unprompted — before the lesson, during transition, at the end?
-4. **Task engagement:** Do they start tasks within the first minute, or do they delay? Do they write/work/annotate, or sit idle?
-5. **Response to name:** Do they look up when you use their name? Do they seem surprised (been invisible) or comfortable (used to being seen)?
-6. **Help-seeking:** Do they ask for help when stuck, or do they sit silently? Help-seeking requires a basic level of belonging — the belief that the teacher will respond and won't judge.
+Choose a review point with the class context in mind; 4–6 weeks is an illustrative observation window, not an evidence-based deadline. Ask optional private questions such as "Can you contribute in a way that works for you?" and "Is there anything making this group feel unsafe?" Act promptly on safety concerns rather than waiting for the review.
+
+Notice access to tasks, meaningful contributions, exclusion and requests for help. Compare observations with learner feedback and alternative explanations: late arrival may reflect transport, quietness may reflect preference, and eye contact may be uncomfortable. Do not score belonging from these behaviours or require speaking, looking up or making friends as proof of improvement.
+
 
 ---
 
@@ -260,6 +259,6 @@ Watch for these changes over 4–6 weeks:
 
 1. **Belonging interventions are slow-burn, not instant fixes.** The practices above will not transform classroom culture in a week. Belonging is built through consistent signals over time — weeks and months, not days. Teachers who expect immediate results may abandon effective practices too early.
 
-2. **Some belonging threats originate outside the classroom.** A student being bullied at break time, experiencing family difficulties, or struggling with identity will not have their belonging needs fully met by classroom practices alone. The practices above address the classroom environment, which is within the teacher's control — but the teacher should also connect with pastoral systems for students whose belonging needs extend beyond the classroom.
+2. **Some belonging threats originate outside the classroom.** A student being bullied at break time, experiencing family difficulties, or struggling with identity will not have their belonging needs fully met by classroom practices alone. Connect with appropriate pastoral/protective systems for bullying or discrimination inside or outside class; ordinary routines are not a substitute for action to stop harm.
 
-3. **Belonging practices must be genuine.** If a teacher uses students' names but their tone is cold, or assigns roles but doesn't value the contributions, the practices become performative — and students will detect the inauthenticity. The practices work because they communicate genuine regard. They cannot be implemented mechanically without the underlying disposition.
+3. **Belonging practices must be genuine.** If a teacher uses students' names but their tone is cold, or assigns roles but doesn't value the contributions, the practices become performative — and students will detect the inauthenticity. The practices aim to communicate genuine regard; check learners' experience and change what is not helping. They cannot be implemented mechanically without the underlying disposition.

@@ -71,11 +71,11 @@ tags: ["PERMA", "positive-education", "Seligman", "flourishing", "wellbeing", "l
 
 ## What This Skill Does
 
-Designs a lesson that integrates Seligman's PERMA framework (Positive Emotion, Engagement, Relationships, Meaning, Accomplishment) into academic content — not as a bolt-on wellbeing activity but as an inherent feature of the learning experience. The critical principle is that wellbeing and learning are not separate agendas: a well-designed lesson IS a wellbeing intervention, because genuine learning involves positive emotions (interest, curiosity, satisfaction), deep engagement (flow, absorption), relationships (collaboration, discussion), meaning (connection to something that matters), and accomplishment (the feeling of mastering something difficult). The output is a lesson plan with PERMA elements explicitly mapped to academic activities, plus specific teacher moves that activate each element. AI is specifically valuable here because most teachers intuitively create some PERMA conditions but rarely design for all five systematically — and because the integration of wellbeing into subject content (rather than as a separate "wellbeing lesson") requires both subject expertise and positive psychology knowledge.
+Designs a lesson that integrates Seligman's PERMA framework (Positive Emotion, Engagement, Relationships, Meaning, Accomplishment) into academic content — not as a bolt-on wellbeing activity but as an inherent feature of the learning experience. The critical principle is that wellbeing and learning are not separate agendas: PERMA can serve as a planning lens for opportunities such as positive emotions (interest, curiosity, satisfaction), deep engagement (flow, absorption), relationships (collaboration, discussion), meaning (connection to something that matters), and accomplishment (the feeling of mastering something difficult). The output is a lesson plan with PERMA elements explicitly mapped to academic activities, plus specific teacher moves that activate each element. AI is specifically valuable here because it can help teachers choose the relevant PERMA conditions systematically without requiring all five — and because the integration of wellbeing into subject content (rather than as a separate "wellbeing lesson") requires both subject expertise and positive psychology knowledge.
 
 ## Evidence Foundation
 
-Seligman (2011) proposed the PERMA model of wellbeing: Positive Emotion (experiencing joy, gratitude, interest, hope), Engagement (being absorbed in activities — flow), Relationships (having supportive, meaningful connections), Meaning (being connected to something larger than oneself), and Accomplishment (achieving goals, mastering challenges). He argued that wellbeing is not the absence of illness but the presence of flourishing — and that schools can explicitly teach and design for flourishing alongside academic achievement. Norrish et al. (2013) applied PERMA at Geelong Grammar School in Australia, developing the "Applied Framework for Positive Education" which integrates PERMA into academic lessons, pastoral care, and school culture. Their evaluation showed improvements in both wellbeing and academic engagement. Kern et al. (2015) developed EPOCH (Engagement, Perseverance, Optimism, Connectedness, Happiness), an adolescent-specific measure related to PERMA, demonstrating that these elements predict academic success, life satisfaction, and physical health. White & Kern (2018) provided practical guidance on integrating PERMA into classroom teaching without creating a false choice between wellbeing and academic rigour. Waters (2011) reviewed school-based positive psychology interventions and found that they improve wellbeing, engagement, and academic achievement — with the strongest effects when positive psychology is embedded in academic content rather than taught as a separate subject.
+Seligman (2011) proposed PERMA as a model of wellbeing: Positive Emotion, Engagement, Relationships, Meaning and Accomplishment. Norrish et al. (2013) describe an applied Positive Education framework at Geelong Grammar School; White & Kern (2018) discuss integrating wellbeing and academic teaching. Kern et al. (2015) offer a multidimensional approach to adolescent wellbeing; measurement of related constructs does not validate this lesson design. Waters (2011) reviews school-based positive psychology interventions. Together these sources provide a planning rationale, not proof that a generated PERMA lesson causes wellbeing or academic gains, that embedded approaches always outperform separate teaching, or that findings transfer unchanged across school contexts.
 
 ## Input Schema
 
@@ -95,7 +95,7 @@ Optional (injected by context engine if available):
 ```
 You are an expert in Positive Education and the PERMA framework, with deep knowledge of Seligman's (2011) model of wellbeing, Norrish et al.'s (2013) applied framework from Geelong Grammar School, and White & Kern's (2018) practical integration guidance. You understand that Positive Education does NOT mean "happy lessons" or "avoiding difficult content" — it means designing learning experiences that simultaneously develop academic knowledge AND wellbeing through the five PERMA elements.
 
-IMPORTANT: PERMA elements should be INTEGRATED into the academic content, not bolted on. "Five minutes of gratitude journaling at the start, then a normal lesson" is NOT PERMA-based lesson design. A PERMA-based lesson is one where the academic activities themselves generate positive emotion, engagement, relationships, meaning, and accomplishment. The wellbeing IS the learning; the learning IS the wellbeing.
+IMPORTANT: PERMA elements should be INTEGRATED into the academic content, not bolted on. "Five minutes of gratitude journaling at the start, then a normal lesson" is NOT PERMA-based lesson design. Use PERMA to identify relevant opportunities within academic activity. Learning and wellbeing are related aims with separate evidence; this design is not a clinical intervention or a guarantee of either.
 
 IMPORTANT: Not every lesson needs to hit all five elements equally. Some lessons will naturally emphasise Engagement and Accomplishment (a challenging problem-solving lesson); others will emphasise Relationships and Meaning (a collaborative project connected to real-world issues). Design for the PERMA elements that naturally fit the content — don't force all five into every lesson.
 
@@ -108,15 +108,17 @@ The following optional context may or may not be provided. Use whatever is avail
 
 **Subject area:** {{subject_area}} — if not provided, infer from the lesson content.
 **PERMA focus:** {{perma_focus}} — if not provided, design for the elements that best fit the content.
-**Student profiles:** {{student_profiles}} — if not provided, design for a typical mixed class.
+**Student profiles:** {{student_profiles}} — use relevant aggregated/non-identifying access needs; if absent, offer accessible and low-disclosure options without assuming interests or emotions.
 **Lesson duration:** {{lesson_duration}} — if not provided, assume 50–60 minutes.
 **Current wellbeing concerns:** {{current_wellbeing_concerns}} — if not provided, design for general wellbeing enhancement.
+
+In the mapping, "not targeted in this lesson" with a reason is valid for any element. Retain the learning objective and existing access supports; no emotion or personal disclosure is required. Sensitive/political reflection may use a historical or fictional third-person example, private reflection or a pass, with an accessible academic task still available. Provide seated/written alternatives to movement, debate or public opinion-taking. Check learning from the actual work separately from enjoyment or absorption.
 
 Apply these principles:
 
 1. **Positive Emotion (Seligman, 2011):**
    - Design moments that generate genuine interest, curiosity, surprise, or satisfaction.
-   - Positive emotion is a SIGNAL of meaningful engagement, not a goal in itself.
+   - Positive emotion may accompany engagement; its presence or absence does not establish learning or wellbeing.
    - Avoid forced positivity — "Isn't this fun?" undermines genuine emotion. Let the content create the emotion.
 
 2. **Engagement (Seligman, 2011; Csikszentmihalyi, 1990):**
@@ -151,11 +153,11 @@ Return your output in this exact format:
 
 | PERMA Element | How It's Addressed | Through Which Activity |
 |---|---|---|
-| Positive Emotion | [Specific design feature] | [Activity name/phase] |
-| Engagement | [Specific design feature] | [Activity name/phase] |
-| Relationships | [Specific design feature] | [Activity name/phase] |
-| Meaning | [Specific design feature] | [Activity name/phase] |
-| Accomplishment | [Specific design feature] | [Activity name/phase] |
+| Positive Emotion | [Specific feature, or not targeted with reason] | [Activity name/phase] |
+| Engagement | [Specific feature, or not targeted with reason] | [Activity name/phase] |
+| Relationships | [Specific feature, or not targeted with reason] | [Activity name/phase] |
+| Meaning | [Specific feature, or not targeted with reason] | [Activity name/phase] |
+| Accomplishment | [Specific feature, or not targeted with reason] | [Activity name/phase] |
 
 ### Lesson Plan
 
@@ -189,7 +191,7 @@ Return your output in this exact format:
 | PERMA Element | How It's Addressed | Through Which Activity |
 |---|---|---|
 | Positive Emotion | Curiosity — provoked by the opening dilemma (should you break the law for justice?). Surprise — discovering how radical some methods were. Satisfaction — building a well-supported argument. | Opening dilemma + source analysis |
-| Engagement | Sustained focus during source analysis (clear task, optimal challenge, time pressure). Absorption during debate preparation (personal investment in argument). | Source analysis challenge + structured debate |
+| Engagement | Sustained focus during source analysis (clear task, optimal challenge, adjustable pacing). Possible focus during debate preparation (investment in evidence). | Source analysis challenge + structured debate |
 | Relationships | Collaborative source analysis in pairs. Structured debate requires listening and responding to others' arguments — genuine intellectual exchange, not just taking turns. | Paired source analysis + whole-class debate |
 | Meaning | Direct connection to justice, equality, and rights — issues students care about. The question "Is it ever right to break the law for something you believe in?" connects to their own lives and values. | Opening dilemma + closing reflection |
 | Accomplishment | Clear progress: students move from "I don't know much about suffragettes" to "I can construct an argument about which methods were more effective, using specific historical evidence." Visible in the closing argument they write. | Source analysis cards completed + written closing argument |
@@ -197,9 +199,9 @@ Return your output in this exact format:
 ### Lesson Plan
 
 **Opening — The Dilemma (5 minutes)**
-Display: "Imagine something you believe is deeply unfair — a law that discriminates against a group you belong to. You've tried peaceful protest for 50 years and nothing has changed. Would you break the law to fight for justice? What would you be willing to do?"
+Display a historical question: "What choices did campaigners consider when peaceful methods did not achieve their aims? What evidence might support or challenge each choice?" Do not require students to imagine discrimination against their own group or disclose present political beliefs.
 
-Give students 60 seconds to think silently, then 90 seconds to discuss with a partner. Cold-call 3–4 students: "What would you be willing to do?" Collect a range of responses — some will say "nothing illegal," others will say "whatever it takes." Don't resolve the dilemma — say: "This is exactly the question women faced in the early 1900s. Today, we're going to look at what they actually DID — and whether it worked."
+Give students 60 seconds to think silently, then 90 seconds to discuss with a partner. Invite 3–4 voluntary historical-source responses; offer private writing or a pass on public discussion. Collect a range of responses — some will say "nothing illegal," others will say "whatever it takes." Don't resolve the dilemma — say: "This is exactly the question women faced in the early 1900s. Today, we're going to look at what they actually DID — and whether it worked."
 
 **PERMA activation:** Positive Emotion (curiosity — the dilemma is genuinely provocative); Meaning (connects to justice and personal values); Relationships (pair discussion).
 
@@ -209,16 +211,16 @@ Provide 6 source cards — 3 showing suffragist methods (peaceful petitions, spe
 In pairs, students analyse each source card and complete a comparison grid:
 | Method | What they did | Evidence of impact | Risks and costs |
 
-The task has clear structure (grid to complete), optimal challenge (analysing primary sources is demanding but supported by the format), and a time limit (20 minutes — creates productive urgency).
+The task has clear structure (grid to complete), optimal challenge (analysing primary sources is demanding but supported by the format), and an illustrative 20-minute period, adjusted for access and processing needs without assuming pressure helps everyone.
 
 After 15 minutes, each pair must decide: "Based on your analysis, which approach was MORE effective at winning the vote? You'll need to defend your answer."
 
 **PERMA activation:** Engagement (focused analysis with time pressure); Relationships (collaborative analysis); Accomplishment (completed grid + formed a position).
 
 **Structured Debate (15 minutes)**
-Split the room: suffragist supporters on one side, suffragette supporters on the other. Students physically move to their chosen side (embodied commitment). Each side has 3 minutes to prepare their strongest arguments using evidence from the source cards.
+Split the room: suffragist supporters on one side, suffragette supporters on the other. Students can use seated/written responses, take a provisional position, or evaluate both arguments without disclosing personal views; movement is optional and accessible. Each side has 3 minutes to prepare their strongest arguments using evidence from the source cards.
 
-Structure: Side A presents (2 minutes) → Side B responds (2 minutes) → Side A responds (2 minutes) → Side B presents (2 minutes). Then: "Has anyone changed their mind? If so, move. Explain why."
+Structure: Side A presents (2 minutes) → Side B responds (2 minutes) → Side A responds (2 minutes) → Side B presents (2 minutes). Then invite an optional change of evidence-based interpretation, orally or in writing. Use the remaining four minutes for transitions and concluding responses.
 
 Rules: every argument must cite a specific source. "They were brave" is not an argument. "The hunger strikes in Source 4 generated public sympathy because..." is an argument.
 
@@ -229,7 +231,7 @@ Each student writes independently: "Which approach — suffragist or suffragette
 
 Then, on the back of their paper, a brief reflection (5 minutes): "What did you find most surprising about today's lesson? Did your view change at any point — and if so, what changed it?"
 
-Collect both. The closing argument assesses the learning objective; the reflection activates meta-cognitive awareness and connects the experience to personal meaning.
+Collect the academic argument as learning evidence; the personal reflection can remain private, use a historical/fictional viewpoint or be passed. Do not grade personal wellbeing disclosure.
 
 **PERMA activation:** Accomplishment (a complete argument, written independently, using evidence — students can see what they've achieved); Meaning (the reflection connects learning to personal growth); Positive Emotion (satisfaction of a complete, well-supported piece of work).
 
@@ -237,13 +239,13 @@ Collect both. The closing argument assesses the learning objective; the reflecti
 
 1. **For Positive Emotion:** Let the content do the work. The suffragette movement is inherently dramatic and provocative. Don't over-narrate ("Isn't this fascinating?") — present the sources and let students react. Their genuine curiosity and surprise are more powerful than teacher enthusiasm.
 
-2. **For Engagement:** Maintain time pressure during the source analysis. "You have 15 minutes — I'll give you a 5-minute warning." Time limits create productive urgency that sustains focus. During the debate, stand back — let students argue. Intervene only to enforce the "cite a source" rule.
+2. **For Engagement:** Maintain a clear, adjustable work period during source analysis. "You have 15 minutes — I'll give you a 5-minute warning." Check whether pacing helps or adds unnecessary pressure; retain access arrangements. During the debate, stand back — let students argue. Support reasoning, access, safety and respectful discussion as needed, as well as the "cite a source" rule.
 
 3. **For Relationships:** During pair work, listen to conversations. If a pair is stuck, prompt: "What does Source 3 tell you about public reaction?" If a pair is disagreeing, affirm: "Good — historians disagree about this too. What evidence supports each of your views?"
 
 4. **For Meaning:** In the opening, make the connection to students' lives explicit: "This isn't just history. The question of whether you should break the law for justice is alive today — climate protests, civil rights movements, political activism. What you're learning about the suffragettes is also about how change happens."
 
-5. **For Accomplishment:** At the end of the lesson, before students leave, say: "At the start of this lesson, most of you couldn't name a single suffragette method beyond 'they chained themselves to things.' Now you've analysed primary sources, debated the effectiveness of two different approaches, and written an evidence-based argument. That's a significant piece of historical thinking in 55 minutes."
+5. **For Accomplishment:** At the end of the lesson, before students leave, say: "Look at the argument you have written. Which sources support it, and what would strengthen it? Use the work to identify actual progress rather than assuming what everyone knew at the start."
 
 ### Reflection Prompts
 
@@ -259,4 +261,4 @@ Collect both. The closing argument assesses the learning objective; the reflecti
 
 2. **PERMA is a framework, not a recipe.** The elements interact and overlap: genuine engagement often produces positive emotion, accomplishment builds relationships (shared success), and meaning deepens engagement. The mapping is a design tool, not a checklist — the goal is a lesson that feels coherent, not one that ticks five boxes.
 
-3. **Positive Education research is primarily from privileged school contexts.** The Geelong Grammar implementation (Norrish et al., 2013) occurred in an independent school with significant resources. The principles transfer to all contexts, but the practical constraints differ. A teacher in a high-deprivation school with limited resources may need to adapt the practices — the underlying framework is sound, but the implementation must be context-sensitive.
+3. **Positive Education research is primarily from privileged school contexts.** The Geelong Grammar implementation (Norrish et al., 2013) occurred in an independent school with significant resources. Transfer to other contexts is a design hypothesis, not an established result; resources, culture and access may change what is appropriate. A teacher in a high-deprivation school with limited resources may need to adapt the practices — the underlying framework is sound, but the implementation must be context-sensitive.

@@ -1,6 +1,6 @@
 # Evidence Canon
 
-The research traditions and key studies that ground this skill library. Organised by domain.
+An index of research traditions and selected key studies cited by this skill library, organised by domain. Coverage is selective; this bibliography is not verification of every claim in all 165 skills or validation of their exact agent procedures.
 
 ---
 
@@ -36,7 +36,7 @@ The research traditions and key studies that ground this skill library. Organise
 
 ### Elaborative Interrogation
 - Pressley, M., Wood, E., Woloshyn, V. E., Martin, V., King, A., & Menke, D. (1992). Encouraging mindful use of prior knowledge: Attempting to construct explanatory answers facilitates learning. *Educational Psychologist, 27*(1), 91–109.
-- Woloshyn, V. E., Pressley, M., & Schneider, W. (1994). Elaborative-interrogation and prior-knowledge effects on learning of facts. *Journal of Educational Psychology, 84*(1), 79–89.
+- Woloshyn, V. E., Pressley, M., & Schneider, W. (1992). Elaborative-interrogation and prior-knowledge effects on learning of facts. *Journal of Educational Psychology, 84*(1), 115–124. [ERIC record](https://eric.ed.gov/?id=EJ443903); [DOI](https://doi.org/10.1037/0022-0663.84.1.115).
 - Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students' learning with effective learning techniques. *Psychological Science in the Public Interest, 14*(1), 4–58.
 
 ### Feedback

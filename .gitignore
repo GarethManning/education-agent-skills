@@ -4,3 +4,10 @@ test-results/
 playwright-report/
 skills/curriculum-assessment/threshold-concept-kud-translator/
 .vercel
+
+# Generated portable Agent Skills profile (canonical skills stay under skills/).
+dist/
+__pycache__/
+
+# Isolated maintainer validation environment.
+.venv-standard/

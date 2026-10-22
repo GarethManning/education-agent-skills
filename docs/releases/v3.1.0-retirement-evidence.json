@@ -1,0 +1,42 @@
+{
+  "verified_utc": "2026-10-22T21:37:13.229902+00:00",
+  "projects": [
+    {
+      "name": "mcp-server",
+      "rootDirectory": "mcp-server",
+      "paused": true,
+      "git_link_removed": true
+    },
+    {
+      "name": "education-agent-skills",
+      "rootDirectory": null,
+      "paused": true,
+      "git_link_removed": true
+    }
+  ],
+  "endpoints": [
+    {
+      "url": "https://mcp-server-sigma-sooty.vercel.app/mcp",
+      "status": 503,
+      "platform_error": "DEPLOYMENT_PAUSED"
+    },
+    {
+      "url": "https://mcp-server-sigma-sooty.vercel.app/request-access",
+      "status": 503,
+      "platform_error": "DEPLOYMENT_PAUSED"
+    },
+    {
+      "url": "https://education-agent-skills.vercel.app/",
+      "status": 503,
+      "platform_error": "DEPLOYMENT_PAUSED"
+    },
+    {
+      "url": "https://education-agent-skills.vercel.app/mcp",
+      "status": 503,
+      "platform_error": "DEPLOYMENT_PAUSED"
+    }
+  ],
+  "new_builds_or_deployments_started": 0,
+  "costs_or_usage_reviewed": false,
+  "configuration_and_source_preserved": true
+}
