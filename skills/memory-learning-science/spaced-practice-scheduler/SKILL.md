@@ -15,7 +15,7 @@ version: "1.0"
 evidence_strength: "strong"
 evidence_sources:
   - "Ebbinghaus (1885/1913) — The forgetting curve: exponential decay of memory without review"
-  - "Cepeda et al. (2006) — Meta-analysis of 254 studies on distributed practice: optimal spacing depends on retention interval"
+  - "Cepeda et al. (2006) — Quantitative synthesis of 317 experiments in 184 articles on distributed practice in verbal recall: effective spacing depends on the retention interval"
   - "Kornell & Bjork (2008) — Spacing and interleaving effects on learning"
   - "Carpenter et al. (2012) — Using spacing to enhance diverse forms of learning"
   - "Dunlosky et al. (2013) — Distributed practice rated high-utility learning strategy"
@@ -71,11 +71,11 @@ tags: ["spacing", "memory", "planning", "forgetting-curve", "distributed-practic
 
 ## What This Skill Does
 
-Takes a list of topics and a teaching timeline and generates an optimised review schedule that spaces retrieval opportunities at expanding intervals to combat the forgetting curve. The output is a week-by-week plan showing when to introduce new content and when to revisit previous topics, with specific activity suggestions for each review slot. AI is specifically valuable here because calculating optimal spacing intervals across multiple topics while respecting prerequisite dependencies and timetable constraints is genuinely complex — most teachers default to blocked practice (finish topic A, move to topic B, never return) because the cognitive load of planning spaced schedules manually is too high.
+Takes a list of topics and a teaching timeline and generates a practical review schedule that distributes retrieval opportunities over time, using adaptable expanding intervals as a starting pattern. The output is a week-by-week plan showing when to introduce new content and when to revisit previous topics, with specific activity suggestions for each review slot. AI is specifically valuable here because coordinating review intervals across multiple topics while respecting prerequisite dependencies and timetable constraints is genuinely complex — most teachers default to blocked practice (finish topic A, move to topic B, never return) because the cognitive load of planning spaced schedules manually is too high.
 
 ## Evidence Foundation
 
-Ebbinghaus (1885/1913) first demonstrated that memory follows an exponential decay curve — without review, approximately 70% of new learning is lost within 24 hours. Cepeda et al. (2006) conducted a meta-analysis of 254 studies and established that the optimal gap between study sessions depends on the desired retention interval: roughly 10–20% of the retention interval is optimal (e.g., if you need students to remember something for 30 days, space reviews approximately 3–6 days apart). Carpenter et al. (2012) extended these findings to diverse classroom learning contexts, showing that spaced practice benefits declarative knowledge, procedural skills, and problem-solving. Kornell & Bjork (2008) demonstrated that spacing feels less effective to learners — students rate massed practice as more effective even when spaced practice produces better retention. This means teachers should expect students to initially prefer (and request) the less effective approach. Dunlosky et al. (2013) rated distributed practice as one of only two "high utility" strategies in their comprehensive review.
+Ebbinghaus (1885/1913) documented forgetting under specific experimental conditions; this does not establish a universal percentage of classroom learning lost in 24 hours or one decay function for all material. Cepeda et al. (2006) synthesised 317 experiments in 184 articles on verbal recall. The most effective inter-study gap varied with the retention interval, with longer retention goals generally favouring longer gaps. That result does not establish a universal 10–20% rule or the exact expanding classroom timetable used below. Carpenter et al. (2012) extended these findings to diverse classroom learning contexts, showing that spaced practice benefits declarative knowledge, procedural skills, and problem-solving. Kornell & Bjork (2008) demonstrated that spacing feels less effective to learners — students rate massed practice as more effective even when spaced practice produces better retention. This means teachers should expect students to initially prefer (and request) the less effective approach. Dunlosky et al. (2013) rated distributed practice as one of only two "high utility" strategies in their comprehensive review.
 
 ## Input Schema
 
@@ -106,11 +106,11 @@ The following optional context may or may not be provided. Use whatever is avail
 **Assessment date:** {{assessment_date}} — if provided, ensure all topics have at least one retrieval opportunity in the final week before the assessment. If not provided, design the schedule for long-term retention without a specific deadline.
 **Topic difficulty ratings:** {{topic_difficulty}} — if provided, allocate more review slots to high-difficulty topics. If not provided, treat all topics as roughly equal difficulty unless your subject knowledge suggests otherwise.
 **Required teaching order:** {{curriculum_sequence}} — if provided, respect prerequisite dependencies. If not provided, assume topics can be taught in the order listed.
-**Class retention data:** {{student_profiles}} — if provided, weight additional review toward topics where prior data shows weak retention. If not provided, use standard expanding spacing intervals.
+**Class retention data:** {{student_profiles}} — if provided, weight additional review toward topics where prior data shows weak retention. If not provided, use the provisional expanding pattern below and invite adjustment after the first review.
 
-Apply these evidence-based principles:
+Apply these research-informed principles and labelled scheduling heuristics. Spacing is supported; the exact intervals, minute allocations, maximum gaps and re-teaching thresholds below are practitioner starting points, not validated optima. Do not infer a universal daily forgetting percentage from Ebbinghaus.
 
-1. **Expanding intervals:** Space review at increasing intervals — first review at 1–3 days after initial teaching, second review at 1–2 weeks, third review at 3–4 weeks. This follows Cepeda et al.'s (2006) finding that optimal spacing expands as retention strengthens.
+1. **Adaptable intervals:** As a practical starting pattern, try a first review at 1–3 days after initial teaching, a second at 1–2 weeks, and a third at 3–4 weeks if the timeline permits. Cepeda et al. (2006) relates effective gaps to the intended retention interval; it does not establish this precise sequence or require successively expanding gaps for every learner. Adjust using actual recall, topic demands, timetable and retention goals, explaining departures.
 
 2. **Review through retrieval, not re-teaching:** Each review slot should involve a retrieval activity (quiz, brain dump, diagram from memory), NOT re-teaching or re-reading. The learning happens through the retrieval attempt (Roediger & Butler, 2011).
 
@@ -151,7 +151,7 @@ For each review slot, suggest a specific brief retrieval activity (not "review T
 - What to do when review reveals gaps (re-teach briefly vs. schedule additional retrieval)
 - How to explain the purpose to students (they will feel like spaced practice is less effective — this is normal)
 
-**Self-check before returning output:** Verify that (a) no topic goes more than 3 weeks without a retrieval opportunity, (b) expanding intervals are maintained, (c) harder topics get more review slots, (d) the schedule is realistic given the lessons-per-week constraint, and (e) review activities involve retrieval, not re-reading or re-teaching.
+**Self-check before returning output:** Verify that (a) gaps beyond the suggested 3-week planning target are explained, (b) intervals fit the retention goal and available lessons, with any expanding pattern identified as a heuristic, (c) harder topics get more review slots, (d) the schedule is realistic given the lessons-per-week constraint, and (e) review activities involve retrieval, not re-reading or re-teaching.
 ```
 
 ## Example Output
@@ -175,24 +175,24 @@ For each review slot, suggest a specific brief retrieval activity (not "review T
 | 1 | 3 | Tectonic plates — convection currents | Retrieve: name 3 plate boundary types and one feature of each |
 | 1 | 4 | Earthquakes — causes and focus/epicentre | Retrieve: explain in 3 sentences how convection currents drive plate movement |
 | 1 | 5 | Earthquakes — measuring and effects | Retrieve: draw and label a diagram showing focus, epicentre, and seismic waves |
-| 2 | 1 | Earthquakes — case studies | Retrieve: **Tectonic plates** — 5 free-recall questions on plate boundaries (first spaced review, ~7 days) |
+| 2 | 1 | Earthquakes — case studies | Retrieve: **Tectonic plates** — 5 free-recall questions on plate boundaries (topic review, ~7 days after introduction; earlier starters also retrieved this topic) |
 | 2 | 2 | Volcanoes — formation and types | Retrieve: compare two earthquake case studies from memory — causes, effects, responses |
 | 2 | 3 | Volcanoes — eruption processes | Mixed retrieve: 3 Qs on **tectonic plates** + 2 Qs on **earthquake measurement** |
 | 2 | 4 | Volcanoes — case studies | Retrieve: draw a cross-section of a composite volcano from memory, label 5 features |
 | 2 | 5 | Volcanoes — living with volcanic risk | Retrieve: **Earthquakes** full topic — "Write everything you know about earthquakes in 5 minutes" (brain dump) |
-| 3 | 1 | Weathering & erosion — types of weathering | Mixed retrieve: 4 Qs interleaving **tectonic plates** and **volcanoes** (2 weeks since tectonics — expanding interval) |
+| 3 | 1 | Weathering & erosion — types of weathering | Mixed retrieve: 4 Qs interleaving **tectonic plates** and **volcanoes** (~2 weeks since introduction; also reviewed in Week 2) |
 | 3 | 2 | Weathering & erosion — erosion processes | Retrieve: name and explain 3 types of weathering from memory |
 | 3 | 3 | Weathering & erosion — erosion vs weathering | Retrieve: **Volcanoes** — blank diagram: label volcanic features and explain formation |
 | 3 | 4 | River landscapes — long profile and processes | Mixed retrieve: distinguish weathering from erosion + 2 Qs on **earthquake effects** |
 | 3 | 5 | River landscapes — upper course features | Retrieve: **Weathering & erosion** — explain 4 types of river erosion from memory |
-| 4 | 1 | River landscapes — middle course features | Mixed retrieve: 2 Qs **tectonic plates** + 2 Qs **volcanoes** + 1 Q **weathering** (interleaved, ~3 weeks since tectonics) |
+| 4 | 1 | River landscapes — middle course features | Mixed retrieve: 2 Qs **tectonic plates** + 2 Qs **volcanoes** + 1 Q **weathering** (interleaved, ~3 weeks since introduction) |
 | 4 | 2 | River landscapes — lower course features | Retrieve: draw and annotate the long profile of a river from memory |
 | 4 | 3 | River landscapes — flooding | Retrieve: **Earthquakes** — compare two case studies + explain one measurement scale |
 | 4 | 4 | River landscapes — flood management | Mixed retrieve: 3 Qs on **river processes** + 2 Qs on **erosion types** |
 | 4 | 5 | Consolidation / depth lesson | Full interleaved quiz: 10 Qs across all 5 topics (2 per topic, mixed order) |
 | 5 | 1 | Extended writing: comparing physical processes | Retrieve: **River landscapes** — sketch upper/middle/lower course features from memory |
 | 5 | 2 | Case study depth: chosen topic | Mixed retrieve: 5 Qs interleaving **volcanoes**, **weathering**, **rivers** |
-| 5 | 3 | Connections between topics | Retrieve: **Tectonic plates** — full free recall (4 weeks since initial teaching — critical spacing point) |
+| 5 | 3 | Connections between topics | Retrieve: **Tectonic plates** — full free recall (~4 weeks since introduction; a planned revisit, not an established critical interval) |
 | 5 | 4 | Exam technique: using case studies | Mixed retrieve: 6 Qs across all 5 topics, focusing on commonly confused concepts |
 | 5 | 5 | Practice assessment | Retrieve: quick-fire 1-minute-per-question across all 5 topics before practice assessment |
 | 6 | 1 | Review based on practice assessment gaps | Targeted retrieval on weakest 2 topics from practice assessment data |
@@ -203,7 +203,7 @@ For each review slot, suggest a specific brief retrieval activity (not "review T
 
 ### Spacing Rationale
 
-Topics are spaced at expanding intervals following Cepeda et al.'s (2006) finding that optimal gaps increase as memory strengthens. Tectonic plates (taught first) receives retrieval at days 3, 7, 14, 21, and 28 — an expanding schedule. Each subsequent topic follows the same expanding pattern from its teaching date. Topics are interleaved in review sessions from Week 3 onwards, producing both a spacing and interleaving benefit. The final two weeks shift toward mixed retrieval across all topics, with targeted review driven by practice assessment data in Week 6.
+This illustrative timetable distributes reviews across the term, consistent with the general spacing evidence in Cepeda et al. (2006). It uses frequent early retrieval and later weekly revisits; it is not a strictly expanding schedule or an empirically optimal one. The repeated tectonics questions also mean elapsed time since first teaching is not the same as the gap since the most recent retrieval. Mixed-topic review is used where useful for comparison, and Week 6 review should be adjusted to actual practice-assessment data rather than assumed class performance.
 
 ### Review Activity Suggestions
 
@@ -216,9 +216,9 @@ Topics are spaced at expanding intervals following Cepeda et al.'s (2006) findin
 ### Teacher Guidance
 
 - Each review starter should take **10–15 minutes maximum**. It replaces a traditional lesson starter, not the main teaching.
-- **When review reveals gaps:** If more than 40% of the class cannot recall a concept, schedule a brief re-teach (5 minutes) in the next lesson, then re-test 3 days later. Do not abandon the spacing schedule for a full re-teach.
-- **Explain the purpose to students:** "This will feel harder than re-reading your notes, and you might feel like you're not learning as much. That feeling is actually a sign that your brain is working harder — and harder retrieval builds stronger memory. The research on this is very clear."
-- **Do not grade review starters.** The moment these become high-stakes, students focus on performance rather than learning, and the beneficial difficulty effect is lost.
+- **When review reveals gaps:** As an illustrative decision heuristic, if more than 40% of the class cannot recall a concept, consider a brief re-teach (around 5 minutes) and another retrieval opportunity around 3 days later. These percentages and timings are not validated cutoffs; use the nature of the errors and available teaching time to decide whether fuller instruction is needed.
+- **Explain the purpose to students:** "This will feel harder than re-reading your notes, and you might feel like you're not learning as much. Effort alone does not prove learning. We will check answers, correct errors and adjust the schedule so practice remains useful."
+- **Keep review starters low-stakes.** Use the answers to guide feedback and next teaching rather than ranking students.
 
 ---
 
@@ -226,6 +226,6 @@ Topics are spaced at expanding intervals following Cepeda et al.'s (2006) findin
 
 1. **The schedule assumes relatively even topic length.** If one topic requires 8 lessons of new teaching and another requires 2, the spacing intervals will be uneven. Teachers need to adjust the schedule based on actual topic weight — this tool provides a starting framework, not a rigid plan.
 
-2. **Optimal spacing intervals from Cepeda et al. (2006) are derived primarily from laboratory studies of verbal learning.** Transfer to complex procedural skills (e.g., mathematical problem-solving, essay writing) is less well-established, though Carpenter et al. (2012) provide supportive classroom evidence.
+2. **Cepeda et al. (2006) reviewed primarily laboratory verbal-recall tasks, not this classroom timetable.** Transfer to complex procedural skills (e.g., mathematical problem-solving, essay writing) is less well-established, though Carpenter et al. (2012) provide supportive classroom evidence.
 
 3. **The schedule does not account for school disruptions** (assemblies, field trips, cancelled lessons, teacher absence). Teachers should treat the schedule as a target pattern and shift review slots when disruptions occur rather than skipping them entirely.

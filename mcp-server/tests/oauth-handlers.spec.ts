@@ -145,6 +145,7 @@ test.describe("OAuth public endpoints", () => {
     authorizationMetadataHandler(request(undefined, "GET", { host: "attacker.example" }), authorization.serverResponse);
     expect(authorization.response.status).toBe(200);
     expect(JSON.parse(authorization.response.body).issuer).toBe("https://mcp.example.com");
+    expect(JSON.parse(authorization.response.body)).not.toHaveProperty("client_id_metadata_document_supported");
 
     const resource = createResponseRecorder();
     protectedResourceHandler(request(undefined, "GET", { host: "attacker.example" }), resource.serverResponse);

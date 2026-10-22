@@ -1,165 +1,84 @@
 # Using Education Agent Skills in OpenAI Codex
 
-This guide explains how to use the Education Agent Skills Library with OpenAI Codex without using the hosted MCP server.
+The library can run from local files without the hosted MCP server. Choose the full source plugin or copy selected skills; no paid model run is needed to install files.
 
-Repository: https://github.com/GarethManning/education-agent-skills
+## Full source plugin
 
-The skills can run locally from your machine. Once installed locally, Codex reads the skill files directly and does **not** call the hosted MCP server.
-
-## Recommended: install as a local Codex plugin
-
-Use this when you want the full Education Agent Skills Library available in Codex.
-
-1. Clone the repository:
+Clone [the repository](https://github.com/GarethManning/education-agent-skills) into your usual repository folder, then register **and install** it:
 
 ```bash
-git clone https://github.com/GarethManning/education-agent-skills.git
-cd education-agent-skills
-```
-
-2. Add the repository as a local Codex plugin marketplace:
-
-```bash
-codex plugin marketplace add /absolute/path/to/education-agent-skills
-```
-
-For example, if you cloned it into your current folder:
-
-```bash
+cd /absolute/path/to/education-agent-skills
 codex plugin marketplace add "$PWD"
+codex plugin add education-agent-skills@education-agent-skills
+codex plugin list --marketplace education-agent-skills --json
 ```
 
-The repository includes the Codex plugin manifest:
+Registration makes the marketplace available; `plugin add` installs its plugin. The marketplace's local `source.path` is `./`, relative to the repository root. `.codex-plugin/plugin.json` retains an array of **20 domain directories**, each containing skill folders; it does not point at one flattened `./skills/` directory.
 
-```text
-.codex-plugin/plugin.json
-```
+Tested with **codex-cli 0.163.0-alpha.11.1** on 22 October 2026 using a fresh, isolated `CODEX_HOME` and config/cache directories, without copying credentials or running a model. Registration, installation and listing succeeded; listing reported `installed: true` and `enabled: true`. The installed cache contained all **165 skill files**, identical to the source, and **12 policy sidecars**. This verifies local packaging and installation, not model selection or activation behavior.
 
-That manifest points Codex at:
+Start a new Codex session after installation or update. If your desktop client retains its old skill list, reload or restart it and start a new session. Session refresh and actual model invocation were not exercised by the isolated CLI check; client behavior can vary by version.
 
-```text
-./skills/
-```
+## Selected skills: extended source or portable profile
 
-The repository also includes a local marketplace helper at:
+The canonical source is `skills/<domain>/<skill-name>/`. Its rich frontmatter includes education schemas, citations and vendor options. The plugin uses this source profile.
 
-```text
-.agents/plugins/marketplace.json
-```
-
-This is there so Codex plugin tooling can discover the repository as a single installable local plugin rather than requiring people to copy all 165 skills one by one.
-
-3. Restart Codex.
-
-After restart, Codex can discover and use the installed skills from the local plugin. You can then ask for education tasks in normal language, for example:
-
-> I am planning a Year 9 science unit on cells: 6 weeks, 3 lessons per week. Build the unit using evidence-based learning science.
-
-Codex can then use relevant skills such as backwards design, spaced practice, retrieval practice, formative assessment, and rubric design.
-
-## Simple option: install individual skills
-
-Use this when you only want a few skills available globally in Codex.
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/GarethManning/education-agent-skills.git
-cd education-agent-skills
-```
-
-2. Copy a skill folder into your Codex skills directory:
+For clients requiring the open specification's restricted frontmatter, download the [v3.1.0 portable ZIP](https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip). Extract it to find 165 folders under `agent-skills/` and an installation note. Copy the whole selected folder, for example:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -r skills/<domain>/<skill-name> ~/.codex/skills/
+cp -R agent-skills/spaced-practice-scheduler ~/.codex/skills/
 ```
 
-Example:
+Resolve an existing destination first; do not merge over an edited skill or add an extra nested folder. No Python build is needed for the download. Maintainers can instead generate the additive portable profile:
 
 ```bash
-cp -r skills/memory-learning-science/spaced-practice-scheduler ~/.codex/skills/
+python3 -m venv /tmp/education-standard-venv
+/tmp/education-standard-venv/bin/python -m pip install -r requirements/standard-validation.txt
+/tmp/education-standard-venv/bin/python scripts/export-standard-skills.py
+/tmp/education-standard-venv/bin/python scripts/validate-standard-skills.py
 ```
 
-3. Restart Codex.
+`dist/agent-skills/<skill-name>/` is generated and ignored by Git. Portable profile `education-agent-skills-portable-1` is a project format label, independent of the source schema and upstream specification versions. Its frontmatter contains `name`, `description`, `license` and string-valued `education.*` metadata. Complete original metadata lives in `references/education.json`; a body instruction points to it, followed by the original body preserved byte for byte. Every exported skill includes the repository's `LICENSE` and its local `references/`, `scripts/`, `assets/` and `agents/` resources when present. Keep the entire folder when copying a skill.
 
-After restart, the installed skill can trigger automatically when relevant.
-
-## One-off use without installing
-
-You can also use any skill manually without setup:
-
-1. Open a `SKILL.md` file under `skills/`.
-2. Copy the prompt or instructions.
-3. Paste them into Codex with your classroom context.
-
-Example skill:
-
-```text
-skills/memory-learning-science/spaced-practice-scheduler/SKILL.md
-```
-
-This works well for testing, but it is not persistent. Codex will not automatically discover the skill in future sessions unless it is installed locally.
-
-## Which option should I choose?
-
-Use the local plugin if:
-
-- You want the full library available.
-- You want Codex to discover relevant education skills automatically.
-- You want to avoid MCP server usage and hosted costs.
-- You are comfortable cloning a GitHub repository.
-
-Use individual skill installation if:
-
-- You only need one or two skills.
-- You want a minimal local setup.
-- You want skills available across Codex projects without installing the whole library.
-
-Use manual one-off use if:
-
-- You are evaluating the library.
-- You cannot install local files.
-- You only need a single prompt once.
-
-## MCP is optional
-
-The hosted MCP server is useful for remote discovery, programmatic access, and clients that prefer MCP connectors.
-
-It is not required for Codex local use.
-
-For sustainable free use, install the skills locally from GitHub rather than connecting to the hosted MCP server.
-
-## Updating
-
-If you cloned the full repository, update it with:
+Example portable installation (replace with a skill you need):
 
 ```bash
-cd education-agent-skills
+mkdir -p ~/.codex/skills
+cp -R dist/agent-skills/spaced-practice-scheduler ~/.codex/skills/
+```
+
+Alternatively copy `skills/memory-learning-science/spaced-practice-scheduler` as the extended source. In either case, the result should be `~/.codex/skills/spaced-practice-scheduler/SKILL.md`; avoid nesting domain folders inside that location. Resolve an existing destination before copying so the command does not silently create an extra nested folder.
+
+The exporter rejects duplicate names/IDs, malformed metadata, traversal names, resource collisions and symlinks, including internal symlinks. It includes new untracked resources. It replaces only its own unmodified output, identified by a file-hash receipt; it refuses arbitrary directories or exports with user edits. Regenerate to a fresh `--output /path/to/new-profile` if you need to preserve an edited export. The receipt records input file hashes, including working edits and resources, rather than claiming that Git HEAD alone identifies the evaluated content.
+
+The separate project validator checks extended sources. The official reference gate checks **only the portable export**, using [skills-ref 0.1.0 pinned at upstream commit 69ef37e9424c0a7ea9dd2293b559e43ec8176379](https://github.com/agentskills/agentskills/tree/69ef37e9424c0a7ea9dd2293b559e43ec8176379/skills-ref). Its parser accepts a narrower YAML subset than general YAML. Passing that reference tool establishes format compatibility, not educational certification or model behavior.
+
+## Explicit-only invocation
+
+Exactly 12 source skills have `disable-model-invocation: true`. Each has `agents/openai.yaml` with:
+
+```yaml
+policy:
+  allow_implicit_invocation: false
+```
+
+These sidecars tell Codex to keep those skills available for explicit invocation while excluding implicit invocation. The other 153 skills have no such restriction. Use an explicit skill request, such as `$panel-review`, when you want an explicit-only workflow. The exporter copies these policies and preserves the original flag in rich metadata.
+
+The open Agent Skills format has **no universal explicit-only control**. Other clients may ignore Codex sidecars and the preserved vendor flag. Do not assume that portable validation enforces invocation policy in every client; confirm that client's controls before installing explicit-only workflows there. The isolated test verified the policy files and counts, not a model choosing or declining a skill.
+
+## Updating and troubleshooting
+
+The source plugin version is 2.2.0 in release v3.1.0. A local plugin is installed into a cache. Updating the checkout alone does not prove that cache refreshed. After deliberately updating your clone, remove and reinstall the plugin, then check its listing and start a new session:
+
+```bash
+cd /absolute/path/to/education-agent-skills
 git pull
+codex plugin remove education-agent-skills@education-agent-skills
+codex plugin add education-agent-skills@education-agent-skills
+codex plugin list --marketplace education-agent-skills --json
 ```
 
-Then restart Codex so it picks up the latest skill changes.
+For a Git-backed marketplace, `codex plugin marketplace upgrade` refreshes marketplace snapshots; still verify the installed plugin and refresh the session. For selected portable copies, download the current release or regenerate the profile and replace each entire installed folder, preserving any intentional local edits elsewhere first. For source copies, replace each folder from the updated source. Do not hand-edit generated exports as a second source tree.
 
-If you copied individual skills into `~/.codex/skills/`, copy them again after updating the repository.
-
-## Troubleshooting
-
-If Codex does not appear to use the skills:
-
-- Make sure each installed skill folder contains a `SKILL.md` file.
-- Make sure the `SKILL.md` file has `name` and `description` fields in the frontmatter.
-- Restart Codex after installing or updating skills.
-- For individual skills, make sure the folder was copied directly into `~/.codex/skills/`, not nested too deeply.
-
-Correct:
-
-```text
-~/.codex/skills/spaced-practice-scheduler/SKILL.md
-```
-
-Incorrect:
-
-```text
-~/.codex/skills/memory-learning-science/spaced-practice-scheduler/SKILL.md
-```
+If discovery appears absent, check that the plugin is installed and enabled, each configured domain directory exists in the installed cache, and selected copies contain `SKILL.md` directly inside their folder. Preserve `references/education.json` and `agents/openai.yaml` when present. A valid manifest or successful listing alone does not demonstrate that a running model has loaded a skill.

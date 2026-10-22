@@ -1,0 +1,7 @@
+# Independent release and retirement review — 22 October 2026
+
+**VERDICT: ACCEPT. No material findings.** Immediate-before comparison matches release-only.diff; all 306 protected files, historical changelog content, registry and MCP bundle unchanged. Both manifests change only to 2.2.0; the library test changes only the expressly authorized version expectation, preserving assertion strength. Independent root suite 21 passed / 1 hosted skip; 78 local links/anchors checked. Vercel config equals previous config plus git.deploymentEnabled:false; rewrites intact.
+
+ZIP SHA256 9964a0e9e2f4569b51698506fca2a2d8e95cb626fbf1119e5555773a54c17df5 verified; 518 entries pass integrity/path checks ; 165 complete folders / 515 profile-file hashes / 12 policies match accepted output. Current instructions remove public-service invitations, explain migration and self-host branding/email defaults, and distinguish format validation from efficacy/model behavior. Saved configuration evidence identifies only the two intended repository-linked Vercel projects and confirms both Git links removed.
+
+Acceptance covers the reviewed source/package candidate and retirement plan. Actual project pause/public HTTP behavior, GitHub publication/download and final client checks remain root-owned. No platform mutation, source edit, server, model call or subagent by reviewer. Exact snapshots /tmp/education-public-release-before-20261022T213014Z. Root subsequently removed one extra blank EOF line in HOSTED_MCP_ACCESS.md; no prose/behavior change.

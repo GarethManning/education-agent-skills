@@ -68,11 +68,11 @@ tags: ["RULER", "emotional-intelligence", "Brackett", "Yale", "SEL", "emotional-
 
 ## What This Skill Does
 
-Designs a structured sequence for developing emotional literacy using the RULER framework from the Yale Center for Emotional Intelligence — teaching students to Recognise emotions in themselves and others, Understand the causes and consequences of emotions, Label emotions with a nuanced vocabulary, Express emotions appropriately, and Regulate emotions using effective strategies. The output includes the specific RULER tool(s) to use (Mood Meter, Meta-Moment, Blueprint, or Charter), how to introduce and implement them, how to integrate emotional literacy into academic content rather than treating it as a separate activity, and how the teacher should model the skills themselves — because emotional literacy begins with the teacher, not the student. AI is specifically valuable here because selecting the right RULER tool for a specific classroom situation, adapting the language for the age group, and integrating emotional literacy into subject content requires both emotional intelligence expertise and pedagogical knowledge.
+Designs an introductory educational adaptation for developing emotional literacy using the RULER framework from the Yale Center for Emotional Intelligence — teaching students to Recognise emotions in themselves and others, Understand the causes and consequences of emotions, Label emotions with a nuanced vocabulary, Express emotions appropriately, and Regulate emotions using effective strategies. The output includes the specific RULER tool(s) to use (Mood Meter, Meta-Moment, Blueprint, or Charter), how to introduce and implement them, how to integrate emotional literacy into academic content rather than treating it as a separate activity, and how the teacher should model the skills themselves — because emotional literacy begins with the teacher, not the student. AI is specifically valuable here because selecting the right RULER tool for a specific classroom situation, adapting the language for the age group, and integrating emotional literacy into subject content requires both emotional intelligence expertise and pedagogical knowledge.
 
 ## Evidence Foundation
 
-Brackett (2019) and Brackett et al. (2012) developed RULER at the Yale Center for Emotional Intelligence, based on Mayer & Salovey's (1997) ability model of emotional intelligence. RULER treats emotional intelligence as a set of skills that can be taught, not a personality trait: Recognising (identifying emotions in faces, voices, body language, and one's own body), Understanding (knowing what causes emotions and what consequences they lead to), Labelling (using precise vocabulary — not just "good" or "bad" but specific emotion words like "frustrated," "apprehensive," "exhilarated"), Expressing (knowing when and how to express emotions in different contexts), and Regulating (using strategies to manage emotional experiences — not suppressing emotions but responding to them effectively). Rivers et al. (2012) conducted a cluster randomised controlled trial of RULER in 62 classrooms and found significant improvements in classroom emotional climate, including more emotional support, better classroom organisation, and greater instructional support. Hagelskamp et al. (2013) found that RULER improved classroom quality on all three dimensions of the CLASS observation system. Critically, RULER begins with teachers — the "Anchors of Emotional Intelligence" (Mood Meter, Meta-Moment, Blueprint, Charter) are first practised by staff before being introduced to students. This is because students cannot develop emotional literacy in an environment where adults don't model it.
+Brackett (2019) and Brackett et al. (2012) developed RULER at the Yale Center for Emotional Intelligence, based on Mayer & Salovey's (1997) ability model of emotional intelligence. RULER treats emotional intelligence as a set of skills that can be taught, not a personality trait: Recognising (identifying emotions in faces, voices, body language, and one's own body), Understanding (knowing what causes emotions and what consequences they lead to), Labelling (using precise vocabulary — not just "good" or "bad" but specific emotion words like "frustrated," "apprehensive," "exhilarated"), Expressing (knowing when and how to express emotions in different contexts), and Regulating (using strategies to manage emotional experiences — not suppressing emotions but responding to them effectively). Rivers et al. (2012) conducted a cluster randomised controlled trial of RULER in 62 classrooms and found significant improvements in classroom emotional climate, including more emotional support, better classroom organisation, and greater instructional support. Hagelskamp et al. (2013) found that RULER improved classroom quality on all three dimensions of the CLASS observation system. Critically, RULER begins with teachers — the "Anchors of Emotional Intelligence" (Mood Meter, Meta-Moment, Blueprint, Charter) are first practised by staff before being introduced to students. Adult modelling is a central implementation practice; the programme evidence does not establish the effectiveness of each generated short sequence.
 
 ## Input Schema
 
@@ -106,9 +106,11 @@ Your task is to design a RULER sequence for:
 The following optional context may or may not be provided. Use whatever is available; ignore any fields marked "not provided."
 
 **Subject area:** {{subject_area}} — if not provided, design as a standalone sequence that can be integrated into any lesson or tutor time.
-**Student profiles:** {{student_profiles}} — if not provided, design for a typical class.
-**Time available:** {{time_available}} — if not provided, design for 15–20 minutes (embeddable in a lesson).
+**Student profiles:** {{student_profiles}} — use only relevant non-identifying access needs; if absent, provide low-disclosure and accessible options without inventing emotional profiles.
+**Time available:** {{time_available}} — if not provided, offer a 15–20-minute introduction, clearly distinguished from full programme implementation.
 **RULER familiarity:** {{ruler_familiarity}} — if not provided, assume students are new to RULER and introduce the tools from scratch.
+
+This short sequence is an adaptation, not an evaluated full RULER implementation or therapy. Check the teacher's preparation/training and authorisation to use chosen programme materials; do not invent licensing terms. Use private self-reflection or fictional/character examples by default, with an option to pass or use a non-personal task. No emotion or cause needs public display. Do not infer an internal state from appearance, behaviour or a Mood Meter colour; invite the learner's own words without insisting. Retain access supports, offer non-breathing strategies and never guarantee calming. Persistent or severe distress needs appropriate human support; urgent safety concerns follow existing school safeguarding/emergency procedures.
 
 Apply these principles:
 
@@ -167,7 +169,7 @@ For each step:
 
 [How to maintain emotional literacy beyond this sequence — routines, language, ongoing use of tools]
 
-**Self-check before returning output:** Verify that (a) the right RULER tool is selected for the situation, (b) the teacher models the skill before students practise it, (c) emotional vocabulary is expanded beyond basic terms, (d) regulation is taught as response management, not emotion suppression, and (e) the sequence is practical and time-efficient.
+**Self-check before returning output:** Verify that (a) the right RULER tool is selected for the situation, (b) the teacher models the skill before students practise it, (c) emotional vocabulary is expanded beyond basic terms, (d) regulation is taught as response management, not emotion suppression, and (e) the sequence is practical and time-efficient, and (f) privacy/pass/fictional options, accessible strategy choices and the human-support boundary are present in each activity.
 ```
 
 ## Example Output
@@ -184,51 +186,51 @@ For each step:
 
 ### Teacher Modelling
 
-Before introducing the tools to students, the teacher models their own emotional experience. This is essential — if the teacher pretends they have no stress, students learn that adults don't feel anxiety, which makes their own anxiety feel abnormal.
+Before introducing the tools to students, the teacher models their own emotional experience. Use a bounded, authentic example or clearly labelled fictional model; teachers need not disclose personal distress.
 
 "I want to share something with you. When I look at the Mood Meter, right now I'm somewhere around here [points to the upper-left quadrant — Red zone, but moderate]. I'd say I'm 'apprehensive.' I've got a lot to do this week, and I notice that when I think about all of it at once, my chest feels tight and I start thinking 'I'll never get it all done.' Sound familiar? That feeling is completely normal — it's my brain telling me this matters. But here's what I've learned: when I stay in that zone and don't do anything about it, I actually get LESS done, not more. So I'm going to share a strategy with you that I use, and then we're going to try it together."
 
 ### Sequence Steps
 
-**Step 1: Recognise — Where Are You Right Now? (5 minutes)**
-- **Activity:** Display the Mood Meter on the screen (four quadrants with emotion words). Give each student a small Post-it note. "I'd like you to place your Post-it on the Mood Meter where you are RIGHT NOW — not where you think you should be, but where you actually are. No names on the Post-its. I'll place mine first." [Teacher places their Post-it in the Red zone, modelling honesty.]
-- **Teacher script:** "There's no right or wrong place to be. Every part of the Mood Meter is normal. I'm interested in the pattern — where is our class as a whole?"
-- **What to look for:** The distribution will likely cluster in the Red (anxious, stressed) and Blue (tired, flat) zones. This provides visible data that anxiety is SHARED — it's not just "me." This normalisation is itself therapeutic: "I'm not the only one who feels this way."
+**Step 1: Recognise — Notice Without Disclosure (5 minutes)**
+- **Activity:** Model the Mood Meter, then offer a private personal mark on a page kept by the learner, a fictional character example, or a pass/non-personal vocabulary task. Do not collect or publicly place individual emotional states, even without names.
+- **Teacher script:** "You can keep this private, use our fictional student, or pass. There is no expected quadrant or emotion. I won't infer how you feel from how you look."
+- **What to look for:** Understanding of energy/pleasantness in the selected example. Quietness, colour choice or participation does not diagnose anxiety or show therapeutic benefit.
 
-**Step 2: Label — Name It to Tame It (5 minutes)**
-- **Activity:** "Now I want us to get more specific. 'Stressed' is a start, but it doesn't tell us much. Look at the emotion words in your quadrant. Which word BEST describes how you feel? Is it 'anxious' (worried about something specific that might happen)? 'Overwhelmed' (too much to do and not enough time)? 'Dread' (a heavy feeling about something you can't avoid)? 'Frustrated' (you're trying but it doesn't feel like it's working)? These are different feelings — and they need different responses."
-- **Teacher script:** "I said I'm apprehensive. That's different from anxious — apprehensive means I'm nervous about something but I think I can handle it. If I were anxious, I'd feel less in control. Getting the right word matters because it helps you figure out what you actually need."
-- **What to look for:** Students moving from "stressed" or "bad" to more precise terms. If students are struggling with vocabulary, offer choices: "Would you say you're more anxious or more overwhelmed? They feel different."
+**Step 2: Label — Find a Useful Word (5 minutes)**
+- **Activity:** Offer nuanced vocabulary such as apprehensive, anxious, frustrated or overwhelmed. Learners can choose their own word, language or accessible communication mode; definitions are language supports, not clinical categories.
+- **Teacher script:** "Which word fits your example? You can choose another word or say you're unsure. You need not tell the class."
+- **What to look for:** More precise description where helpful; don't correct a learner's reported emotion to fit the teacher's interpretation.
 
-**Step 3: Understand — What's Causing This? (5 minutes)**
-- **Activity:** "Now let's figure out what's underneath the feeling. Turn to your partner and complete this sentence: 'I feel [emotion word] because ___.' Be specific. Not 'because of exams' — WHAT about the exams? Is it not knowing what will come up? Feeling like you haven't revised enough? Worrying about what the result will mean? Comparing yourself to others?"
-- **Teacher script:** "Understanding the cause tells you what to do about it. If you're anxious because you haven't revised, the solution is a revision plan. If you're anxious because you're comparing yourself to others, the solution is different — it's about where YOU are, not where they are. Same feeling, different cause, different response."
-- **What to look for:** Students identifying specific causes rather than vague ones. Partners listening to each other (relatedness — Walton & Cohen). The conversation itself is often therapeutic — articulating the cause reduces the feeling's power.
+**Step 3: Understand — Explore Possible Causes (5 minutes)**
+- **Activity:** Use a fictional exam scenario: "This student says they feel overwhelmed; what might contribute, and what would we need to ask?" Personal reflection remains private and optional; no compulsory partner explanation.
+- **Teacher script:** "We can't tell the cause from someone's face. Different causes may need different support, including changes to the task or environment."
+- **What to look for:** Tentative explanations, not diagnoses. Articulation is a vocabulary activity, not a promised treatment.
 
 **Step 4: Regulate — The Meta-Moment (5 minutes)**
-- **Activity:** Introduce the Meta-Moment: "When you feel that wave of anxiety — the sick feeling, the 'I can't do this' thought — here's what I want you to practise. PAUSE. Don't try to force the feeling away. Instead, three steps: (1) Notice it: 'I feel anxious right now.' (2) Ask: 'What would my best self do right now?' Not your panicking self, not your avoidant self — your best self. The version of you that handles things well. (3) Choose a strategy." Provide a strategy menu:
-  - **Breathing:** 4-7-8 breathing (in for 4, hold for 7, out for 8). Activates the parasympathetic nervous system.
-  - **Chunking:** "I can't revise everything — but I can revise ONE topic for 25 minutes right now."
-  - **Reframing:** "Exams show me what I know — they don't define who I am."
-  - **Connection:** "I'm going to talk to someone about how I feel — not to fix it, but to not feel alone."
-- **Teacher script:** "You will feel anxious before the exams. That's guaranteed — it's a normal response to something that matters. The Meta-Moment isn't about removing the anxiety. It's about choosing what you DO with it. Anxiety can paralyse you (you freeze and don't revise) or motivate you (you feel the urgency and start working). The Meta-Moment helps you choose the second one."
-- **What to look for:** Students engaging with the strategy menu — picking one that resonates. Students practising the breathing (even sceptically — sceptical practice still works). Students talking to each other about which strategy they'll try.
+- **Activity:** Model a pause: notice the feeling, consider the response you want, choose a feasible strategy. Offer a menu:
+  - **Optional comfortable breathing:** Only if the learner chooses it; no required count or breath-holding. Stop if uncomfortable.
+  - **Chunking:** Choose one manageable revision step with suitable support and timing.
+  - **Reframing:** "An exam result gives information about this work; it doesn't define my worth."
+  - **Connection or grounding:** Ask a trusted adult for support or attend to a familiar object/environment, if helpful and accessible.
+- **Teacher script:** "You may feel anxious, calm, uncertain or something else. Try a strategy that suits you, or pass; none is guaranteed to help. If distress persists, we will seek appropriate support."
+- **What to look for:** A learner-chosen response plan and optional feedback on usefulness; do not infer regulation from quiet compliance.
 
 ### Academic Integration
 
 - **English:** When studying characters under pressure (Macbeth before the murder, Romeo after the banishment), place the character on the Mood Meter. "Where is Macbeth right now? What's causing it? What would the Meta-Moment look like for him?" This builds analytical skills AND emotional vocabulary simultaneously.
 
-- **Science:** Before a practical assessment: "Let's check in with the Mood Meter. Where are you? If you're in the Red zone, try one round of 4-7-8 breathing before you start. Research shows that anxiety narrows attention — which means you'll miss things in the experiment. Calming your breathing literally helps you observe better."
+- **Science:** Before a practical assessment: "If useful, check in privately or use a fictional example. Choose a familiar strategy or ask for support before starting; you do not need to share how you feel." Follow practical-safety instructions regardless of emotional state.
 
 - **History:** When studying people making difficult decisions under pressure (Churchill during the Blitz, suffragettes facing imprisonment): "Use the Blueprint. What were they feeling? What caused those feelings? How did their emotions influence their decisions?"
 
 ### Sustaining the Practice
 
-1. **Make the Mood Meter visible and used.** Keep it on the wall. Check in at the start of lessons (30 seconds: "Where are you on the Mood Meter? No need to share — just notice"). Over time, students will start using the vocabulary unprompted.
+1. **Make the Mood Meter visible and used.** Keep it on the wall. Check in at the start of lessons (30 seconds: "Where are you on the Mood Meter? No need to share — just notice"). Notice whether learners find the vocabulary useful over time; spontaneous use is not guaranteed.
 
 2. **Model the Meta-Moment when YOU feel frustrated.** "I'm going to take a Meta-Moment. I'm frustrated because the technology isn't working. My automatic response is to get annoyed — but that won't fix the projector. My best self says: breathe, try one more thing, then move on. OK — let me try this."
 
-3. **Normalise the vocabulary.** Use emotion words in everyday conversation: "You look apprehensive — what's on your mind?" / "I can see some people are in the Yellow zone — that energy is great for this task." The more the teacher uses precise emotional language, the more students will adopt it.
+3. **Normalise the vocabulary.** Use emotion words in everyday conversation: "Would you like support, or would you prefer to continue?" / "Our fictional character says they feel energised — what might that word mean here?" The more the teacher uses precise emotional language, the more students will adopt it.
 
 4. **Return to the Meta-Moment before every high-stakes event.** Before exams, before presentations, before parents' evening: "Let's do a Meta-Moment check. Where are you? What does your best self need right now?"
 
@@ -236,8 +238,8 @@ Before introducing the tools to students, the teacher models their own emotional
 
 ## Known Limitations
 
-1. **RULER is a whole-school programme, not a single-lesson intervention.** The sequence above introduces RULER tools, but their full impact requires consistent use across multiple classrooms, integration into school culture, and staff training. A single teacher using RULER in one lesson provides benefit, but the system-level effects (improved emotional climate across the school) require whole-school adoption.
+1. **RULER is a whole-school programme, not a single-lesson intervention.** The sequence above introduces RULER tools, but their full impact requires consistent use across multiple classrooms, integration into school culture, and staff training. Benefits from this generated introduction are unestablished; do not transfer results from trained programme implementations to this script.
 
 2. **Emotional literacy does not replace clinical support.** Students with anxiety disorders, depression, or trauma responses need professional support — a school counsellor, CAMHS referral, or therapeutic intervention. RULER builds emotional skills for the general population; it is not a substitute for clinical services for students who need them. If a student's distress is persistent or severe, RULER should be supplemented with appropriate referral.
 
-3. **The teacher must genuinely model.** RULER requires teachers to be emotionally literate themselves — to share their own emotions, to demonstrate the Meta-Moment, to use precise vocabulary. Teachers who are uncomfortable with emotional disclosure will find RULER difficult to implement authentically. Professional development and a supportive school culture are prerequisites for effective implementation.
+3. **The teacher must genuinely model.** RULER requires teachers to be emotionally literate themselves — to model bounded examples, demonstrate the Meta-Moment and use precise vocabulary without requiring personal disclosure. Teachers who are uncomfortable with emotional disclosure will find RULER difficult to implement authentically. Professional development and a supportive school culture are prerequisites for effective implementation.

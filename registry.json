@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-08-28T21:20:16.259928+00:00",
+  "generated": "2026-10-22T21:04:07.091718+00:00",
   "standard": "agent-skills-1.0",
   "total_skills": 165,
   "domains": [
@@ -3440,7 +3440,7 @@
         "observation",
         "self-reflection"
       ],
-      "teacher_time": "5 minutes",
+      "teacher_time": "5 minutes to review a draft design; implementation time is separate (see workload estimate)",
       "chains_with": [
         "learning-target-authoring-guide",
         "coherent-rubric-logic-builder",
@@ -3965,7 +3965,7 @@
       "name": "panel-review",
       "display_name": "Panel review \u2014 seven-role independent-mode review of framework artefacts",
       "domain": "professional-learning",
-      "description": "Seven-role depersonalised panel review of framework artefacts (KUD, criterion bank, LT definition, crosswalk, scope-and-sequence) in sequential-isolation mode. Gate rule mean>=88 AND no role<70.",
+      "description": "Seven-role curriculum artefact review calibrated for wellbeing/SEL. Uses simulated perspectives in one session; mean>=88 and no role<70 are practitioner heuristics, not validated gates.",
       "disable_model_invocation": true,
       "evidence_strength": "medium",
       "tags": [

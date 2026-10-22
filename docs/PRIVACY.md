@@ -1,16 +1,18 @@
 # Privacy Policy — Education Agent Skills MCP Server
 
-**Last updated: 28 August 2026**
+**Last updated: 22 October 2026**
 
 ## Overview
 
-The Education Agent Skills MCP server is a read-only service that returns content and metadata from the open-source skill library. Hosted access is authenticated, and the optional access-request page uses an email provider to deliver a credential.
+The library-operated public MCP service is retiring with v3.1.0, and public signup is no longer offered. Local plugins, copied skills and local stdio do not require requests to that service. Your selected AI client still has its own model and data-handling policies; local skill installation alone does not make model use offline.
+
+This notice describes the retained MCP application source and the former hosted service's application behavior. A self-hoster controls their deployment and must provide a notice matching their configuration. If they enable authenticated HTTP and access-email delivery, the application behaves as described below. Retirement does not itself establish that historical credentials were revoked or provider data deleted.
 
 ## Data handled by the application
 
 For ordinary authenticated MCP calls, the application checks the bearer credential and processes the MCP request needed to return skill content. It does not create a user profile, write the teaching request to an application database, use cookies, or add analytics/tracking code.
 
-The hosted access-request page accepts:
+If enabled by a self-hoster, the retained access-request page accepts:
 
 - email address (required);
 - name (optional);
@@ -27,9 +29,9 @@ Bearer credentials are accepted only in the `Authorization` header. New access a
 
 ## Third-party services
 
-The server is hosted on Vercel. Vercel may process standard infrastructure data such as IP addresses, request timestamps, headers, and operational logs under [Vercel's Privacy Policy](https://vercel.com/legal/privacy-policy).
+The former public service used Vercel; self-hosters choose their own infrastructure. Where Vercel is used, it may process standard infrastructure data such as IP addresses, request timestamps, headers, and operational logs under [Vercel's Privacy Policy](https://vercel.com/legal/privacy-policy).
 
-Access email is sent through Resend. Resend processes the supplied email address and message-delivery data under [Resend's privacy policy](https://resend.com/legal/privacy-policy). The application does not claim control over retention performed by these infrastructure providers.
+When the retained access-email route is enabled, it sends through the configured Resend account. Resend processes the supplied email address and message-delivery data under [Resend's privacy policy](https://resend.com/legal/privacy-policy). The application does not claim control over retention performed by these infrastructure providers.
 
 ## Open source
 

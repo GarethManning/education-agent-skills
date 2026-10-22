@@ -118,7 +118,6 @@ export function authorizationServerMetadata(baseUrl: string) {
     token_endpoint_auth_methods_supported: ["none"],
     code_challenge_methods_supported: ["S256"],
     scopes_supported: ["mcp"],
-    client_id_metadata_document_supported: true,
   };
 }
 

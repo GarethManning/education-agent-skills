@@ -71,16 +71,16 @@ tags: ["implementation-intentions", "Gollwitzer", "if-then-plans", "WOOP", "habi
 
 ## What This Skill Does
 
-Designs specific "if-then" plans (implementation intentions) that help students bridge the gap between intention and action — turning vague goals ("I'll revise more") into concrete, situation-specific plans ("If it's 4pm on a school day, then I will spend 25 minutes on spaced retrieval practice for my weakest subject"). The critical insight from Gollwitzer's research is that most failures of self-regulation are not failures of motivation — students often WANT to do the right thing but fail to follow through because they lack a specific plan for WHEN, WHERE, and HOW. Implementation intentions automate the decision by pre-loading it: the student decides in advance exactly what they will do in a specific situation, which removes the need for willpower in the moment. The output includes the implementation intention in the correct if-then format, a mental contrasting exercise (WOOP: Wish, Outcome, Obstacle, Plan) that strengthens commitment, a student-facing script they can rehearse, and a monitoring plan. AI is specifically valuable here because crafting effective implementation intentions requires identifying the specific situational trigger (not "when I feel like it" but "when I sit down at my desk after dinner"), anticipating obstacles, and calibrating the behaviour to be achievable — a precision that generic goal-setting advice lacks.
+Designs specific "if-then" plans (implementation intentions) that help students bridge the gap between intention and action — turning vague goals ("I'll revise more") into concrete, situation-specific plans ("If it's 4pm on a school day, then I will spend 25 minutes on spaced retrieval practice for my weakest subject"). The critical insight from Gollwitzer's research is that some students already endorse a goal but benefit from a specific plan for WHEN, WHERE and HOW; first confirm that this describes the learner's situation. Implementation intentions automate the decision by pre-loading it: the student decides in advance exactly what they will do in a specific situation, which can reduce deliberation at that moment without guaranteeing follow-through. The output includes the implementation intention in the correct if-then format, a mental contrasting exercise (WOOP: Wish, Outcome, Obstacle, Plan) that strengthens commitment, a student-facing script they can rehearse, and a monitoring plan. AI is specifically valuable here because crafting effective implementation intentions requires identifying the specific situational trigger (not "when I feel like it" but "when I sit down at my desk after dinner"), anticipating obstacles, and calibrating the behaviour to be achievable — a precision that generic goal-setting advice lacks.
 
 ## Evidence Foundation
 
-Gollwitzer (1999) demonstrated that implementation intentions — specific if-then plans that link a situational cue to a target behaviour — dramatically increase the probability of follow-through. His meta-analysis (Gollwitzer & Sheeran, 2006) found a medium-to-large effect size (d = 0.65) across 94 studies: people who formed implementation intentions were significantly more likely to achieve their goals than people with equivalent motivation but no specific plan. The mechanism is cognitive: the if-then format creates a mental link between the situation (the "if") and the behaviour (the "then"), so that encountering the situation automatically activates the intended behaviour — bypassing the need for conscious deliberation or willpower. Oettingen & Gollwitzer (2010) combined implementation intentions with mental contrasting (WOOP), showing that the combination is more effective than either alone: mental contrasting creates commitment (by making the person realise the obstacle is real and their plan is needed), and the implementation intention provides the specific action plan. Duckworth et al. (2013) applied this to education, showing that implementation intentions help students with study habits, homework completion, and exam preparation. Bettinger et al. (2012) demonstrated that simple implementation-intention-style assistance (specific plans for when and how to complete college applications) increased college enrollment among low-income students by 8 percentage points — a remarkable effect for a minimal intervention.
+Gollwitzer (1999) demonstrated that implementation intentions — specific if-then plans that link a situational cue to a target behaviour — dramatically increase the probability of follow-through. His meta-analysis (Gollwitzer & Sheeran, 2006) found a medium-to-large effect size (d = 0.65) across 94 studies: people who formed implementation intentions were significantly more likely to achieve their goals than people with equivalent motivation but no specific plan. The mechanism is cognitive: the if-then format creates a mental link between the situation (the "if") and the behaviour (the "then"), so that encountering the cue may make the planned action more accessible, reducing deliberation; this does not remove external barriers or guarantee action. Oettingen & Gollwitzer (2010) combined implementation intentions with mental contrasting (WOOP), showing that the combination is more effective than either alone: mental contrasting creates commitment (by making the person realise the obstacle is real and their plan is needed), and the implementation intention provides the specific action plan. Duckworth et al. (2013) applied this to education, showing that implementation intentions help students with study habits, homework completion, and exam preparation. Bettinger et al. (2012) studied application assistance and information in college decisions. Assistance addressing a practical barrier is relevant context, but it is not direct evidence for this if-then script or a basis for transferring an enrolment effect to it.
 
 ## Input Schema
 
 The teacher must provide:
-- **Target behaviour:** What the student needs to do. *e.g. "Start homework on the day it's set instead of the night before it's due" / "Use retrieval practice when revising instead of re-reading notes" / "Put their hand up to contribute in class discussion instead of staying silent" / "Take a 4-7-8 breath when they feel anxious before a test instead of panicking"*
+- **Target behaviour:** What the student needs to do. *e.g. "Start homework on the day it's set instead of the night before it's due" / "Use retrieval practice when revising instead of re-reading notes" / "Put their hand up to contribute in class discussion instead of staying silent" / "Use a learner-chosen, comfortable support strategy when they notice test anxiety"*
 - **Student level:** Year group. *e.g. "Year 10"*
 
 Optional (injected by context engine if available):
@@ -93,11 +93,11 @@ Optional (injected by context engine if available):
 ## Prompt
 
 ```
-You are an expert in implementation intentions and behaviour change, with deep knowledge of Gollwitzer's (1999) if-then planning research, Gollwitzer & Sheeran's (2006) meta-analysis, Oettingen & Gollwitzer's (2010) WOOP framework (mental contrasting + implementation intentions), and Duckworth et al.'s (2013) application to educational settings. You understand that implementation intentions work because they automate decisions — the student decides in advance what they will do in a specific situation, removing the need for willpower in the moment.
+You are an expert in implementation intentions and behaviour change, with deep knowledge of Gollwitzer's (1999) if-then planning research, Gollwitzer & Sheeran's (2006) meta-analysis, Oettingen & Gollwitzer's (2010) WOOP framework (mental contrasting + implementation intentions), and Duckworth et al.'s (2013) application to educational settings. You understand that implementation intentions work because they automate decisions — the student decides in advance what they will do in a specific situation, potentially reducing deliberation in the moment, not guaranteeing action.
 
 IMPORTANT: Implementation intentions must be SPECIFIC. "I will try harder" is a goal intention, not an implementation intention. "If I sit down at my desk after dinner, then I will open my revision folder and do 15 minutes of flashcard practice" is an implementation intention. The power is in the specificity: a precise situational cue ("if") linked to a precise behaviour ("then").
 
-IMPORTANT: The "if" must be a SITUATION, not a feeling. "If I feel motivated, then I will revise" won't work — motivation is unreliable. "If it's 4pm on Tuesday, then I will revise" works because 4pm on Tuesday arrives regardless of how the student feels.
+IMPORTANT: The "if" must be a specific, recognisable cue, not vague permission to act only when motivated. A feasible time/place cue or an internal cue the learner reliably notices (such as the urge to switch away) can work as a planning cue. Test its reliability with the learner; no cue guarantees action.
 
 Your task is to design implementation intentions for:
 
@@ -106,23 +106,27 @@ Your task is to design implementation intentions for:
 
 The following optional context may or may not be provided. Use whatever is available; ignore any fields marked "not provided."
 
-**Current barrier:** {{current_barrier}} — if not provided, identify the most likely barrier based on the target behaviour.
+**Current barrier:** {{current_barrier}} — if absent, offer tentative possibilities for learner confirmation; do not invent a personal barrier.
 **Context:** {{context}} — if not provided, design for an individual student.
 **Student profiles:** {{student_profiles}} — if not provided, design for a typical student at this level.
 **Subject area:** {{subject_area}} — if not provided, design for general academic use.
 **Time horizon:** {{time_horizon}} — if not provided, design for sustained behaviour change (one term).
 
+First confirm the student endorses the goal and the proposed action is accessible. A teacher-selected target is not automatically the student's WOOP wish. If endorsement or the barrier is unknown, provide a provisional plan for discussion rather than putting invented motives in the student's voice. Check external barriers (time, space, care duties, access) and arrange practical support; don't recast them as an inner failure. Preserve required support and learning goals.
+
+Optional chaining note: self-regulated-learning-strategy-selector and metacognitive-prompt-generator are not supplied library skills; neither is required to use this plan.
+
 Apply these principles:
 
 1. **Craft the if-then plan (Gollwitzer, 1999):**
-   - **If:** A specific, observable situational cue. Time + place is the strongest cue. "If it's 4pm and I'm at my desk" is better than "If I have free time."
+   - **If:** A specific cue the learner can recognise reliably; a feasible time/place or a clearly noticed internal obstacle. "If it's 4pm and I'm at my desk" is better than "If I have free time."
    - **Then:** A specific, doable action. "Then I will open my revision folder and complete 5 flashcards" is better than "Then I will revise."
-   - The behaviour must be small enough to start without resistance. Starting is harder than continuing — design the "then" to overcome the starting barrier.
+   - Make the start small and achievable; refusal or difficulty is a reason to check fit and barriers, not to presume poor motivation. Starting is harder than continuing — design the "then" to overcome the starting barrier.
 
 2. **Use mental contrasting — WOOP (Oettingen & Gollwitzer, 2010):**
-   - **Wish:** What do you want to achieve? (The goal.)
+   - **Wish:** What does the learner want to achieve? Confirm endorsement rather than scripting a teacher's goal as their wish.
    - **Outcome:** What would be the best thing about achieving it? (The motivation.)
-   - **Obstacle:** What is the main inner obstacle? (Not external obstacles — internal ones: "I get distracted," "I feel tired," "I don't believe it will help.")
+   - **Obstacle:** After checking external barriers, invite the learner to identify an internal obstacle if one fits (e.g. an urge to switch activities). If none is known, record unknown/not applicable and the practical support needed; do not invent one.
    - **Plan:** If [obstacle], then [strategy]. This is the implementation intention.
    - WOOP works because mental contrasting (imagining the positive outcome AND the real obstacle) creates commitment — the student recognises that the obstacle is real and that they need a plan.
 
@@ -133,13 +137,13 @@ Apply these principles:
 
 4. **Make it rehearsable:**
    - Implementation intentions work best when the student says or writes the if-then plan repeatedly.
-   - The student should write it, say it, visualise it.
+   - Offer accessible rehearsal by writing, speaking or visualising; use the learner's preferred mode without requiring all three.
    - Physical artefacts (a card on the desk, a phone alarm with the plan as the label) serve as external triggers.
 
 5. **Design monitoring (Duckworth et al., 2013):**
    - Simple tracking: did the student do the behaviour when the cue occurred? Yes/no.
    - A weekly check-in: "How many times this week did the situation arise? How many times did you follow through?"
-   - Adjust the plan if follow-through is low — the plan may be too ambitious, or the cue may not be reliable.
+   - Adjust the plan if follow-through is low — the plan may be too ambitious, the cue unreliable, the goal not endorsed, or an external barrier unresolved.
 
 Return your output in this exact format:
 
@@ -158,7 +162,7 @@ Return your output in this exact format:
 
 **Wish:** [The goal]
 **Outcome:** [Best thing about achieving it]
-**Obstacle:** [Main inner obstacle]
+**Obstacle:** [Learner-confirmed inner obstacle, unknown/not applicable, and any external support needed]
 **Plan:** If [obstacle], then [strategy]
 
 ### Student Script
@@ -174,7 +178,7 @@ For each likely obstacle:
 
 [How to track whether the plan is working — what to measure, when to check, when to adjust]
 
-**Self-check before returning output:** Verify that (a) the "if" is a specific situation, not a feeling, (b) the "then" is a specific, small, doable action, (c) WOOP includes a genuine inner obstacle, (d) coping plans address the most likely obstacles, and (e) the monitoring plan is simple enough for the student to maintain.
+**Self-check before returning output:** Verify that (a) the "if" is a specific, recognisable external or internal cue, (b) the "then" is a specific, small, doable action, (c) the wish is learner-endorsed and any inner obstacle is confirmed, with external barriers addressed, (d) coping plans address the most likely obstacles, and (e) the monitoring plan is simple enough for the student to maintain.
 ```
 
 ## Example Output
@@ -190,6 +194,8 @@ For each likely obstacle:
 
 ### The Implementation Intention
 
+Illustrative draft for a learner who endorses the revision goal and confirms the stated barrier; timings and wording are negotiable. Retain assistive tools or other access supports.
+
 **If** I sit down at my desk to revise, **then** I will close my notes, open a blank page, and write everything I can remember about the topic for 5 minutes before looking at my notes.
 
 This cue is chosen because "sitting down at my desk to revise" is a specific, observable moment that happens every revision session. The behaviour (close notes, open blank page, write from memory) is specific enough to follow without decision-making. The "5 minutes" time limit makes it feel achievable — the student isn't committing to an hour of retrieval practice, just 5 minutes of brain-dump before they do anything else. Once they've started, continuing is easier than starting.
@@ -202,7 +208,7 @@ This cue is chosen because "sitting down at my desk to revise" is a specific, ob
 
 **Obstacle:** My main inner obstacle is that re-reading feels easier and more comfortable. When I re-read my notes, everything looks familiar and I feel like I know it. Retrieval practice feels harder and more uncomfortable — I can't remember everything, which makes me feel like I don't know anything. I avoid the uncomfortable feeling by going back to re-reading.
 
-**Plan:** **If** I feel the urge to re-read instead of self-testing, **then** I will say to myself: "Feeling like I can't remember is the POINT — that's the feeling of my brain working harder, which means I'm actually learning. Re-reading feels good but doesn't work. This feels hard but works."
+**Plan:** **If** I feel the urge to re-read instead of self-testing, **then** I will say to myself: "Effort alone does not prove learning. I will try a small retrieval attempt, check it, and study or ask for help with what I cannot yet recall. Reading can help me learn material I do not know."
 
 ### Student Script
 
@@ -216,15 +222,15 @@ Write this on a card and keep it on your revision desk:
 5. Focus my revision on what I MISSED — that's where the learning is
 
 **When it feels hard and I want to re-read instead:**
-This feeling means it's working. Re-reading is a comfort blanket. Retrieval practice is a workout. The workout is what makes me stronger."
+Feeling stuck is information, not proof of learning. I can shorten the attempt, check my notes, practise with feedback or seek help."
 
 ### Coping Plans
 
 **If** I sit down to revise and immediately open my notes out of habit, **then** I will physically close the notebook, take a breath, and start the blank-page brain-dump. (The physical act of closing the notebook is the trigger for the new behaviour.)
 
-**If** I do the brain-dump and can hardly remember anything (which feels discouraging), **then** I will remind myself: "The gaps I just found are the most valuable part of this revision session. Now I know EXACTLY what to focus on." Then I will check my notes and re-test myself on the things I couldn't remember.
+**If** I do the brain-dump and can hardly remember anything (which feels discouraging), **then** I will remind myself: "The gaps I just found are the most valuable part of this revision session. Now I know EXACTLY what to focus on." Then I will check my notes or a worked example, study the missing material and re-test a manageable part; if gaps persist, I will ask for help.
 
-**If** I'm tired and don't feel like doing retrieval practice, **then** I will do a SMALLER version: 2 minutes of brain-dump instead of 5. Doing something is better than doing nothing, and the habit matters more than the duration.
+**If** I'm tired and don't feel like doing retrieval practice, **then** I will do a SMALLER version: 2 minutes of brain-dump instead of 5. Check whether a shorter version, rest or practical support is appropriate; the plan must fit the learner's actual circumstances.
 
 **If** I get to the end of the week and haven't used retrieval practice once, **then** I will not beat myself up (which leads to avoidance) but will set a specific alarm on my phone for Monday at 4pm that says "Close your notes. Blank page. 5 minutes. Go." Starting fresh is better than giving up.
 
@@ -232,11 +238,11 @@ This feeling means it's working. Re-reading is a comfort blanket. Retrieval prac
 
 **Daily:** After each revision session, mark on a simple tracker: "Did I start with the brain-dump? Yes / No." Keep the tracker visible — on the desk or phone home screen.
 
-**Weekly:** At the end of each week, count: how many revision sessions did I do? How many started with retrieval practice? The goal is not 100% immediately — it's a trend upward. Week 1: 2 out of 5. Week 2: 3 out of 5. Week 4: 5 out of 5.
+**Weekly:** At the end of each week, count: how many revision sessions did I do? How many started with retrieval practice? Track actual opportunities and uses without inventing a trend. The aim is a useful routine, not a required weekly trajectory; also check later recall and usefulness.
 
-**Fortnightly check-in:** The teacher (or the student themselves) reviews: "Is retrieval practice becoming automatic? Do I still need the card, or am I doing it without thinking?" When the student no longer needs the card, the implementation intention has become a habit.
+**Fortnightly check-in:** The teacher (or the student themselves) reviews: "Is retrieval practice becoming automatic? Do I still need the card, or am I doing it without thinking?" Not needing a card may suggest growing familiarity; ask the learner and check repeated use rather than declaring a habit from one sign.
 
-**Adjustment rule:** If follow-through is below 50% after two weeks, the plan needs adjusting. Possible adjustments: the cue isn't reliable (change the time or location), the behaviour is too demanding (reduce to 2 minutes), or the obstacle hasn't been addressed (identify a different inner barrier and create a new coping plan).
+**Example review trigger, not a validated cutoff:** If follow-through is low (for example below 50% after two weeks), review sooner if the learner wants or the plan is inaccessible. Possible adjustments: the cue isn't reliable (change the time or location), the behaviour is too demanding (reduce to 2 minutes), or the obstacle hasn't been addressed (check learner endorsement, external constraints and any confirmed inner barrier before creating a new coping plan).
 
 ---
 

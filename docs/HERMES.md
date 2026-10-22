@@ -10,7 +10,7 @@ The recommended Hermes path is **selected local installs**, not a plugin. The re
 | --- | --- | --- |
 | Hermes selected installs | Local, offline, no-dependency use inside Hermes | You choose which skills to install |
 | Hermes tap | Registering this GitHub repo as a community skill source | Current Hermes tap search works best with flat skill repos, so use the full identifiers below for individual installs |
-| Hosted MCP | Remote clients and intelligent skill discovery via `find_skills` / `suggest_skills` | Requires an access token |
+| Local/self-hosted MCP | Discovery via `find_skills` / `suggest_skills` | Run stdio locally or operate an authenticated HTTP endpoint |
 | Claude/Codex plugins | Users already working in those runtimes | Runtime-specific install path |
 | Manual copy-paste | Trying one skill with no setup | No automatic discovery or orchestration |
 
@@ -20,7 +20,7 @@ The recommended Hermes path is **selected local installs**, not a plugin. The re
 hermes skills tap add GarethManning/education-agent-skills
 ```
 
-This registers the repository as a Hermes community source. Because this library preserves domain folders (`skills/<domain>/<skill-name>/SKILL.md`), the most reliable install path is to use the full skill identifier or raw `SKILL.md` URL.
+This registers the repository as a Hermes community source. Because this library preserves domain folders (`skills/<domain>/<skill-name>/SKILL.md`), use the full skill identifier for source installs. The isolated verification checked portable discovery and resource reads; Hub installation and updates were not tested.
 
 ## Install one skill
 
@@ -68,30 +68,24 @@ hermes skills install GarethManning/education-agent-skills/skills/student-learni
 hermes skills install GarethManning/education-agent-skills/skills/student-learning/teach-back-evaluator --category education --yes
 ```
 
-## Raw URL fallback
+## Complete portable folders
 
-If identifier-based install fails in your Hermes version, install a single skill directly from its raw `SKILL.md` URL:
+For a portable copy, download the [v3.1.0 ZIP](https://github.com/GarethManning/education-agent-skills/releases/download/v3.1.0/education-agent-skills-portable-v3.1.0.zip). The extracted `agent-skills/` contains 165 folders and comes with an installation note. Copy selected complete folders into the skills directory documented for your Hermes profile; retain `references/education.json`, `LICENSE`, examples and policies. Check with `hermes skills list` and inspect resources before use. Preserve existing edited installations before replacing them.
 
-```bash
-hermes skills install \
-  https://raw.githubusercontent.com/GarethManning/education-agent-skills/main/skills/original-frameworks/learning-target-authoring-guide/SKILL.md \
-  --category education --yes
-```
-
-You can use the same pattern for any folder under `skills/<domain>/<skill-name>/SKILL.md`.
+A raw `SKILL.md` download alone omits supporting resources and is unsuitable for a complete installation. For a no-install trial, manually copy a prompt and consult its linked resources in the repository.
 
 ## Intelligent skill selection
 
-A Hermes plugin is not currently planned. It would duplicate the discovery layer already exposed by the hosted MCP server.
+A Hermes plugin is not currently planned. The MCP source already exposes a discovery layer.
 
-If you want the system to recommend skills from a teaching need, use the hosted MCP tools instead:
+If you want the system to recommend skills from a teaching need, run [local/self-hosted MCP](../mcp-server/README.md) and use:
 
 - `find_skills` — search by keyword, domain, evidence rating, or task;
 - `suggest_skills` — describe a teaching/curriculum need and get recommended skills;
 - `get_skill_details` — fetch the full skill metadata and guidance;
 - `list_skills` — browse the library.
 
-Use selected Hermes installs when you want local/offline skills. Use the MCP when you want intelligent remote discovery.
+Use selected Hermes installs when you want local/offline skills. Use MCP for discovery through a local process or your own authenticated endpoint. The library-operated public service is retiring with v3.1.0; public signup is no longer offered. Remote-only clients need their own hosted endpoint or another supported installation route; there is no automatic connector migration.
 
 ## Trust and licence
 

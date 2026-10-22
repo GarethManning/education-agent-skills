@@ -113,7 +113,7 @@ The following optional context may or may not be provided. Use whatever is avail
 
 **Student level:** {{student_level}} — if not provided, infer from the target context.
 **Subject area:** {{subject_area}} — if not provided, infer from the target context.
-**Framework text:** {{framework_text}} — if not provided, use your knowledge of the framework. If you are uncertain about the exact wording, state this and provide your best interpretation.
+**Framework text:** {{framework_text}} — if supplied, reproduce it exactly as supplied and identify that provenance; do not imply independent verification of its official status. If absent, write "Exact source wording not supplied or verified" under Original Framework Wording and request the descriptor and version for fidelity checking. You may still draft a useful interpretation from the named framework and context, explicitly labelled provisional in the Translation and Framework Fidelity Check; never reconstruct text as an official quotation. If the source version is unspecified, say so rather than assume the latest edition.
 **Integration approach:** {{integration_approach}} — if not provided, design for embedding in subject content (the most sustainable approach).
 **Assessment needs:** {{assessment_needs}} — if not provided, design for formative assessment within lessons.
 
@@ -122,16 +122,16 @@ Return your output in this exact format:
 ## Competency Translation: [Framework — Competency Name]
 
 **Framework:** [Which framework]
-**Competency:** [Official name and reference]
+**Competency:** [Supplied name and reference; mark official status/version unverified where necessary]
 **Translated for:** [Subject, year group, context]
 
 ### Original Framework Wording
 
-[The official competency descriptor as written in the framework — or your best interpretation if not provided]
+[Exact supplied descriptor, labelled "Supplied text — official status not independently verified"; otherwise "Exact source wording not supplied or verified — please provide descriptor and version". No reconstructed official wording.]
 
 ### Translation: What This Means in [Subject] for [Year Group]
 
-[Plain-English translation: what this competency actually requires students to do in this specific subject and age group]
+[Plain-English interpretation for this subject and age group, separate from the source wording; label provisional when exact descriptor/version is missing]
 
 ### Observable Indicators
 
@@ -161,7 +161,7 @@ For each task (2–3):
 
 [How well this translation represents the original framework intention — any interpretive choices made and why]
 
-**Self-check before returning output:** Verify that (a) every indicator is observable — you can see or hear it, (b) progression levels are qualitatively distinct, (c) the translation is specific to the stated subject and year group, (d) tasks require the competency (it's not optional), (e) the translation is honest about any ambiguity in the original framework, and (f) integration is practical — embeddable in existing teaching.
+**Self-check before returning output:** Verify that (a) every indicator is observable — you can see or hear it, (b) progression levels are qualitatively distinct, (c) the translation is specific to the stated subject and year group, (d) tasks require the competency (it's not optional), (e) exact supplied wording is separated from interpretation and missing source/version or unverified official status is explicit, and (f) integration is practical — embeddable in existing teaching.
 ```
 
 ## Example Output
@@ -178,7 +178,7 @@ For each task (2–3):
 
 ### Original Framework Wording
 
-"At proficiency level 3 (intermediate): Can compare and critically evaluate the credibility and reliability of specific sources of data, information and digital content." (European Commission, 2022)
+Supplied text — official status not independently verified: "Can compare and critically evaluate the credibility and reliability of specific sources of data, information and digital content". The scenario identifies this as DigComp 2.2, proficiency level 3 (European Commission, 2022); check against that edition before treating it as an official quotation.
 
 ### Translation: What This Means in History for Year 9
 
@@ -243,18 +243,18 @@ The competency is developed THROUGH the subject content, not alongside it. Stude
 
 ### Framework Fidelity Check
 
-The DigComp 2.2 descriptor at Level 3 ("can compare and critically evaluate the credibility and reliability of specific sources") is faithfully represented in this translation, with the following contextualisation:
+This draft interprets the scenario-supplied DigComp 2.2 Level 3 wording, with the following contextualisation. Official wording and level attribution still require checking against the source edition:
 - **"Credibility"** is interpreted through a History lens: author expertise, evidence citation, bias, purpose. In a Science context, credibility would emphasise methodology and peer review instead.
 - **"Reliability"** is interpreted as consistency across sources and the strength of evidence — not just whether the source "looks trustworthy."
 - **"Digital content"** is interpreted as websites and online resources encountered during research, not social media or messaging (which would be a different translation for a Media Studies context).
 
-The translation is faithful to the DigComp intent but specific to the History classroom. A different subject would produce a different translation of the same competency.
+The intended connection to DigComp is explicit, but framework fidelity remains subject to source and educator review; the tasks and levels are classroom design judgments. A different subject would produce a different translation of the same competency.
 
 ---
 
 ## Known Limitations
 
-1. **Competency frameworks are updated regularly.** DigComp has moved from 1.0 to 2.2; GreenComp is relatively new; UNESCO AI guidance will evolve. The translation is based on the current framework version — teachers should check that they're working with the most recent version and adapt if descriptors have changed.
+1. **Competency frameworks are updated regularly.** DigComp has moved from 1.0 to 2.2; GreenComp is relatively new; UNESCO AI guidance will evolve. The translation must identify the supplied edition rather than assume it is current; teachers should check the edition applicable to their setting and adapt if descriptors have changed.
 
 2. **Some frameworks are deliberately vague.** Framework descriptors are written for multiple contexts (primary, secondary, vocational, adult education) and multiple countries. This generality is a feature, not a bug — but it means that translation inevitably involves interpretation. This skill is transparent about interpretive choices, but teachers should verify that the translation aligns with their school's or system's interpretation of the framework.
 

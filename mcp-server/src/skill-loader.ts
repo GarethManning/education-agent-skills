@@ -1,6 +1,6 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import { join, basename, dirname, resolve } from "node:path";
-import matter from "gray-matter";
+import { isAlias, isMap, isNode, isScalar, parseDocument, visit } from "yaml";
 import { assertValidLoadedSkills } from "./skill-validation.js";
 import type { LoadedSkill, SkillMetadata } from "./types.js";
 
@@ -17,10 +17,50 @@ const IGNORED_FILES = new Set([
 
 const IGNORED_DIRS = new Set(["schemas", "mcp-server", ".git", "node_modules"]);
 
+function parseFrontmatter(raw: string): { data: unknown; content: string } {
+  const opening = raw.match(/^---\r?\n/);
+  if (!opening) throw new Error("frontmatter must open with a plain --- line");
+  const remainder = raw.slice(opening[0].length);
+  const closing = /^---(?:\r?\n|$)/m.exec(remainder);
+  if (!closing) throw new Error("frontmatter must close with a plain --- line");
+
+  const document = parseDocument(remainder.slice(0, closing.index), {
+    schema: "core",
+    version: "1.2",
+    customTags: [],
+    resolveKnownTags: false,
+  });
+  if (document.errors.length || document.warnings.length) {
+    throw new Error(`invalid YAML frontmatter: ${[...document.errors, ...document.warnings].map((error) => error.message).join("; ")}`);
+  }
+  const allowedTags = new Set(["map", "seq", "str", "bool", "int", "float", "null"].map((tag) => `tag:yaml.org,2002:${tag}`));
+  visit(document, (_key, node) => {
+    // Only JSON-like data belongs in metadata; never resolve executable/custom
+    // tags, aliases (including cycles), complex keys, or non-finite numbers.
+    if (isAlias(node)) throw new Error("YAML aliases are not supported in frontmatter");
+    if (isNode(node) && node.tag && !allowedTags.has(node.tag)) {
+      throw new Error("custom YAML tags are not supported in frontmatter");
+    }
+    if (isScalar(node) && typeof node.value === "number" && !Number.isFinite(node.value)) {
+      throw new Error("frontmatter numbers must be finite");
+    }
+    if (isMap(node) && node.items.some(({ key }) => !isScalar(key) || typeof key.value !== "string")) {
+      throw new Error("frontmatter mapping keys must be strings");
+    }
+  });
+  if (!isMap(document.contents)) throw new Error("frontmatter must be a YAML mapping");
+  return {
+    data: document.toJS({ maxAliasCount: 0 }),
+    content: remainder.slice(closing.index + closing[0].length),
+  };
+}
+
 function extractPrompt(content: string): string {
   // Case 1: ## Prompt or ## System Prompt followed by a fenced code block.
-  const promptMatch = content.match(/^## (?:System )?Prompt\s*\n+```[^\n]*\n([\s\S]*?)```/m);
-  if (promptMatch) return promptMatch[1].trim();
+  const promptMatch = content.match(
+    /^## (?:System )?Prompt[ \t]*\r?\n(?:[ \t]*\r?\n)*(`{3,})[^`\r\n]*\r?\n([\s\S]*?)^\1[ \t]*\r?$/m,
+  );
+  if (promptMatch) return promptMatch[2].trim();
 
   // Case 2: h1 prompt with h2 subheadings inside — stop at next h1 or EOF.
   const h1Match = content.match(
@@ -131,7 +171,7 @@ export async function loadSkills(libraryRoot: string): Promise<LoadedSkill[]> {
 
     try {
       const raw = await readFile(filePath, "utf-8");
-      const { data, content } = matter(raw);
+      const { data, content } = parseFrontmatter(raw);
       const metadata = data as SkillMetadata;
 
       if (!metadata.skill_id || !metadata.input_schema) throw new Error("missing skill_id or input_schema");

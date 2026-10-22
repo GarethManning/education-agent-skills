@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate all SKILL.md files have correct Agent Skills v2 frontmatter."""
+"""Validate canonical SKILL.md files against the extended project source schema."""
 
 import glob
 import re
@@ -93,7 +93,7 @@ def validate_skill(path):
     if not description:
         errors.append("Missing 'description' field")
     elif len(description) > 250:
-        errors.append(f"'description' exceeds 250 chars: {len(description)}")
+        errors.append(f"'description' exceeds project policy of 250 chars: {len(description)}")
 
     disabled = frontmatter.get("disable-model-invocation")
     if disabled is None:
@@ -161,7 +161,7 @@ def main():
     print(f"Errors: {total_errors}, Warnings: {total_warnings}")
     if total_errors > 0:
         sys.exit(1)
-    print("All SKILL.md files pass validation")
+    print("All SKILL.md files pass project source validation")
 
 
 if __name__ == "__main__":

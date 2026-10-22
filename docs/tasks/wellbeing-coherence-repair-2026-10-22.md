@@ -1,0 +1,9 @@
+# Motivation example coherence repair — 2026-10-22
+Goal: repair the one confirmed independent-review contradiction without reopening the wellbeing packet.
+Source: authorizedbuild + reviewer finding in skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:255 vs217 (baselinecurrentworkingdraft).
+Checkout /Users/garethmanning/Github/education-agent-skills; branch codex/agent-skills-standards-quality-2026-10-22; preserveallprecedingwork. No commits/push/deploy/subagents or hosted/modelcalls. Youare notalone; don'trevert otherchanges.
+Owner: only that SKILL.md body, current builder report’s hash for that file if needed (prefer separate repairreceipt), and docs/tasks/wellbeing-coherence-repair-2026-10-22-report.md. Rawfrontmatter/templatevariables/schema/IDs/sourcecitations unchanged. Don'teditregistry/bundle/export/code.
+Read fullaffectedfile, task wellbeing-inclusion-2026-10-22.md and report, and relevantreviewfinding. Originallearner motivation nowcorrectlyUnknown inassessment; laterWhattoWatchFor#4 assertsoriginaltaskalreadyexternalregulation.
+Smallestrepair: removeassertedoriginalmotivationtype from#4 while retaining generalrewardscaution and learnerperspective/workevidence checks. Don'treplacemethodwithgenericadvice or manufacturemotivationdiagnosis. Confirm examplewholefile doesnotlabelunknownlearner as knownexternallyregulated.
+Acceptance: ordinarytaskredesignstillusable; Unknownremainsunknownthroughoutassessment, explanation andcautions; rawfrontmatter/templatevariablesexact; balancedfences/extractedprompt; gitdiff--check scoped. No new keywordunit test or repeatedfullsuiteforonesentence.
+Report exactbefore/afterhashes, exactsentencechanged, preservedbehavior, textualwalkthrough and checkresults; no empiricalbenefitclaim. Stoponlyforunresolvedmeaning or2failedattemptssameproblem; otherwisefinish.

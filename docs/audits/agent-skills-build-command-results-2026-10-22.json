@@ -1,0 +1,191 @@
+{
+  "checked_utc": "2026-10-22T20:49:37.711429+00:00",
+  "commands": [
+    {
+      "command": "npm audit --audit-level=high",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "found 0 vulnerabilities"
+    },
+    {
+      "command": "npm audit --audit-level=high",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills/mcp-server",
+      "exit_code": 0,
+      "output": "found 0 vulnerabilities"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python -m pip check",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "No broken requirements found."
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python scripts/generate-registry.py",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "registry.json generated: 165 skills, 20 domains\n",
+      "checked_utc": "2026-10-22T21:04:07.101209+00:00"
+    },
+    {
+      "command": "npm run bundle-skills",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills/mcp-server",
+      "exit_code": 0,
+      "output": "\n> education-agent-skills-mcp@0.1.0 bundle-skills\n> tsx scripts/bundle-skills.ts\n\nBundled 165 skills into /Users/garethmanning/Github/education-agent-skills/mcp-server/src/skills.json\n",
+      "checked_utc": "2026-10-22T21:04:08.893261+00:00"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills/mcp-server",
+      "exit_code": 0,
+      "output": "\n> education-agent-skills-mcp@0.1.0 build\n> tsc\n\n\n> education-agent-skills-mcp@0.1.0 postbuild\n> cp src/skills.json dist/skills.json\n\n",
+      "checked_utc": "2026-10-22T21:04:10.002327+00:00"
+    },
+    {
+      "command": "npm test -- --reporter=dot",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills/mcp-server",
+      "exit_code": 0,
+      "output": "\n> education-agent-skills-mcp@0.1.0 test\n> playwright test --reporter=dot\n\n\nRunning 75 tests using 4 workers\n(node:71905) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:71903) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:71906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:71904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n  75 passed (5.7s)\n",
+      "checked_utc": "2026-10-22T21:04:16.071885+00:00"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python scripts/validate-skills.py",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "WARN   skills/original-frameworks/learning-target-authoring-guide/SKILL.md: File is 517 lines (over 500-line guideline)\n\nValidated 165 SKILL.md files\nErrors: 0, Warnings: 1\nAll SKILL.md files pass validation\n",
+      "checked_utc": "2026-10-22T21:04:16.553521+00:00"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python scripts/validate-registry.py",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "registry.json valid: 165 skills, 20 domains\n",
+      "checked_utc": "2026-10-22T21:04:16.584559+00:00"
+    },
+    {
+      "command": "npm test -- --reporter=dot",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "\n> education-agent-skills@1.0.0 test\n> npx playwright test --reporter=dot\n\n\nRunning 22 tests using 1 worker\n(node:72192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:72192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b0\n  1 skipped\n  21 passed (1.4s)\n",
+      "checked_utc": "2026-10-22T21:04:18.846303+00:00"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python -m unittest discover -s tests -p test_standard_export.py -q",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\nRan 15 tests in 4.013s\n\nOK\n",
+      "checked_utc": "2026-10-22T21:04:22.940736+00:00"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python scripts/export-standard-skills.py",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "Exported 165 skills; source SHA-256 a2e71fa05cde2ea2ebccd875023ebb0368c11379beb1fe165c1e0debd12938dc\n",
+      "checked_utc": "2026-10-22T21:04:24.091389+00:00"
+    },
+    {
+      "command": "/tmp/education-skills-audit-20261022/venv/bin/python scripts/validate-standard-skills.py",
+      "cwd": "/Users/garethmanning/Github/education-agent-skills",
+      "exit_code": 0,
+      "output": "skills-ref 0.1.0: validate 165/165; to-prompt 165/165\n",
+      "checked_utc": "2026-10-22T21:04:24.741085+00:00"
+    }
+  ],
+  "artifacts": {
+    "portable_skills": 165,
+    "source_sha256": "a2e71fa05cde2ea2ebccd875023ebb0368c11379beb1fe165c1e0debd12938dc",
+    "portable_receipt_sha256": "633117b63a28539ff02aa73306cf1fa62293edbc7d28f937d9420b9e0dca7c97",
+    "repeat_export_content_identical": true,
+    "portable_files_hashed": 515,
+    "registry_semantically_current": true,
+    "registry_sha256": "4315ba389f09e114f5d3bf38153bab2b6ff2da0fea10a26dcbbd0a5917daa1cc",
+    "domains": 20,
+    "bundled_prompts": 165,
+    "explicit_only_source_skills": 12,
+    "bundle_sha256": "36e9a5b9957d66e1c74a9161565160b2ebb615e13702e8a8b58e6a2dda8c153e"
+  },
+  "codex": {
+    "client": "codex-cli 0.163.0-alpha.11.1",
+    "commands": [
+      {
+        "args": [
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "codex-cli 0.163.0-alpha.11.1\n"
+      },
+      {
+        "args": [
+          "plugin",
+          "marketplace",
+          "add",
+          "/Users/garethmanning/Github/education-agent-skills",
+          "--json"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"marketplaceName\": \"education-agent-skills\",\n  \"installedRoot\": \"/Users/garethmanning/Github/education-agent-skills\",\n  \"alreadyAdded\": false\n}\n"
+      },
+      {
+        "args": [
+          "plugin",
+          "add",
+          "education-agent-skills@education-agent-skills",
+          "--json"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"pluginId\": \"education-agent-skills@education-agent-skills\",\n  \"name\": \"education-agent-skills\",\n  \"marketplaceName\": \"education-agent-skills\",\n  \"version\": \"2.1.0\",\n  \"installedPath\": \"/private/var/folders/d1/1hd27b7s10gcc97hl5sm4lqr0000gn/T/education-codex-final-6oyedu5o/codex/plugins/cache/education-agent-skills/education-agent-skills/2.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n"
+      },
+      {
+        "args": [
+          "plugin",
+          "list",
+          "--marketplace",
+          "education-agent-skills",
+          "--json"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"installed\": [\n    {\n      \"pluginId\": \"education-agent-skills@education-agent-skills\",\n      \"name\": \"education-agent-skills\",\n      \"marketplaceName\": \"education-agent-skills\",\n      \"version\": \"2.1.0\",\n      \"installed\": true,\n      \"enabled\": true,\n      \"source\": {\n        \"source\": \"local\",\n        \"path\": \"/Users/garethmanning/Github/education-agent-skills\"\n      },\n      \"marketplaceSource\": {\n        \"sourceType\": \"local\",\n        \"source\": \"/Users/garethmanning/Github/education-agent-skills\"\n      },\n      \"installPolicy\": \"AVAILABLE\",\n      \"authPolicy\": \"ON_INSTALL\"\n    }\n  ],\n  \"available\": []\n}\n"
+      }
+    ],
+    "skills": 165,
+    "domains": 20,
+    "policy_sidecars": 12,
+    "source_files_compared": 185,
+    "reference_files_compared": 8,
+    "all_source_files_byte_equal": true,
+    "temporary_storage_cleaned_on_exit": true,
+    "model_activation_tested": false,
+    "real_settings_changed": false
+  },
+  "hermes": {
+    "version": "v0.18.0 (2026.7.1)",
+    "source_revision": "a6b9597d5fb92969d605a858d5f14536e805553a",
+    "command": "python3 /tmp/education-skills-build-20261022/hermes_portable_read_check.py",
+    "exit_code": 0,
+    "listed": 165,
+    "main_and_metadata_reads": [
+      "learning-target-authoring-guide",
+      "spaced-practice-scheduler",
+      "confidence-calibration-check"
+    ],
+    "moved_reference_read": "learning-target-authoring-guide/references/worked-examples.md",
+    "preprocess": false,
+    "network": "blocked",
+    "model_calls": false,
+    "temporary_profile_cleaned": true
+  },
+  "temporary_harness_corrections": [
+    "Codex first setup attempt failed because CODEX_HOME directory had not been created; helper created disposable directories before retry.",
+    "A later cache selector counted both source and generated portable LT copies; narrowed selector to canonical skills/domain/slug. Registration/install/list had already succeeded; final full comparison passed. No repository correction was needed."
+  ],
+  "closure": {
+    "review": "ACCEPT",
+    "documentation_source_hashes_unchanged": true,
+    "raw_headers_byte_identical": 160,
+    "original_audits_hashes_unchanged": 9,
+    "head_unchanged": true,
+    "index_unstaged": true,
+    "tzdata_pin": "2026.5",
+    "current_status_record": "docs/tasks/build-status-2026-10-22.json",
+    "closed_utc": "2026-10-22T21:17:16.898518+00:00"
+  }
+}

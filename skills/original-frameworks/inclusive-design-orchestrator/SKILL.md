@@ -82,7 +82,7 @@ tags: ["orchestrator", "composite-framework", "practitioner-framework", "emergin
 
 ## What This Skill Does
 
-Coordinates inclusive design and UDL tools when a teacher is planning a lesson, unit, or programme and wants to ensure it is accessible to more learners. The orchestrator routes between UDL tools, differentiation, and language-access approaches based on the teacher's specific inclusion challenge, and enforces a universal-first hierarchy: reduce barriers for everyone before targeting a specific group, and target a specific group before designing individualised accommodation.
+Coordinates inclusive design and UDL tools when a teacher is planning a lesson, unit, or programme and wants to ensure it is accessible to more learners. The orchestrator routes between UDL tools, differentiation, and language-access approaches based on the teacher's specific inclusion challenge, and uses universal-first planning: proactively reduce shared barriers while providing existing, required or urgent individual access support in parallel. No learner must wait for other tiers to be exhausted.
 
 Use this when the inclusion challenge is not yet resolved into a specific tool. If you already know you need a UDL lesson audit, use udl-lesson-auditor directly. Use this orchestrator when the type of inclusive intervention is uncertain.
 
@@ -90,7 +90,7 @@ This orchestrator coordinates design tools. It does not replace specialist asses
 
 ## Evidence Foundation
 
-The pathways draw from Universal Design for Learning (Rose & Meyer, 2002; CAST, 2018; Meyer, Rose & Gordon, 2014; Ok, Rao, Bryant & McDougall, 2017 systematic review), differentiated instruction (Tomlinson, 2001), and culturally responsive teaching (Gay, 2010). The organising principle — design universally first, then differentiate, then accommodate — reflects the UDL framework's original architecture: the goal is not to retrofit access after design, but to build it in from the start.
+The pathways draw from Universal Design for Learning (Rose & Meyer, 2002; CAST, 2018; Meyer, Rose & Gordon, 2014; Ok, Rao, Bryant & McDougall, 2017 systematic review), differentiated instruction (Tomlinson, 2001), and culturally responsive teaching (Gay, 2010). The organising principle is to build access into design from the start. The three tiers below are this practitioner framework's planning structure, not a research-validated requirement to delay individual support.
 
 ## Evidence Space and Strength of Evidence
 
@@ -121,13 +121,13 @@ This skill depends on udl-barrier-anticipator, udl-lesson-auditor, udl-options-d
 
 ## Universal-First Hierarchy
 
-This orchestrator enforces a three-tier hierarchy. Do not skip to a lower tier if a higher tier would address the need:
+This orchestrator uses three planning tiers. Start by considering shared barriers, while honouring existing plans and urgent access needs immediately; the tiers are not prerequisites for receiving support:
 
 1. **Universal Design** — Reduce barriers for all learners before instruction begins. Benefit: everybody gains access; no student is singled out; design effort is concentrated where it helps the most people.
-2. **Targeted Differentiation** — Adapt a specific task, resource, or modality for a student or small group with an identified need. Use only when universal design does not fully address the barrier.
-3. **Individualised Accommodation** — Adjust for a specific student with a support plan, IEP, or clinical need. Use only when targeted differentiation is insufficient and specialist support or documentation is in place.
+2. **Targeted Differentiation** — Adapt a specific task, resource, or modality for a student or small group with an identified need. Use for identified needs not yet met by shared design, including while universal improvements are underway.
+3. **Individualised Accommodation** — Adjust for a specific student with a support plan, IEP, or clinical need. Honour existing plans and required accommodations; address urgent access needs with authorised staff in parallel with design work. Do not require failed earlier tiers or new documentation before providing appropriate support.
 
-The hierarchy is not a ranking of student worth. It is a design priority order that prevents tokenistic inclusion, reduces stigma, and ensures design effort is allocated efficiently.
+The hierarchy is not a ranking of student worth. It is a planning priority for reducing shared barriers, not a gate withholding individual support.
 
 ## Pathway Principle
 
@@ -160,7 +160,7 @@ Typical chain: `differentiation-adapter` → optional `language-demand-analyser`
 
 Best when: responding to an identified individual need, implementing part of an IEP, scaffolding for EAL students, or adjusting for a student returning after absence.
 
-Do not use this pathway: when a universal design modification would address the same barrier for more students without singling anyone out.
+Check whether a universal modification could also help others, without delaying existing or urgent targeted support.
 
 ### 4. Assessment Accessibility
 Use when the concern is specifically about whether an assessment format creates barriers unrelated to what is being assessed — barriers that obscure what students actually know. Produces: barrier-reduced assessment design with format alternatives where appropriate.
@@ -174,7 +174,7 @@ Do not use this pathway: as a reason to lower expectations. The goal is to remov
 ## Prompt
 
 ```text
-You are an inclusive design orchestrator. Your first responsibility is to make pathway options visible and to enforce the universal-first hierarchy: reduce barriers for everyone before targeting a specific group, and target a group before designing individualised accommodation.
+You are an inclusive design orchestrator. Your first responsibility is to make pathway options visible and prioritise universal barrier reduction while providing existing, required or urgent targeted/individual support in parallel. Universal-first is a planning priority, never a wait-for-failure rule.
 
 Inputs:
 Lesson or unit: {{lesson_or_unit}}
@@ -185,7 +185,7 @@ Existing plan: {{existing_plan}}
 Constraints: {{constraints}}
 Pathway choice: {{pathway_choice}}
 
-Step 1: If pathway_choice is not provided, present all four pathway options with when-to-use guidance. State what each produces and when not to use it.
+Step 1: First preserve existing support plans, access arrangements and learning goals, and flag urgent access needs for prompt authorised action. If pathway_choice is not provided, present all four pathway options with when-to-use guidance. State what each produces and when not to use it.
 
 Step 2: Recommend the best-fit pathway. Explain which tier of the universal-first hierarchy applies: Is this a universal design decision, a targeted differentiation, or an individualised accommodation? Name your assumptions.
 
@@ -199,13 +199,13 @@ Step 4: Once a pathway is selected, coordinate the relevant skills in sequence. 
 - Handoff to the next step
 - Do-not-proceed-if check
 
-Step 5: Apply the universal-first hierarchy explicitly. Before recommending targeted differentiation, confirm that universal design would not address the same barrier. Before recommending individualised accommodation, confirm that targeted differentiation is insufficient.
+Step 5: Apply the universal-first hierarchy explicitly. Identify shared barrier reductions and any remaining targeted needs. Honour existing/required support and urgent access arrangements in parallel; never wait for universal or targeted options to fail before addressing these.
 
 Step 6: Apply specialist referral check. Flag clearly when a need exceeds what inclusive design can address:
 - If a student requires educational psychology assessment to understand their learning profile, flag this.
 - If a student's needs include speech-language, occupational therapy, or clinical mental health support, flag this.
 - If a barrier persists despite multiple design modifications and the student is not making progress, flag this.
-A referral flag is not a failure of inclusive design. It is honest recognition that some support needs require specialist expertise.
+A referral flag identifies a need for specialist collaboration. It does not suspend ordinary inclusion or existing support; stop only the decision requiring specialist authority and continue safe design work.
 
 Step 7: Apply tokenism check. For each proposed modification:
 - Does this modification address an actual identified barrier, or is it a generic addition ("add a visual") that may not help anyone specifically?
@@ -234,18 +234,18 @@ For each step:
 [Barrier-reduced lesson, unit, or assessment design]
 
 ## Universal-First Hierarchy Check
-- [ ] Universal design modifications identified and applied first?
-- [ ] Targeted differentiation used only where universal design is insufficient?
-- [ ] Individualised accommodation reserved for students with documented specialist support needs?
+- [ ] Universal barrier reductions prioritised, alongside existing or urgent access support?
+- [ ] Targeted needs addressed without waiting for shared redesign?
+- [ ] Existing/required accommodations retained and urgent access needs addressed with authorised staff?
 - [ ] No student has been singled out unnecessarily by the design modifications?
 
 ## Specialist Referral Flags
 [List any situations where specialist referral is more appropriate than design modification]
 
 ## Stop / Do Not Proceed If
-- [ ] The inclusion challenge involves a clinical, psychological, or specialist support need that design cannot address
+- [ ] A proposed decision requires clinical, psychological or specialist authority: pause that decision and seek the appropriate human input; continue ordinary inclusion
 - [ ] Modifications are being added as compliance gestures without identifying actual barriers
-- [ ] A targeted or individualised solution is being jumped to before checking whether universal design would address the same need
+- [ ] An existing, required or urgent individual support is being delayed pending earlier tiers
 - [ ] The teacher has not yet examined what barriers exist — barrier analysis must precede barrier removal
 
 Self-check: Am I helping the teacher think about barriers and access, or am I generating a compliance checklist? Is the universal-first hierarchy being followed? Am I being honest about the limits of design-based inclusion? Have I flagged specialist referral needs clearly?
@@ -261,7 +261,7 @@ Self-check: Am I helping the teacher think about barriers and access, or am I ge
 
 ### Auditing and adapting an existing lesson
 1. UDL lesson auditor — systematic audit of existing plan.
-2. Prioritise barriers by impact.
+2. Prioritise barriers by impact; preserve existing accommodations and address urgent needs in parallel.
 3. UDL options designer for high-impact barriers.
 4. Differentiation adapter for remaining individual needs.
 5. Flag specialist referral needs.
@@ -274,7 +274,7 @@ Self-check: Am I helping the teacher think about barriers and access, or am I ge
 ## Common Pitfalls
 
 1. **Tokenistic additions.** Adding a visual, a choice, or a scaffold without identifying which barrier it addresses is not UDL. Modifications must connect to real barriers.
-2. **Jumping to individualised accommodation.** Targeted and individualised approaches are sometimes appropriate, but reaching for them before attempting universal design wastes design effort and can stigmatise students.
+2. **Jumping to individualised accommodation.** Consider shared design opportunities, but do not delay existing, required or urgent individual support while redesigning. Choose supports from the actual barrier and learner needs.
 3. **Mistaking compliance for inclusion.** Completing a barrier audit checklist does not mean students feel included. Genuine inclusion is relational, cultural, and ongoing.
 4. **Lowering expectations instead of removing barriers.** The goal of inclusive design is to ensure students can demonstrate their actual knowledge and skills. Removing format barriers is not the same as reducing challenge.
 5. **Ignoring specialist referral signals.** When a student's needs consistently exceed what design modifications can address, continuing to iterate on design rather than seeking specialist support is not serving that student well.

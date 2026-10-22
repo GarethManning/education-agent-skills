@@ -1,0 +1,11 @@
+{
+  "phase": "release publication in progress; source/package reviewed; public hosted MCP paused",
+  "release": "v3.1.0",
+  "plugin_version": "2.2.0",
+  "retirement_evidence": "docs/releases/v3.1.0-retirement-evidence.json",
+  "publication_record": "docs/releases/v3.1.0-publication-record.md",
+  "costs_usage_review": "skipped by explicit user instruction",
+  "builds_deployments_started": 0,
+  "next": "GitHub commit/PR/CI/merge/release/public download and client checks",
+  "updated_utc": "2026-10-22T21:38:11.036483+00:00"
+}

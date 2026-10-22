@@ -4,7 +4,8 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readFileSync } from "node:fs";
-import { createServer } from "../src/server.js";
+import { createServer, MAX_TOOL_INPUT_ELEMENTS } from "../src/server.js";
+import { MCP_REQUEST_BODY_LIMIT_BYTES } from "../src/request-body.js";
 import type { LoadedSkill } from "../src/types.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -175,6 +176,42 @@ test.describe("MCP Server — skill tools", () => {
     expect(text).toContain("Cognitive Load Theory");
     expect(text).toContain("mitosis");
     expect(text).toContain("Year 9 novice");
+  });
+
+  test("accepts a large fictional structured input and the exact element boundary", async () => {
+    const required = { desired_outcomes: "Fictional curriculum planning", student_level: "Year 9", unit_duration: "Six weeks" };
+    const profiles = Array.from({ length: 1_000 }, (_, index) => ({
+      id: `fictional-${index}`, year: "9", subject: "science", prior_attainment: "developing",
+      gap: "fractions", language: "English", support: "worked example", target: "transfer",
+    }));
+    const args = { ...required, student_profiles: profiles };
+    // Four root keys + 1,000 array entries + 8,000 record keys = 9,004.
+    expect(4 + profiles.length * 9).toBe(9_004);
+    expect(Buffer.byteLength(JSON.stringify(args))).toBeLessThan(MCP_REQUEST_BODY_LIMIT_BYTES);
+    const result = await client.callTool({ name: "backwards-design-unit-planner", arguments: args });
+    expect(result.isError).not.toBe(true);
+    expect((result.content as Array<{ text: string }>)[0].text).toContain("fictional-999");
+
+    const boundary = await client.callTool({ name: "backwards-design-unit-planner", arguments: {
+      ...required, student_profiles: Array(MAX_TOOL_INPUT_ELEMENTS - 4).fill(0),
+    } });
+    expect(boundary.isError).not.toBe(true);
+  });
+
+  test("rejects safely bounded arrays and nested objects over the element limit", async () => {
+    const required = { desired_outcomes: "Fictional curriculum planning", student_level: "Year 9", unit_duration: "Six weeks" };
+    for (const student_profiles of [
+      Array(MAX_TOOL_INPUT_ELEMENTS - 3).fill(0),
+      [Object.fromEntries(Array.from({ length: MAX_TOOL_INPUT_ELEMENTS - 4 }, (_, index) => [`field${index}`, 0]))],
+    ]) {
+      const args = { ...required, student_profiles };
+      expect(Buffer.byteLength(JSON.stringify(args))).toBeLessThan(MCP_REQUEST_BODY_LIMIT_BYTES);
+      const result = await client.callTool({ name: "backwards-design-unit-planner", arguments: args });
+      expect(result.isError).toBe(true);
+      expect((result.content as Array<{ text: string }>)[0].text).toContain(`maximum of ${MAX_TOOL_INPUT_ELEMENTS} elements`);
+    }
+    const healthy = await client.callTool({ name: "list_skills", arguments: {} });
+    expect(healthy.isError).not.toBe(true);
   });
 
   // The former slug collision (two `critical-thinking-task-designer` skills) was

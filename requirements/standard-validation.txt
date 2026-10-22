@@ -1,0 +1,8 @@
+# Official reference implementation, pinned independently of this project's source validator.
+skills-ref @ git+https://github.com/agentskills/agentskills.git@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref
+PyYAML==6.0.3
+click==8.5.0
+strictyaml==1.7.3
+python-dateutil==3.0.0
+six==1.17.0
+tzdata==2026.5

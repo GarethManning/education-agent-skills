@@ -57,7 +57,7 @@ test.describe("Skill Discovery", () => {
     }
   });
 
-  test("every SKILL.md has Agent Skills v2 name field", () => {
+  test("every source SKILL.md has the required name field", () => {
     const paths = getAllSkillPaths();
     for (const p of paths) {
       const fm = parseFrontmatter(p);
@@ -214,7 +214,7 @@ test.describe("Plugin Manifest Validation", () => {
 
   test("plugin.json is valid JSON", () => {
     expect(plugin.name).toBe("education-agent-skills");
-    expect(plugin.version).toBe("2.1.0");
+    expect(plugin.version).toBe("2.2.0");
   });
 
   // Claude Code and Codex scan only one directory level deep, while skills are

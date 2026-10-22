@@ -1,0 +1,16 @@
+# Safe MCP runtime and reproducible package — 2026-10-22
+Goal: implement the audited safe parsing/runtime reliability repairs without changing educational content.
+Source: Gareth: “let’s proceed with this build”; plans docs/audits/agent-skills-migration-plan.md Q0/Q1/Q2-C3/P2 package freshness.
+Checkout /Users/garethmanning/Github/education-agent-skills; branch codex/agent-skills-standards-quality-2026-10-22; baseline6bbbce418f82e11044009c9f3b7373a354de5bd0.
+Owner: builder owns mcp-server/src/skill-loader.ts, tool-handler.ts, server.ts, oauth.ts; mcp-server/package{,-lock}.json; necessary focused mcp-server/tests/* and package/LICENSE; docs/HOSTED_MCP_ACCESS.md if operational limits need clarification.
+Protected: skills/**, registry.json, src/skills.json content, root docs/readme, plugin manifests, root tests. Coordinator is writing separate briefs; you are not alone. Do not revert others’ edits. No subagents.
+Read AGENTS.md; plan relevant sections; actual src/tests before running. No learner data/secrets/hosted calls/deploys; no commits/push/publication. Scope supersedes skill default commit/push instruction for this local-only build.
+1 Safe frontmatter: require plain --- opening/closing, nonexecuting YAML parser, reject js/javascript/custom tags/executable delimiters. Preserve all165 parsed metadata and extracted prompts exactly. Remove gray-matter if no longer needed rather than downgrade.
+2 Refresh SDK to compatible patched release at least1.32 and lockfile/transitives using fresh registry/advisory evidence. Inspect dependency lifecycle hooks before install; never npm audit fix --force. Set explicit justified maxToolInputElements compatible with 1MiB cap. Avoid unrelated major upgrades.
+3 Replace unsafe string replacement with one pass over original placeholder tokens using callback and literal keys, case insensitive preserving original behavior; input containing $&, {{literal}}, regex-key text is not reinterpreted. Existing input summary remains.
+4 Remove unsupported OAuth client_id_metadata_document_supported advertisement; preserve fixed client flow. Document token-vs-family revocation and instance-local replay limit without building shared persistence.
+5 Add prepack local build freshness and packed-CLI temp smoke test (no npm publish, no network model calls); ensure no absolute source paths needed. License copy only existing terms, do not relicense.
+Checks: baseline/final npm run build and npm test in mcp-server with summary; parser safe fixtures + deep parity all165; literal placeholder tests; legitimate largest/bounded over-limit SDK test; existing auth/protocol count165prompts157tools12explicit; npm audit --audit-level=high; npm pack to temp and packed CLI handshake if feasible.
+Do not print credential-bearing environment/process args. All started servers/processes must stop.
+Stop condition: two failed attempts same issue, unapproved interface meaning, needs paid service/live deployment or unsafe operation; report concrete blocker, keep safe independent repairs.
+Report docs/tasks/safe-mcp-runtime-2026-10-22-report.md with outcome, changed files, commands/counts, actual dependency/advisory results, preserved parity, remaining limits and rollback. No invented verification.

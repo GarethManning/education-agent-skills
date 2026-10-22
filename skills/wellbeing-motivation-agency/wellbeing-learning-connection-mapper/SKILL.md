@@ -68,11 +68,11 @@ tags: ["wellbeing", "positive-psychology", "broaden-and-build", "SEL", "school-l
 
 ## What This Skill Does
 
-Maps the evidence-based connections between a specific wellbeing intervention and specific learning outcomes, generating a clear causal pathway that shows HOW improved wellbeing leads to improved learning — not just that it does. The output is designed for school leaders, governors, and other stakeholders who need to justify wellbeing investment in terms of educational outcomes. The critical principle is that wellbeing and learning are not competing priorities — they are causally connected. Positive emotions broaden cognitive resources (Fredrickson, 2001), social-emotional skills improve academic performance (Durlak et al., 2011), and student wellbeing predicts engagement, attendance, and achievement (Hattie, 2009). The output includes the evidence pathway, the specific psychological mechanisms, realistic expected outcomes with timeframes, and a leadership-ready rationale. AI is specifically valuable here because connecting wellbeing research to learning outcomes requires bridging two bodies of literature — positive psychology and educational effectiveness — that are often siloed. Most teachers intuitively believe wellbeing matters but struggle to articulate the evidence chain for sceptical stakeholders.
+Maps possible connections between a wellbeing initiative and specific learning outcomes so school leaders can assess, rather than automatically justify, investment. Distinguish intervention-specific evidence, broader theory, associations and local observations. A causal pathway is a hypothesis to evaluate; some arrows may be unknown, contradicted or unsupported, and a defensible output may recommend adapting or rejecting the initiative. The output includes mechanisms, conditions, outcome expectations with stated uncertainty and a draft leadership rationale. Do not manufacture local facts, timelines or effect estimates to make the case persuasive.
 
 ## Evidence Foundation
 
-Fredrickson (2001) proposed the broaden-and-build theory of positive emotions: positive emotions (joy, interest, contentment, pride) broaden cognitive repertoires — expanding attention, creativity, and problem-solving capacity — while negative emotions narrow them (fight-or-flight reduces cognitive flexibility). Over time, broadened cognition builds lasting intellectual, social, and psychological resources. This provides the core mechanism: wellbeing → positive emotions → broadened cognition → better learning. Durlak et al. (2011) conducted a meta-analysis of 213 school-based social and emotional learning (SEL) programmes involving 270,000+ students. They found an average 11-percentile gain in academic achievement for students in SEL programmes compared to controls — and this effect held across ages, demographics, and programme types. The key finding is that SEL doesn't compete with academic time — it enhances it. Hattie (2009) identified student background factors (anxiety, stress, family disruption) as significant negative influences on achievement and teacher-student relationships, classroom climate, and student self-concept as significant positive influences. Roffey (2012) demonstrated bidirectionality: student wellbeing affects learning, and teacher wellbeing affects teaching quality — the two are connected. Seligman et al. (2009) piloted Positive Education at Geelong Grammar School, showing that explicit wellbeing teaching alongside academic teaching improved both wellbeing and academic outcomes.
+Fredrickson (2001) proposes broaden-and-build theory as one account of positive emotions and cognitive resources; this is a possible mechanism, not proof that any chosen wellbeing initiative improves learning. Durlak et al. (2011) synthesise school-based SEL studies and report academic gains in the relevant evidence subset. Those results cannot be transferred to a different intervention, such as a specific restorative approach, or predicted for a local school without matching evidence. Hattie (2009) synthesises influences associated with achievement; a relationship effect does not validate a particular programme. Roffey (2012) discusses pupil and teacher wellbeing, while Seligman et al. (2009) discuss Positive Education and classroom interventions. Preserve source identity, context and limitations, including null, negative or uncertain findings. None validates the generated map as a complete causal intervention.
 
 ## Input Schema
 
@@ -89,7 +89,7 @@ Optional (injected by context engine if available):
 ## Prompt
 
 ```
-You are an expert in wellbeing and learning science, with deep knowledge of Fredrickson's (2001) broaden-and-build theory, Durlak et al.'s (2011) meta-analysis of SEL programmes, Hattie's (2009) research on student background factors and achievement, and Seligman et al.'s (2009) positive education model. You understand that wellbeing and academic learning are not competing priorities — they are causally connected through specific psychological mechanisms — and you can articulate these connections clearly for school leadership audiences.
+You are an expert in wellbeing and learning science, with deep knowledge of Fredrickson's (2001) broaden-and-build theory, Durlak et al.'s (2011) meta-analysis of SEL programmes, Hattie's (2009) research on student background factors and achievement, and Seligman et al.'s (2009) positive education model. Assess possible connections without presuming a causal benefit. Explain mechanisms and uncertainty clearly for school leadership, including when the evidence does not support adoption.
 
 IMPORTANT: The rationale must be honest. Do not overstate the evidence. Where evidence is strong, say so. Where it is emerging or contested, say that too. School leaders who discover that their evidence base was exaggerated will lose trust in the entire wellbeing agenda. Honest, calibrated evidence is more persuasive than hype.
 
@@ -100,27 +100,27 @@ Your task is to map the wellbeing-learning connections for:
 
 The following optional context may or may not be provided. Use whatever is available; ignore any fields marked "not provided."
 
-**Target outcomes:** {{target_outcomes}} — if not provided, identify the most likely outcomes based on the intervention type.
-**Current data:** {{current_data}} — if not provided, note that baseline data should be collected before implementation.
+**Target outcomes:** {{target_outcomes}} — if absent, offer candidate outcomes to investigate, not predicted benefits.
+**Current data:** {{current_data}} — if absent, mark local baseline and trends unknown and propose proportionate aggregated/non-identifying data; never invent incident histories or demand identifiable learner records.
 **Stakeholder audience:** {{stakeholder_audience}} — if not provided, design the rationale for school senior leadership.
 **Time and resources:** {{time_and_resources}} — if not provided, note resource requirements and flag where investment is needed.
 
 Apply these evidence-based principles:
 
-1. **Map the causal pathway (Fredrickson, 2001; Durlak et al., 2011):**
+1. **Test the proposed causal pathway (Fredrickson, 2001; Durlak et al., 2011):**
    - Don't just state "wellbeing improves learning." Show the MECHANISM.
    - Intervention → immediate psychological effect → medium-term behavioural change → learning outcome.
-   - Each link in the chain should have an evidence base.
+   - For each link state supported, plausible/indirect, contradicted or unknown; cite the actual evidence type/context and identify missing links. Separate causal evidence from association or theory. No supported pathway is a valid finding; retain null/negative findings and consider rejection or adaptation.
    - Be specific: which ASPECT of wellbeing? Which ASPECT of learning?
 
 2. **Distinguish proximal and distal outcomes:**
-   - Proximal (months): changes in student emotions, behaviour, engagement, attendance.
-   - Distal (terms/years): changes in academic outcomes, exam results, progress measures.
-   - School leaders often expect distal outcomes too quickly. Set realistic timeframes.
+   - Proximal: possible changes in student experience, behaviour, engagement or attendance, which may be absent or adverse.
+   - Distal: possible changes in academic outcomes, exam results or progress; these need separate evidence and cannot be assumed from proximal change.
+   - Use intervention-specific evidence for timelines; otherwise state unknown. A chosen review date is a planning decision, not a forecast of benefit.
 
 3. **Identify necessary conditions for impact:**
    - Most wellbeing interventions only work under specific conditions: staff buy-in, consistent implementation, sufficient dosage, alignment with school culture.
-   - If the intervention is implemented poorly, it won't produce the mapped outcomes — and may produce cynicism.
+   - Poor implementation may affect outcomes, but even well-delivered initiatives can show no benefit or harm; do not use implementation as an automatic excuse for negative findings.
 
 4. **Address the sceptic's question (Hattie, 2009):**
    - "This takes time from teaching — how does it improve results?"
@@ -128,7 +128,7 @@ Apply these evidence-based principles:
    - If the evidence is weak for a particular claim, say so and suggest what other evidence exists.
 
 5. **Provide the leadership rationale:**
-   - A clear, jargon-free statement that a headteacher could present to governors.
+   - A clear, jargon-free draft for human factual/source review before a headteacher presents it. Label local statements observed/reported, proposed or unknown; keep caveats in the delivered rationale.
    - Structured as: the problem → the intervention → the evidence → the expected outcomes → the conditions for success.
 
 Return your output in this exact format:
@@ -140,22 +140,22 @@ Return your output in this exact format:
 
 ### Causal Pathway
 
-[Visual or structured representation of: intervention → psychological mechanism → behavioural change → learning outcome]
+[Proposed links with status, evidence type/source/context and missing evidence for every arrow; no supported pathway is an acceptable result]
 
 ### Mechanism Analysis
 
-[Detailed explanation of HOW the intervention leads to learning improvements — the specific psychological mechanisms, with evidence citations]
+[How the intervention might affect learning, distinguishing theory, association, intervention evidence and supplied local observations, with null/negative/unknown findings retained]
 
 ### Expected Outcomes
 
-**Short-term (first half-term):**
-[What changes to expect and what evidence to look for]
+**Proximal outcomes:**
+[Supported expectations or unknown; positive, null and adverse possibilities and what to measure]
 
-**Medium-term (one term to one year):**
-[What changes to expect]
+**Distal outcomes:**
+[Supported expectations or unknown; distinguish academic outcomes from participation/enjoyment]
 
-**Long-term (1–3 years):**
-[What changes to expect — with honest caveats]
+**Timing and review:**
+[Source-backed timeline if available; otherwise unknown, with a separately labelled proposed review date]
 
 ### Conditions for Impact
 
@@ -163,13 +163,13 @@ Return your output in this exact format:
 
 ### Leadership Rationale
 
-[A clear, evidence-based statement for school leaders — could be presented to governors verbatim]
+[Draft for authorised human review of local facts, source applicability, resource trade-offs and uncertainty before presentation or investment; distinguish observed/reported, proposed and unknown]
 
 ### Honest Caveats
 
 [What the evidence does NOT show, where claims are uncertain, what could go wrong]
 
-**Self-check before returning output:** Verify that (a) the causal pathway shows specific mechanisms, not just correlations, (b) expected outcomes are realistic with honest timeframes, (c) the evidence is accurately represented — not overstated, (d) conditions for impact are specified, and (e) the leadership rationale is clear enough for a non-specialist audience.
+**Self-check before returning output:** Verify that (a) each proposed link has an honest evidence type, status and missing-link check, (b) outcome/timing uncertainty and null/negative findings remain visible, (c) the evidence is accurately represented — not overstated, (d) conditions for impact are specified, and (e) the leadership rationale is clear and retains caveats and human factual review; no local facts, transferred effects or timelines are invented.
 ```
 
 ## Example Output
@@ -180,96 +180,55 @@ Return your output in this exact format:
 
 ## Wellbeing-Learning Connection Map: Whole-School Restorative Practice
 
-**Intervention:** Replace detention-based behaviour system with restorative practice approach
-**School context:** Urban secondary, 900 students, 45% PP, high exclusion rate, high ACE prevalence
+**Intervention:** Proposed whole-school restorative approach in place of the current detention-based system; any policy change requires authorised leadership review.
+**School context (reported in this fictional scenario):** Urban secondary, 900 students, 45% Pupil Premium, above-average exclusion rate and staff concern about behaviour. No local incident trend, attendance baseline or outcome evaluation was supplied. Do not infer trauma in any individual student.
 
 ### Causal Pathway
 
-```
-Restorative practice replaces punitive responses to behaviour
-    ↓
-Students experience: being heard, understanding impact, repairing harm
-(Mechanism: relatedness need met — Deci & Ryan; emotional regulation practised — Brackett)
-    ↓
-Short-term: fewer repeat behaviour incidents (harm is repaired, not just punished)
-Fewer exclusions → more time in classroom → more learning time
-    ↓
-Medium-term: improved teacher-student relationships
-(Mechanism: trust built through restorative conversations — Roffey, 2012)
-    ↓
-Students feel safer and more connected → reduced anxiety → broadened cognition
-(Mechanism: Fredrickson broaden-and-build — positive emotions expand cognitive capacity)
-    ↓
-Long-term: improved engagement, attendance, and academic outcomes
-(Evidence: Durlak et al., 2011 — SEL approaches produce average 11-percentile academic gain)
-```
+| Proposed link | Status and evidence type | Missing link / check |
+|---|---|---|
+| Restorative approach → safer relationships | Plausible/indirect here: restorative-specific sources and implementation details are not supplied; general relationship literature is contextual rationale | Obtain applicable intervention research; assess consent, power imbalance, protection and staff capacity |
+| Fewer exclusions → more classroom access | Conditional reasoning, not a measured local effect | Establish whether exclusions actually change, what instruction is available and whether classrooms remain safe |
+| Safer relationships/classroom access → academic learning | Plausible/indirect: Hattie (2009) provides broader achievement context, not proof of this programme | Measure access, teaching and academic outcomes separately; consider other changes |
+| This restorative implementation → academic gain | Unknown from the supplied evidence | Durlak et al. (2011) SEL findings do not estimate this restorative programme's effect |
 
 ### Mechanism Analysis
 
-**Mechanism 1: Reduced exclusion time increases learning time.** This is the most direct pathway. A student who is excluded for 10 days loses 10 days of teaching. If restorative practice reduces exclusions, students spend more time in classrooms being taught. This is not a wellbeing argument — it is a basic instructional time argument. Research consistently shows that exclusion does not improve behaviour (it often worsens it by damaging the student's relationship with school) and removes the student from the only environment where they can learn.
-
-**Mechanism 2: Relationship quality predicts learning.** Hattie (2009) found teacher-student relationships have an effect size of 0.72 on achievement — one of the highest influences in his meta-analysis. Restorative practice, by replacing punishment with dialogue, builds rather than damages these relationships. A student who has been listened to in a restorative conversation is more likely to engage in that teacher's lessons than a student who has been given a detention and feels resentful.
-
-**Mechanism 3: Emotional safety enables cognitive function.** Students with high ACE scores often have elevated stress responses (van der Kolk, 2014). A punitive environment activates threat responses, narrowing cognitive capacity to survival-mode thinking. A restorative environment, where harm is addressed through dialogue rather than punishment, reduces chronic stress and allows cognitive resources to be directed toward learning rather than self-protection (Fredrickson, 2001).
-
-**Mechanism 4: Restorative skills are transferable life skills.** Restorative practice teaches students to identify emotions, understand impact, take responsibility, and repair harm. These are social-emotional skills that support academic collaboration, conflict resolution, and self-regulation — all of which improve classroom learning (Durlak et al., 2011).
+Possible mechanisms include opportunities to repair harm and improved access to instruction. These require suitable participation and effective protection; a harmed learner must not be pressured into meeting someone who harmed them. Dialogue may not improve safety or learning, and can be inappropriate in some power imbalances. Fredrickson's theory offers background about emotions, not direct evidence for a restorative policy. Relationships and attendance can change without improved learning; the entire chain remains unestablished here.
 
 ### Expected Outcomes
 
-**Short-term (first half-term):**
-- A reduction in repeat behaviour incidents (not necessarily total incidents — initial implementation may temporarily increase staff awareness of low-level disruption).
-- Staff will report that restorative conversations take MORE time than issuing detentions. This is expected and should be communicated — the investment pays off over the medium term.
-- Some improvement in student-reported relationship quality (measurable via student survey).
+**Proximal:** Recurrence, exclusion, attendance and learner/staff experience could improve, stay unchanged or worsen. No effect size is supported for this proposed implementation.
 
-**Medium-term (one term to one year):**
-- Reduction in fixed-term exclusions (typically 20–50% in well-implemented programmes — González, 2015).
-- Improvement in attendance, particularly for previously excluded students.
-- Improvement in classroom climate measures (fewer disruptions, more on-task behaviour).
-- Staff initially resistant may begin to report positive experiences — but some staff may remain sceptical. This is normal.
+**Distal:** Academic effect is unknown. An SEL meta-analysis cannot justify an expected academic gain from this different intervention.
 
-**Long-term (1–3 years):**
-- Sustained reduction in exclusions and improvement in attendance.
-- Measurable improvement in academic outcomes — but this will be difficult to attribute solely to restorative practice, as many factors affect achievement. The most honest claim is that restorative practice contributes to conditions that support learning, alongside good teaching.
-- Cultural shift: behaviour is understood as communication, not defiance. This changes how the school responds to difficulty, not just specific incidents.
+**Timing and review:** A benefit timeline is unknown. Leaders could choose a review after an agreed trial period, subject to ordinary protection/policy requirements; that review date would be a planning choice, not a research-based time-to-benefit. Stop or adapt for adverse evidence rather than waiting out an assumed implementation dip.
 
 ### Conditions for Impact
 
-1. **Whole-school implementation.** Restorative practice only works when it is the consistent approach across the school, not an add-on used by some staff. If students experience restorative responses from one teacher and punitive responses from another, the approach is undermined. This requires full staff training (minimum 2 days initial, with ongoing practice sessions).
-
-2. **Senior leadership commitment.** The leadership team must model restorative approaches and must not revert to punitive measures when under pressure (e.g., when a governor asks "Why haven't you excluded that student?"). Leadership consistency is the single strongest predictor of implementation success.
-
-3. **Staff training and ongoing support.** Restorative conversations are a skill, not a disposition. Staff need training in facilitation, active listening, and managing their own emotional responses. Without training, "restorative practice" becomes "letting students off" — which is neither restorative nor effective.
-
-4. **Time allocation.** Restorative conversations take 15–30 minutes. Schools must create time and space for these conversations. If staff are told to "be restorative" but given no time, the approach will fail.
-
-5. **Baseline data collection.** Before implementation, collect baseline data on exclusions, attendance, behaviour incidents, and academic outcomes. Without baselines, you cannot demonstrate impact — and you need to demonstrate impact to sustain the initiative.
+Review local-policy compatibility, trained facilitation, suitable voluntary participation, ongoing safeguarding/protection, staff time, resource trade-offs and leadership support. Training duration must come from the selected approach and context, not an invented minimum. Collect proportionate aggregated baseline and follow-up measures with comparable definitions; no identifiable incident narratives are needed for this rationale. Monitor recurrence and retaliation as well as attendance/exclusions. Satisfactory implementation alone does not demonstrate impact.
 
 ### Leadership Rationale
 
-"Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: our exclusion rate is above average and repeat behaviour incidents have increased for three consecutive years. Students who are excluded lose learning time and often return with worse behaviour, not better.
+"**Reported:** Our scenario describes an above-average exclusion rate and staff concern about behaviour. It supplies no three-year repeat-incident trend or local evidence that the current system caused those outcomes.
 
-We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour (which research shows does not change behaviour).
+**Proposed:** We are considering a restorative approach to accountability and repair, subject to safety, voluntary suitability, policy and resource review. We would need applicable restorative research and a feasible implementation plan before judging investment.
 
-The evidence supports this approach. A meta-analysis of 213 schools implementing social-emotional approaches found an average 11-percentile gain in academic achievement (Durlak et al., 2011). Research on teacher-student relationships shows they are one of the strongest predictors of student achievement (Hattie, 2009, effect size 0.72). And the basic logic is straightforward: students who are in the classroom learn more than students who are excluded from it.
+**Unknown:** This evidence does not establish a local academic benefit, percentage reduction in exclusions or time to improvement. General SEL findings are not an estimate for this programme. We should compare options, including adaptation or non-adoption, and retain null or adverse findings in the decision."
 
-We expect to see a reduction in exclusions within the first term, improvements in attendance and classroom behaviour over the first year, and a contribution to improved academic outcomes over 1–3 years. The approach requires investment in staff training and protected time for restorative conversations. We are asking for that investment because the current approach is not working, and continuing to do the same thing will produce the same results."
+This is a draft: authorised school leaders must verify local facts, source relevance, policy and costs before presenting it or making an investment decision.
 
 ### Honest Caveats
 
-1. **The evidence for restorative practice is promising but not definitive.** Most studies are small-scale, and large-scale RCTs are limited. The strongest evidence is for reduced exclusions and improved relationships; the evidence for direct academic impact is more indirect (via attendance, engagement, and classroom climate). This should be communicated honestly.
+The mechanism is plausible but unproven for this setting. Reduced exclusions are not sufficient evidence of safety, learning or wellbeing; changed reporting can also change recorded incidents. Monitor protection, participation and learning separately. Neither a restorative label nor a confident rationale establishes effectiveness, and school-policy consequences can coexist with suitable restorative work.
 
-2. **Implementation quality is everything.** Restorative practice implemented poorly — without training, without consistency, without leadership support — does not produce positive outcomes and may produce worse outcomes (staff feel unsupported, students perceive inconsistency). The evidence supports well-implemented restorative practice, not the label alone.
-
-3. **The transition period is difficult.** Moving from a punitive to a restorative system temporarily disrupts established routines. Some students may test boundaries. Some staff will feel vulnerable. The first half-term is the hardest — and this is when sceptics will say "It's not working." Leaders must communicate that implementation dips are normal and commit to the approach long enough for it to take effect.
-
-4. **Restorative practice does not replace consequences.** A common misunderstanding is that restorative practice means there are no consequences for behaviour. This is incorrect. Restorative practice changes the nature of consequences — from punitive (suffering for what you did) to restorative (understanding the impact and making it right). Students still experience consequences; the consequences are more demanding, not less.
 
 ---
 
 ## Known Limitations
 
-1. **The connection map presents the THEORETICAL pathway, not a guaranteed outcome.** Evidence supports each link in the chain under the right conditions, but real schools are complex systems where many factors interact. The map is a best-evidence prediction, not a promise.
+1. **The connection map presents the THEORETICAL pathway, not a guaranteed outcome.** Each link needs its own appraisal; some may be unknown, contradicted or absent. The map may conclude that the proposed pathway or investment is unsupported.
 
-2. **The tool generates rationale, not implementation.** Knowing WHY restorative practice should work is different from knowing HOW to implement it. This skill should be paired with implementation planning and staff training — the rationale alone will not produce change.
+2. **The tool generates rationale, not implementation.** A possible rationale is different from a justified adoption decision or an implementation plan. This skill should be paired with implementation planning and staff training — the rationale alone will not produce change.
 
-3. **Some wellbeing interventions have weaker evidence than others.** The tool will accurately represent the evidence strength for whatever intervention is proposed, but some interventions (e.g., mindfulness in schools) have more contested evidence than others (e.g., SEL programmes). The tool should flag evidence limitations rather than advocate for all interventions equally.
+3. **Some wellbeing interventions have weaker evidence than others.** The user must verify the evidence appraisal and source applicability for the proposed intervention, but some interventions (e.g., mindfulness in schools) have more contested evidence than others (e.g., SEL programmes). The tool should flag evidence limitations rather than advocate for all interventions equally.

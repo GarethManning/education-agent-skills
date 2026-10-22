@@ -1,4 +1,7 @@
 # Education Skills Library — Agent Skills v2 Upgrade Spec
+
+> Historical record: counts, proposed layouts and “v2/1.0” standards claims below describe an earlier project state. For the current source/portable contract and verified limits, use the [developer guide](AGENT_SKILLS.md) and [22 October 2026 build receipt](audits/agent-skills-build-verification-2026-10-22.md). This notice preserves the historical text.
+
 **For Claude Code. Read this entire document before writing a single line of code.**
 
 ---

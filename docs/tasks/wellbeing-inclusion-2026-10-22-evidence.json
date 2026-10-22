@@ -1,0 +1,1875 @@
+{
+  "baseline": "6bbbce418f82e11044009c9f3b7373a354de5bd0",
+  "records": [
+    {
+      "skill": "inclusive-design-orchestrator",
+      "skill_id": "original-frameworks/inclusive-design-orchestrator",
+      "path": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "structured source screening plus named targeted deeper checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "assessment": "Coordinates UDL and differentiation tools through a universal-first hierarchy: barrier removal before targeted differentiation before individualised accommodation. Use when planning accessible learning.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:4"
+          ]
+        },
+        "C2": {
+          "status": "supported",
+          "assessment": "Specific procedural/decision guidance: You are an inclusive design orchestrator. Your first responsibility is to make pathway options visible and to enforce the universal-first hierarchy: reduce barriers for everyone before targeting a spe. Added value over an unaided model was not measured.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:177"
+          ]
+        },
+        "C3": {
+          "status": "supported",
+          "assessment": "Required inputs, an active prompt and output guidance specify a reusable workflow; no local contradiction identified in this bounded screening.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:24",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:177",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:48"
+          ]
+        },
+        "C4": {
+          "status": "supported",
+          "assessment": "Named educational grounding and explicit limitations support the declared design rationale; retain existing inclusion/exclusion policy. Exact source claims not comprehensively independently verified.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:16",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:283"
+          ]
+        },
+        "C5": {
+          "status": "concern",
+          "assessment": "Context/default guidance: Step 1: If pathway_choice is not provided, present all four pathway options with when-to-use guidance. State what each produces and when not to use it. Additional source-backed note: Universal-first hierarchy can withhold individualized support until other strategies are exhausted; no explicit existing-support exception.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:188",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:124",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:128",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:202",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:239",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:246"
+          ]
+        },
+        "C6": {
+          "status": "supported",
+          "assessment": "The declared job and output structure give the user an actionable artifact or interaction; actual user effort/usefulness was not measured.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:48",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:177"
+          ]
+        },
+        "C7": {
+          "status": "concern",
+          "assessment": "A limitation/scope boundary is explicitly documented. This is static design evidence; only named distribution-parity concerns were checked in depth. Additional source-backed note: Universal-first hierarchy can withhold individualized support until other strategies are exhausted; no explicit existing-support exception.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:283",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:124",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:128",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:202",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:239",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:246"
+          ]
+        },
+        "C8": {
+          "status": "supported",
+          "assessment": "Body 3238 vs MCP prompt 874 o200k tokens. No compulsory shortening justified by the size screen; actual optimal length is unmeasured.",
+          "evidence": [
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:177",
+            "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:283"
+          ]
+        }
+      },
+      "preserve": [
+        "You are an inclusive design orchestrator. Your first responsibility is to make pathway options visible and to enforce the universal-first hierarchy: reduce barriers for everyone before targeting a specific group, and tar",
+        "Stable identity, educational grounding and relevant limitations."
+      ],
+      "proposed_change": [
+        "Preserve universal design as planning priority while honoring existing support/urgent access needs in parallel; flag specialist involvement without suspending ordinary inclusion."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/original-frameworks/inclusive-design-orchestrator/SKILL.md:177",
+          "instruction": "Task inputs, main decision sequence, output contract and critical exceptions."
+        }
+      ],
+      "reference_candidates": [],
+      "local_issues": [
+        {
+          "criteria": [
+            "C5",
+            "C7"
+          ],
+          "lines": [
+            124,
+            128,
+            202,
+            239,
+            246
+          ],
+          "problem": "Universal-first hierarchy can withhold individualized support until other strategies are exhausted; no explicit existing-support exception.",
+          "recommended_change": "Preserve universal design as planning priority while honoring existing support/urgent access needs in parallel; flag specialist involvement without suspending ordinary inclusion.",
+          "priority": "high",
+          "kind": "content"
+        }
+      ],
+      "body_tokens_o200k": 3238,
+      "file_tokens_o200k": 4108,
+      "mcp_prompt_tokens_o200k": 874,
+      "body_words": 2395,
+      "mcp_prompt_words": 664,
+      "source_sha256": "97e42e33c1ba372589561b67c185bfd4ffe60efc1000a837fe5943eec14ef19e",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Making pathway choices visible, proactively reducing barriers through universal design, useful targeted/individual options and specialist collaboration. Preserve universal design as a planning priority alongside existing and urgent individualized access support.",
+        "permitted_correction": "The enforced sequential hierarchy may change where it delays established or urgent support. The exception is substantive and intentional: universal-first planning must not mean withholding appropriate support until other tiers are exhausted."
+      }
+    },
+    {
+      "skill": "agency-scaffold-generator",
+      "skill_id": "wellbeing-motivation-agency/agency-scaffold-generator",
+      "path": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:30"
+          ],
+          "assessment": "Scaffolding decision-making for a specified task/current independence level is clear."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:115",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:122",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:133",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:138"
+          ],
+          "assessment": "Structured choices across dimensions, explicit teacher-role shifts and recovery are useful specialist guidance."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:128",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:190",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:211",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:241",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:64",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:65"
+          ],
+          "assessment": "One-level start can coexist with staged Level3 target, but distinguish immediate vs later goal;3\u20134 cycles/default independence prediction is an unvalidated heuristic. Replace assumed class-level progression with check evidence. Additional source-backed note: Suggested chain target absent from 165-skill library: self-regulated-learning-strategy-selector Additional source-backed note: Suggested chain target absent from 165-skill library: metacognitive-prompt-generator"
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:115",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:122",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:128",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:241"
+          ],
+          "assessment": "Five dimensions/4 levels are adapted design synthesis, not validated Zimmerman taxonomy or empirical threshold; label explicitly rather than borrowing citation authority."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:136",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:160",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:243",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:249"
+          ],
+          "assessment": "Genuine bounded choices, mistake recovery, context-specific agency and mixed-readiness limitation preserve agency well."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:153",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:165",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:169",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:173"
+          ],
+          "assessment": "Teacher/student decisions, specific choices, language and safety nets form a useful deliverable."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:119",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:126",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:136",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:253"
+          ],
+          "assessment": "Safety nets never teacher takes over must yield to safety, required accommodations and mandated assessment criteria; co-construction needs explicit non-negotiable goals/supports rather than unrestricted criteria change."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:180",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:219",
+            "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:239"
+          ],
+          "assessment": "Full history example and later advocacy can be referenced; keep dimensions, progression, teacher roles and learning-goal integrity in core."
+        }
+      },
+      "preserve": [
+        "Real bounded choice; explicit decision ownership; recover without reflexively removing agency; agency not maximal freedom everywhere."
+      ],
+      "proposed_change": [
+        "Label adapted dimensions/levels and numeric cadence as practical heuristics; show immediate next level and evidence to advance. State protected safety, existing access supports and assessment/curriculum requirements before negotiating choices; allow differentiated readiness.",
+        "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:98",
+          "instruction": "Genuine meaningful bounded choice"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:115",
+          "instruction": "Choice dimensions as adapted design lens"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:122",
+          "instruction": "Gradual release"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:133",
+          "instruction": "Recovery while protecting essential safeguards"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:177",
+          "instruction": "Preserve learning goal"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:249",
+          "instruction": "Different readiness within class"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:76",
+          "content": "Extended theory narrative"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/agency-scaffold-generator/SKILL.md:180",
+          "content": "Full WW1 worked scaffold and long-term discussion"
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3"
+          ],
+          "lines": [
+            64
+          ],
+          "problem": "Suggested chain target absent from 165-skill library: self-regulated-learning-strategy-selector",
+          "recommended_change": "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills.",
+          "priority": "low",
+          "kind": "supporting-metadata"
+        },
+        {
+          "criteria": [
+            "C3"
+          ],
+          "lines": [
+            65
+          ],
+          "problem": "Suggested chain target absent from 165-skill library: metacognitive-prompt-generator",
+          "recommended_change": "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills.",
+          "priority": "low",
+          "kind": "supporting-metadata"
+        }
+      ],
+      "body_tokens_o200k": 4068,
+      "file_tokens_o200k": 4774,
+      "mcp_prompt_tokens_o200k": 1238,
+      "body_words": 3024,
+      "mcp_prompt_words": 842,
+      "source_sha256": "3803c8bc63a828c42f7d5cd0429a3b8ebf8b29b6c424435005d47f06294fd2af",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Real bounded choice; explicit decision ownership; recover without reflexively removing agency; agency not maximal freedom everywhere.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "awe-wonder-experience-designer",
+      "skill_id": "wellbeing-motivation-agency/awe-wonder-experience-designer",
+      "path": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:74"
+          ],
+          "assessment": "Opening a content-linked inquiry is a clear use, with appropriate sparing cadence245."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:117",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:125",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:135"
+          ],
+          "assessment": "Vastness/accommodation distinction, pacing and inquiry bridge add a specific design lens."
+        },
+        "C3": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:144",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:159",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:163",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:171"
+          ],
+          "assessment": "Moment\u2192question\u2192learning sequence aligns with output and practical self-check."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:96",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:197",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:247"
+          ],
+          "assessment": "Emerging classroom evidence is honestly labelled, but psychology claims are expressed as settled classroom mechanisms; Proxima being another Sun-size football is an inaccurate worked-example assumption. Verify stimulus facts and distinguish inference from demonstrated effects."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:111",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:120",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:140",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:243"
+          ],
+          "assessment": "Subjective awe is acknowledged, yet suffering as awe trigger and protected surprise need sensitivity to prior knowledge, trauma and sensory/access needs; allow preview/alternative without requiring awe."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:151",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:163",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:187",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:227"
+          ],
+          "assessment": "Concrete moment, inquiry bridge, schedule and learner questions can support a real lesson."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:112",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:120",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:187",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:195"
+          ],
+          "assessment": "Field movement, emotional intensity and large distances require local accessibility/supervision alternatives; this is a specific activity boundary, not a blanket privacy concern."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:174",
+            "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:229"
+          ],
+          "assessment": "Detailed astronomy example and psychology narrative can be references; preserve pacing/inquiry bridge and factual verification in core."
+        }
+      },
+      "preserve": [
+        "Emerging evidence label; content-linked wonder; inquiry bridge; subjective-response and overuse limitations."
+      ],
+      "proposed_change": [
+        "Qualify transfer from emotion studies to classroom outcomes; verify concrete facts/scale in examples. Provide emotionally and physically accessible alternatives and avoid using suffering as spectacle. Keep curiosity linked to a teachable objective, with no required emotional response."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:98",
+          "instruction": "Distinguish vastness/accommodation from flashy interest"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:100",
+          "instruction": "Tie encounter to learning"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:135",
+          "instruction": "Convert wonder to inquiry"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:139",
+          "instruction": "Respect learner pacing/reaction"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:247",
+          "instruction": "Classroom effects remain emerging"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:76",
+          "content": "Detailed emotion-research account"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/awe-wonder-experience-designer/SKILL.md:174",
+          "content": "Corrected astronomy lesson"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3155,
+      "file_tokens_o200k": 3870,
+      "mcp_prompt_tokens_o200k": 1118,
+      "body_words": 2330,
+      "mcp_prompt_words": 799,
+      "source_sha256": "3249cc1879007f460f2ad52f078c9975a61c5450168b5fa1a5479036913d635e",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Emerging evidence label; content-linked wonder; inquiry bridge; subjective-response and overuse limitations.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "belonging-classroom-culture-designer",
+      "skill_id": "wellbeing-motivation-agency/belonging-classroom-culture-designer",
+      "path": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:27"
+          ],
+          "assessment": "Specific group-dynamic concern and integrated classroom routine use are clear."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:127",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:132",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:137"
+          ],
+          "assessment": "Non-stigmatizing routine design, contribution roles and monitoring add useful expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:118",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:130",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:139",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:171",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:251"
+          ],
+          "assessment": "Never say extra help, always rotate/no self-selection and monitor eye contact become blanket rules. Need access/culture/relationship safety checks and direct voluntary learner feedback, not behavior proxies alone."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:15",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:249"
+          ],
+          "assessment": "Strong label and52% college gap finding are not classroom-practice effect estimates. Mark cross-context design inference and illustrative4\u20136-week observation window."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:130",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:190",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:196",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:251"
+          ],
+          "assessment": "Avoid singling out is sound, but fixed partners/roles, assumed social confidence, reading-aloud and eye-contact indicators can exclude neurodivergent, language-anxious or bullied learners; offer bounded safe alternatives."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:150",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:157",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:165",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:169"
+          ],
+          "assessment": "Specific practices, language and routine integration provide a practical teacher plan."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:263",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:139",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:251"
+          ],
+          "assessment": "Pastoral route recognizes outside threats; ensure suspected bullying/discrimination goes to appropriate protective response and student voice, rather than being normalized as universal difficulty or hidden behind stealth practice."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:176",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:219",
+            "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:238"
+          ],
+          "assessment": "Long routine case repeats language and rationale. Claimed no-extra-time conflicts with marking all exit slips and new routines; reference expanded case and state actual prep burden."
+        }
+      },
+      "preserve": [
+        "Avoid public singling out; contribution over token inclusion; routine embedding; authentic regard; pastoral support boundary."
+      ],
+      "proposed_change": [
+        "Add learner-voice and access checks; treat eye contact/speaking/arrival as ambiguous signals, never belonging scores. Permit support without stigma and safe pairing choices; respond directly to bullying/discrimination. Qualify cross-context efficacy and time claims."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:98",
+          "instruction": "Avoid stigmatizing isolated learners"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:100",
+          "instruction": "Practices must be authentic"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:127",
+          "instruction": "Structured, safe interaction"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:132",
+          "instruction": "Meaningful contribution"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:263",
+          "instruction": "Classroom routines do not replace pastoral action"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:76",
+          "content": "Detailed theory/effect narrative with context caveat"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/belonging-classroom-culture-designer/SKILL.md:176",
+          "content": "Full Year7 routine/language example"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 4382,
+      "file_tokens_o200k": 5127,
+      "mcp_prompt_tokens_o200k": 1164,
+      "body_words": 3257,
+      "mcp_prompt_words": 800,
+      "source_sha256": "5d4c825c85b67b2e76a7300700141a34b72c36c2953b49810f9f9b582ae6c8fb",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Avoid public singling out; contribution over token inclusion; routine embedding; authentic regard; pastoral support boundary.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "flow-state-condition-designer",
+      "skill_id": "wellbeing-motivation-agency/flow-state-condition-designer",
+      "path": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:251"
+          ],
+          "assessment": "Clear optimization of suitable practice/creative/problem-solving tasks; limits initial instruction."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:115",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:120",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:125",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:130",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:135"
+          ],
+          "assessment": "Challenge, feedback, concentration and student control form a concrete design diagnostic."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:214",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:218",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:220",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:239"
+          ],
+          "assessment": "Highest level within25 minutes is a completion/performance goal after criticising do20 questions; repetition at same level without instruction may keep a learner stuck. Add diagnosis, easier entry and feedback beyond correctness."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:123",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:167",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:220",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:253"
+          ],
+          "assessment": "Cannot/all/creates-flow language treats probable conditions as deterministic despite admitted individual variation; absorption is not evidence of academic learning."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:109",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:128",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:137",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:243"
+          ],
+          "assessment": "Differentiated pathways, choice of starting point/pace and private levels support adaptation and dignity."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:151",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:161",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:165",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:169"
+          ],
+          "assessment": "Diagnostic plus redesign and differentiated support map are usable planning outputs."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:243",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:249",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:251",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:253"
+          ],
+          "assessment": "Private progress, minimum prerequisites, activity limits and teacher monitoring provide proportionate boundaries."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:176",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:217",
+            "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:233"
+          ],
+          "assessment": "Long algebra case repeats each design condition then repeats flow-killer advice; reference it, retaining one feedback/recovery example core."
+        }
+      },
+      "preserve": [
+        "Differentiation; low interruption; immediate informative feedback; private progress; minimum skill and unsuitable-task limits."
+      ],
+      "proposed_change": [
+        "Replace deterministic flow/guaranteed-success claims with design hypotheses checked by student report and learning evidence. Align task goal to mastery, and add response to repeated errors rather than endless same-level retry."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:115",
+          "instruction": "Clear target"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:120",
+          "instruction": "Usable timely feedback"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:125",
+          "instruction": "Individual challenge adjustment"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:130",
+          "instruction": "Protect focus without losing necessary teaching"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:249",
+          "instruction": "Address missing foundations first"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:76",
+          "content": "Extended flow theory account"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/flow-state-condition-designer/SKILL.md:176",
+          "content": "Algebra redesign and repeated explanatory commentary"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3437,
+      "file_tokens_o200k": 4144,
+      "mcp_prompt_tokens_o200k": 1119,
+      "body_words": 2444,
+      "mcp_prompt_words": 750,
+      "source_sha256": "94714b077d4cce82fa4e1075ca4f532b79c1a9ffeba3728cfa2211e4ebe252e1",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Differentiation; low interruption; immediate informative feedback; private progress; minimum skill and unsuitable-task limits.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "implementation-intention-designer",
+      "skill_id": "wellbeing-motivation-agency/implementation-intention-designer",
+      "path": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:245"
+          ],
+          "assessment": "Precise intention/action gap; explicitly not intended to create absent motivation."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:117",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:122",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:129",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:139"
+          ],
+          "assessment": "Specific cue/action, WOOP, coping and monitoring add actionable expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:100",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:125",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:126",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:177",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:205",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:64",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:65"
+          ],
+          "assessment": "Prohibits feeling cues, then WOOP/working example uses internal urge/fatigue cues; distinguish unreliable motivation-as-permission from reliably noticed internal obstacle triggers. Avoid declaring a universal time/place hierarchy. Additional source-backed note: Suggested chain target absent from 165-skill library: self-regulated-learning-strategy-selector Additional source-backed note: Suggested chain target absent from 165-skill library: metacognitive-prompt-generator"
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:205",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:219"
+          ],
+          "assessment": "FAFSA application assistance is called implementation-intention-style without direct substantiation; retrieval feels hard=working and rereading does not work overstate conditional learning evidence."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:109",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:125",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:249"
+          ],
+          "assessment": "External obstacle limitation is strong, but prompt guesses barrier and insists inner obstacle. Ask learner to confirm their own goal/barrier; assess environmental constraints before internal framing."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:151",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:164",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:173",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:239"
+          ],
+          "assessment": "Small rehearsable plan, coping routes and adjustment rule are practically useful;50%/two-week threshold is illustrative heuristic, not validated."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:142",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:245",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:247",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:249"
+          ],
+          "assessment": "Adjustment and motivation/external-barrier limitations are relevant recovery boundaries. No blanket clinical/privacy failure for a nonidentifying study-habit plan."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:180",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:207",
+            "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:231"
+          ],
+          "assessment": "Long retrieval/WOOP script repeats instructions; a compact if/cue/action/obstacle/adjustment example suffices in core, full case in reference."
+        }
+      },
+      "preserve": [
+        "Discrete cue/action specificity; tiny achievable start; coping; simple monitoring; motivation and external-barrier limits."
+      ],
+      "proposed_change": [
+        "Resolve internal-cue contradiction; distinguish student-endorsed wishes from teacher-selected compliance. Confirm real barriers and retain environmental support path. Label monitoring thresholds as examples and correct evidence/effort-certainty claims.",
+        "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:117",
+          "instruction": "Specific achievable cue/action"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:122",
+          "instruction": "Learner-owned mental contrasting"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:129",
+          "instruction": "Coping plans"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:139",
+          "instruction": "Monitor and adjust"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:249",
+          "instruction": "External barriers require actual support"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:76",
+          "content": "Detailed evidence prose"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/implementation-intention-designer/SKILL.md:180",
+          "content": "Full retrieval-habit worked case"
+        }
+      ],
+      "local_issues": [
+        {
+          "criteria": [
+            "C3"
+          ],
+          "lines": [
+            64
+          ],
+          "problem": "Suggested chain target absent from 165-skill library: self-regulated-learning-strategy-selector",
+          "recommended_change": "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills.",
+          "priority": "low",
+          "kind": "supporting-metadata"
+        },
+        {
+          "criteria": [
+            "C3"
+          ],
+          "lines": [
+            65
+          ],
+          "problem": "Suggested chain target absent from 165-skill library: metacognitive-prompt-generator",
+          "recommended_change": "Resolve/label optional chain targets or document evidence-label meaning; preserve behavior and do not invent missing skills.",
+          "priority": "low",
+          "kind": "supporting-metadata"
+        }
+      ],
+      "body_tokens_o200k": 3280,
+      "file_tokens_o200k": 4023,
+      "mcp_prompt_tokens_o200k": 1209,
+      "body_words": 2362,
+      "mcp_prompt_words": 800,
+      "source_sha256": "83819dfb83c3aeb253eab35292ca386e699a0363fced214cd2925adde51ee92d",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Discrete cue/action specificity; tiny achievable start; coping; simple monitoring; motivation and external-barrier limits.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "motivation-diagnostic-task-redesign",
+      "skill_id": "wellbeing-motivation-agency/motivation-diagnostic-task-redesign",
+      "path": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:27"
+          ],
+          "assessment": "Clear recurring task-design problem with fixed learning objective."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:117",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:123",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:129",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:142"
+          ],
+          "assessment": "SDT analysis, autonomy plus structure and linked redesign provide substantial expert procedure."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:54",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:135",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:170",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:213"
+          ],
+          "assessment": "Forces current motivation type from task/teacher description, even without learner report; example invents consequence motive. Include unknown/mixed/task hypothesis rather than diagnosing internal motivation."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:74",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:241",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:259"
+          ],
+          "assessment": "SDT rationale is strong, but exact redesign benefit is unproven; more demanding/higher-order described as intrinsically more rigorous risks excluded Bloom-quality hierarchy. Target achievement, not maximized demand."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:43",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:118",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:143",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:144",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:247"
+          ],
+          "assessment": "Structured choice, constraints, feedback and recognition of comprehension rather than motivation problems support adaptation."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:172",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:176",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:180"
+          ],
+          "assessment": "Complete redesign, explained changes and what-to-watch-for are usable teacher deliverables."
+        },
+        "C7": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:257",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:259",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:261"
+          ],
+          "assessment": "Teacher-description, outside-task and time-tradeoff limits are practical; do not equate universal data boilerplate with a safety flaw here."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:187",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:231",
+            "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:241"
+          ],
+          "assessment": "Ecosystem transcript/table repeats diagnosis and principles; full case can be a reference, retaining one before/after example core."
+        }
+      },
+      "preserve": [
+        "SDT specificity; autonomy AND structure; rationale; no deficit student labels; comprehension fallback; time-cost acknowledgement."
+      ],
+      "proposed_change": [
+        "Stop assigning internal motivation from design alone; ask/check learner perspective, allow unknown and label hypotheses. Preserve learning objective and necessary foundational work rather than claiming higher cognitive level is automatically better; offer a time-equivalent small redesign."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:98",
+          "instruction": "Protect learning goal"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:117",
+          "instruction": "Autonomy analysis"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:123",
+          "instruction": "Competence/challenge/feedback"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:129",
+          "instruction": "Relatedness analysis"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:142",
+          "instruction": "Map concrete changes to identified needs"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:76",
+          "content": "Detailed theory narrative"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign/SKILL.md:187",
+          "content": "Full ecosystem worked example"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3895,
+      "file_tokens_o200k": 4649,
+      "mcp_prompt_tokens_o200k": 1237,
+      "body_words": 2805,
+      "mcp_prompt_words": 839,
+      "source_sha256": "1b4717de6826f4cf803ef32f63cd4e854d3629165a28fc0e192aad38d358528e",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "SDT specificity; autonomy AND structure; rationale; no deficit student labels; comprehension fallback; time-cost acknowledgement.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "perma-based-lesson-designer",
+      "skill_id": "wellbeing-motivation-agency/perma-based-lesson-designer",
+      "path": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:74"
+          ],
+          "assessment": "Clear integrated academic lesson planning purpose."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:100",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:117",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:122",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:127",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:132",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:137"
+          ],
+          "assessment": "Maps wellbeing design features into subject activity and rejects forced positivity/all-five checklist."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:100",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:150",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:158",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:172"
+          ],
+          "assessment": "All-five output table can pressure filling every element despite explicit selective-use instruction; allow not targeted with rationale. 55-minute example phases total55 but debate internal sequence consumes11 of15, workable with transitions if acknowledged."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:74",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:262"
+          ],
+          "assessment": "A well-designed lesson IS a wellbeing intervention and wellbeing IS learning overstates a design lens; moderate contextual research does not validate generated lessons or universal transfer. EPOCH claim and supporting studies require source-audit reconciliation."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:111",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:113",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:200",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:202",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:219"
+          ],
+          "assessment": "Default typical-class design ignores whether personal discrimination dilemma, cold call or physical debate positions expose or exclude learners; add voluntary impersonal/pass/accessible options when sensitive content is used."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:160",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:164",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:168"
+          ],
+          "assessment": "Subject plan, concrete teacher moves and reflection prompts can be useful beyond generic wellbeing activities."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:39",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:45",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:202",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:230"
+          ],
+          "assessment": "Wellbeing profiles and personal reflection are sensitive; use aggregated/non-identifying needs and optional private/fictional reflections. Do not label lesson a clinical intervention."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:175",
+            "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:236"
+          ],
+          "assessment": "Long historical example and repeated teacher moves are reference candidates; keep selective integration, academic goal and no forced positivity core."
+        }
+      },
+      "preserve": [
+        "No all-five mandate; no forced positivity; academic rigour; actual teacher actions; privileged-context limitation."
+      ],
+      "proposed_change": [
+        "Present PERMA as a planning lens, qualify outcome/intervention claims, and permit unaddressed elements in mapping. Add low-disclosure/access choices for personal or political reflection; require learning evidence separately from enjoyment."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:98",
+          "instruction": "Integrate into content"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:100",
+          "instruction": "Select only naturally relevant elements"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:120",
+          "instruction": "Avoid forced positivity"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:172",
+          "instruction": "Maintain stated academic learning"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:260",
+          "instruction": "Framework, not recipe"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:76",
+          "content": "Detailed research narrative"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/perma-based-lesson-designer/SKILL.md:175",
+          "content": "Full history example and teacher scripts"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3520,
+      "file_tokens_o200k": 4224,
+      "mcp_prompt_tokens_o200k": 1066,
+      "body_words": 2532,
+      "mcp_prompt_words": 719,
+      "source_sha256": "4fd5066f923dfafcbbad20561a5a6ec4572912ec05685b6c3fd9817a7f52c982",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "No all-five mandate; no forced positivity; academic rigour; actual teacher actions; privileged-context limitation.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "restorative-practice-protocol-designer",
+      "skill_id": "wellbeing-motivation-agency/restorative-practice-protocol-designer",
+      "path": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:27",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:77"
+          ],
+          "assessment": "Clear incident-specific process design for teacher/pastoral use."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:106",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:127",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:134",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:145"
+          ],
+          "assessment": "Approach selection, preparation, ordered questions, owned agreement and follow-up add substantive expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:109",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:138",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:192",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:200",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:301"
+          ],
+          "assessment": "Selects face-to-face conference for persistent accent mockery without first screening bullying/power imbalance, despite own limitation301. Seriousness alone cannot select circle/conference; suitability, safety and genuine willingness come first."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:77",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:81",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:303"
+          ],
+          "assessment": "Moderate framework label is honest but unqualified more effective and investment pays off claims exceed exact-process evidence; generated script remains an adaptation."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:138",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:220",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:222"
+          ],
+          "assessment": "Agreement ownership and right to stop are strengths. Participation may be required wording and telling reluctant harmed learner it helps offender can pressure them; make voluntary choice real and offer protected alternatives."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:163",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:171",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:175",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:179",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:183"
+          ],
+          "assessment": "Preparation scripts, agreement, follow-up and failure plan are usable teacher artifacts."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:102",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:138",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:183",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:289",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:301"
+          ],
+          "assessment": "Sanctions coexist and stall recovery are useful; suitability/protection, school safeguarding route, retaliation risk and confidential minimal agreement records belong before convening, not just limitations. Do not require harmed learner to face aggressor or produce apology/forgiveness."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:79",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:190",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:205",
+            "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:268"
+          ],
+          "assessment": "Full worked conference can become a reference after suitability/consent repair; retain readiness/safety screen, question sequence, follow-up and alternative route core."
+        }
+      },
+      "preserve": [
+        "Preparation before meeting; person harmed has voice; specific participant-owned agreement; follow-up; practical fallback and coexistence with policy consequences."
+      ],
+      "proposed_change": [
+        "Move power-imbalance/safeguarding/consent screening into the active first step. Replace severity-only approach choice with readiness and protected voluntary alternatives. Correct worked persistent-mockery case so no face-to-face meeting is assumed; add follow-up protection against recurrence/retaliation. Qualify comparative-effect claims."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:102",
+          "instruction": "Accountability and policy can coexist"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:127",
+          "instruction": "Core restorative questions"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:134",
+          "instruction": "Preparation, emotional readiness and real willingness"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:145",
+          "instruction": "Participant-owned specific agreement and review"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:183",
+          "instruction": "Stall/stop/alternative route"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:301",
+          "instruction": "Power-imbalance and safety exclusions must be core"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:79",
+          "content": "Detailed framework history"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/restorative-practice-protocol-designer/SKILL.md:190",
+          "content": "Corrected full conference example"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3901,
+      "file_tokens_o200k": 4639,
+      "mcp_prompt_tokens_o200k": 1185,
+      "body_words": 2926,
+      "mcp_prompt_words": 832,
+      "source_sha256": "7ec90a91b85fdd63fec0199ad624d7b7c4cb2e8829ee38d28c0bb051c7ff1fe9",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Preparation before meeting; person harmed has voice; specific participant-owned agreement; follow-up; practical fallback and coexistence with policy consequences.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "ruler-emotional-literacy-sequence",
+      "skill_id": "wellbeing-motivation-agency/ruler-emotional-literacy-sequence",
+      "path": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:71"
+          ],
+          "assessment": "Situation/tool/age-specific emotional-literacy sequence is a clear classroom task."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:94",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:115",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:121",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:137"
+          ],
+          "assessment": "Tool selection, teacher modelling and regulation-vs-suppression distinction add specialist structure."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:110",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:111",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:170",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:239"
+          ],
+          "assessment": "15\u201320-minute introduction must be clearly an adaptation/introductory sequence, not sufficient implementation of a trained whole-school programme; preconditions appear mostly after example."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:15",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:75",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:196",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:206",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:215",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:239"
+          ],
+          "assessment": "Programme evidence is labelled strong, but exact generated short script and therapeutic effects/sceptical practice still works are unestablished extrapolations. Avoid requiring a clinical claim to justify vocabulary practice."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:194",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:204",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:209",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:227"
+          ],
+          "assessment": "Later no-need-to-share option is good but main example requires public mood placement and partner causes; offer private, fictional or pass options and learner-chosen vocabulary/strategy."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:150",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:154",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:162",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:166"
+          ],
+          "assessment": "Concrete modelling, activity, signs and ongoing routine produce a useful teaching draft."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:194",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:204",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:210",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:221",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:241"
+          ],
+          "assessment": "Emotion disclosure may be identifiable despite no names. Do not prescribe breath-holding as universal or guarantee calming; retain clinical-referral boundary in prompt and provide accessible non-breathing alternatives."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:73",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:173",
+            "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:185"
+          ],
+          "assessment": "Long exam-anxiety script can be referenced only after disclosure and overclaim repair; preserve tool definitions, choices and clinical boundary in core."
+        }
+      },
+      "preserve": [
+        "Teacher modelling first; precise vocabulary; regulation not suppression; whole-school and clinical limitations; sustained routines."
+      ],
+      "proposed_change": [
+        "Label short sequence as an adaptation distinct from evaluated full RULER implementation; check teacher training/material authorization rather than imply programme fidelity. Make emotions/causes private or fictional by default, optional pass; do not infer internal state from appearance. Replace therapeutic guarantees and universal breath script with choice and referral."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:94",
+          "instruction": "Tool distinctions"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:115",
+          "instruction": "Match tool to actual need"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:121",
+          "instruction": "Model appropriately before inviting practice"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:137",
+          "instruction": "All emotions valid, behaviour bounded"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:241",
+          "instruction": "Clinical support not replaced"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:73",
+          "content": "Full programme research account"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence/SKILL.md:173",
+          "content": "Corrected anxiety example and integration scenarios"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 4032,
+      "file_tokens_o200k": 4799,
+      "mcp_prompt_tokens_o200k": 1216,
+      "body_words": 2886,
+      "mcp_prompt_words": 817,
+      "source_sha256": "c6a079ba16320268ee52493686cbcd6dd9077ab72d88aaa850a47d5f92d36257",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Teacher modelling first; precise vocabulary; regulation not suppression; whole-school and clinical limitations; sustained routines.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "self-efficacy-builder-sequence",
+      "skill_id": "wellbeing-motivation-agency/self-efficacy-builder-sequence",
+      "path": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:30"
+          ],
+          "assessment": "Task-specific avoidance and credible mastery sequence define a reusable need."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:115",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:121",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:126",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:136"
+          ],
+          "assessment": "Small prerequisite increments, similar-peer modelling, credible attribution and fallback add expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:109",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:117",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:134",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:194",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:269"
+          ],
+          "assessment": "Prompt infers cause from avoidance then promises virtually guaranteed success; later limitation asks verification of motivational vs cognitive difficulty. Prerequisite/access diagnosis belongs before sequence selection."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:123",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:134",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:269"
+          ],
+          "assessment": "Mindset caveat respects exclusion rule, but attribution of difficulty/motivation from verbal strength is unjustified and feeling hard does not mean learning. Broad prediction evidence does not validate generated4\u20136-task sequence."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:109",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:133",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:196",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:206",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:210"
+          ],
+          "assessment": "Private low-pressure work is good, but speech strength does not rule out dysgraphia or language/working-memory difficulty; writing just transcription and imposed timer can misfit learner needs."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:157",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:161",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:163",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:253"
+          ],
+          "assessment": "Tasks with actual success criteria, scripts, contingency and long-term plan are useful concrete deliverables."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:203",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:214",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:255",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:261",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:269"
+          ],
+          "assessment": "Privacy of past struggle and legitimate ongoing planning are strengths. Recording speech requires appropriate consent/data handling; preserve accommodations and refer persistent access barriers instead of treating them as motivation."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:180",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:237",
+            "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:253"
+          ],
+          "assessment": "Lengthy writing sequence and repeated attribution guide can be referenced; core must retain inspect-current-capability, authentic success, alternatives and no-praise-without-evidence rules."
+        }
+      },
+      "preserve": [
+        "Mastery over slogans; specific credible praise; tiny steps; task contingency; privacy/dignity; legitimate verbal planning."
+      ],
+      "proposed_change": [
+        "Assess actual prerequisite and access needs before motivational hypothesis; do not infer psychological cause from refusal or verbal articulation. Remove guaranteed-success and hard=learning claims, use learner-approved pacing/timers and preserve assistive tools. Keep growth-mindset implementation caveat."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:115",
+          "instruction": "Begin from demonstrated capability, not assumed motivation"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:126",
+          "instruction": "Credible evidence-based encouragement"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:133",
+          "instruction": "Reduce unnecessary exposure/pressure"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:157",
+          "instruction": "Task-level success and recovery"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:255",
+          "instruction": "Do not remove legitimate ongoing strategy"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:269",
+          "instruction": "Skill/access instruction may be necessary"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:76",
+          "content": "Detailed theory account"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/self-efficacy-builder-sequence/SKILL.md:180",
+          "content": "Corrected full writing progression and attribution guide"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 4777,
+      "file_tokens_o200k": 5515,
+      "mcp_prompt_tokens_o200k": 1320,
+      "body_words": 3532,
+      "mcp_prompt_words": 905,
+      "source_sha256": "3b66bdaef032d90bd840043301ba6454105e90d5c5de711a7a8310d031405a9c",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Mastery over slogans; specific credible praise; tiny steps; task contingency; privacy/dignity; legitimate verbal planning.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "trauma-informed-practice-designer",
+      "skill_id": "wellbeing-motivation-agency/trauma-informed-practice-designer",
+      "path": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md",
+      "action": "revise",
+      "priority": "high",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:74"
+          ],
+          "assessment": "Observable classroom difficulty and supportive practice design are recurring needs; activation can bias toward trauma if alternative causes are not checked."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:98",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:127",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:144",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:149"
+          ],
+          "assessment": "Safety/predictability/co-regulation plus compassionate boundaries and whole-class needs provide substantial practical expertise."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:146",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:215",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:225",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:250"
+          ],
+          "assessment": "Prompt says sit down while example prohibits it; no local immediate-safety branch for throwing equipment/elopement. Automatic corridor exit and wait rules cannot be safely generalized."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:78",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:128",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:140",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:215",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:254"
+          ],
+          "assessment": "Absolute cannot learn, neurobiologically futile, tears confirm involuntary trauma response and20\u201390-second amygdala claims overstate/infer beyond observed evidence. Treat trauma as one hypothesis; source audit/specialist verification needed for physiological claims."
+        },
+        "C5": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:101",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:102",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:120",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:215"
+          ],
+          "assessment": "No diagnosis/history probing is a strong instruction, contradicted by example assigning cause from observable behaviour. Adapt from functional needs, student preferences and existing plans."
+        },
+        "C6": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:169",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:175",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:191"
+          ],
+          "assessment": "Concrete adaptations, response sequence and referral indicators are a useful draft if safety and diagnostic overreach are repaired."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:225",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:250",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:252",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:287",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:288",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:289"
+          ],
+          "assessment": "Abuse/self-harm/suicidal disclosure sits under ordinary counsellor referral; missing urgent safeguarding/local-plan branch is material. Do not await frequency threshold or ignore immediate danger. Sensitive history instruction36 is helpful but insufficient for operational safety."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:76",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:198",
+            "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:215"
+          ],
+          "assessment": "Full clinical-sounding example amplifies overconfidence; revise before moving to reference. Keep immediate safety, no diagnosis, professional boundary and referrals in mandatory core."
+        }
+      },
+      "preserve": [
+        "No trauma-history elicitation; no teacher-as-therapist; predictable routines; dignity; whole-class safety; compassionate boundaries."
+      ],
+      "proposed_change": [
+        "Replace causal/neuroscience certainties with observable needs and plausible alternatives. Put immediate danger/disclosure safeguarding and existing individual/emergency plan first; avoid universal exit/wait/no-demand rules. Distinguish universal supportive practice from therapy and diagnosis; require qualified human review for consequential response protocols."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:98",
+          "instruction": "Do not diagnose or seek trauma histories"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:120",
+          "instruction": "Use observed behaviour without assumptions"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:127",
+          "instruction": "Physical/emotional safety"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:149",
+          "instruction": "Whole-class safety"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:191",
+          "instruction": "Referral plus urgent safeguarding branch must stay core"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:76",
+          "content": "Research/neuroscience exposition after correction"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/trauma-informed-practice-designer/SKILL.md:198",
+          "content": "Entire worked case after specialist/safety correction"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 4746,
+      "file_tokens_o200k": 5484,
+      "mcp_prompt_tokens_o200k": 1296,
+      "body_words": 3506,
+      "mcp_prompt_words": 879,
+      "source_sha256": "26fc50ed988804a27fc34e01f3de8897b7ebed4e815f5c4299c7317919a6b71e",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "No trauma-history elicitation; no teacher-as-therapist; predictable routines; dignity; whole-class safety; compassionate boundaries.",
+        "permitted_correction": ""
+      }
+    },
+    {
+      "skill": "wellbeing-learning-connection-mapper",
+      "skill_id": "wellbeing-motivation-agency/wellbeing-learning-connection-mapper",
+      "path": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md",
+      "action": "revise",
+      "priority": "medium",
+      "review_depth": "full independent file review plus integrated source checks",
+      "criteria": {
+        "C1": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:4",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:24",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:71"
+          ],
+          "assessment": "Specific rationale for school leaders deciding on an initiative is a recurring need."
+        },
+        "C2": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:110",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:116",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:121",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:128"
+          ],
+          "assessment": "Mechanisms, outcome distance, implementation conditions and caveats add analytical structure."
+        },
+        "C3": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:92",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:94",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:110",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:147",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:271"
+          ],
+          "assessment": "Starts with causal connection assumed, then requests evidence honesty; must allow no supported pathway or intervention rejection, with a visible evidence type and missing link for each arrow."
+        },
+        "C4": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:75",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:204",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:225",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:249",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:253"
+          ],
+          "assessment": "General SEL effect is used to justify a different restorative intervention; example invents three-year incident trend absent scenario and calls213 programmes213 schools. Predicted20\u201350% reductions/timeframes need exact supporting evidence, not confident generic citation."
+        },
+        "C5": {
+          "status": "supported",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:27",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:37",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:41",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:104"
+          ],
+          "assessment": "School context, stakeholder audience, resources and baseline absence are considered."
+        },
+        "C6": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:166",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:249",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:255"
+          ],
+          "assessment": "Leadership-ready verbatim rationale is practically convenient but unsafe if it includes invented local facts and misapplied estimates; require observed/proposed/unknown labels before presenting as ready to use."
+        },
+        "C7": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:35",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:94",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:104",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:271"
+          ],
+          "assessment": "Evidence and baseline caution exist; consequential investment advice needs explicit human check of all local facts and claims. Use aggregated data; no reason to collect identifiable incident histories."
+        },
+        "C8": {
+          "status": "concern",
+          "evidence": [
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:73",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:175",
+            "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:247"
+          ],
+          "assessment": "Long persuasive worked case repeats and intensifies errors; replace with short calibrated example plus referenced full case only after correction."
+        }
+      },
+      "preserve": [
+        "Honesty instruction; mechanisms not slogans; conditions for impact; caveat section; baseline requirement."
+      ],
+      "proposed_change": [
+        "Make evidence-map output neutral: links can be supported, plausible/indirect, contradicted or unknown; preserve null/negative findings. Remove invented local trends, unrelated effect-size transfer and unsupported timelines. Separate forecast from local evidence and require leadership factual review."
+      ],
+      "mandatory_core": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:94",
+          "instruction": "Do not overstate evidence"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:110",
+          "instruction": "Evidence for each link; unknown permitted"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:116",
+          "instruction": "Separate proximal/distal outcomes"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:121",
+          "instruction": "Implementation conditions"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:168",
+          "instruction": "Keep honest caveats in delivered rationale"
+        }
+      ],
+      "reference_candidates": [
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:73",
+          "content": "Extended general research history"
+        },
+        {
+          "evidence": "skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper/SKILL.md:175",
+          "content": "Corrected illustrative case, not a reusable factual rationale"
+        }
+      ],
+      "local_issues": [],
+      "body_tokens_o200k": 3717,
+      "file_tokens_o200k": 4429,
+      "mcp_prompt_tokens_o200k": 956,
+      "body_words": 2665,
+      "mcp_prompt_words": 651,
+      "source_sha256": "ee8065c41aa3bb174ef457fc19d576a21115b94ef8352bf6db1822369e36da19",
+      "confidence": "Static design judgment; not observed effectiveness. Deeper coverage in the28 named domains.",
+      "plan_clarification": {
+        "preserve": "Honesty instruction; mechanisms not slogans; conditions for impact; caveat section; baseline requirement.",
+        "permitted_correction": ""
+      }
+    }
+  ]
+}

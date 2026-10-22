@@ -1,0 +1,5 @@
+# Independent nested-prompt fence review — 22 October 2026
+
+VERDICT: ACCEPT. No findings in the bounded repair. Reviewer independently confirmed the corrected LT prompt equals every byte of original intended lines112–487, trimmed (23,993 characters; SHA2560ba66d5fc85681152452f19f83bb617781b372119eb3ecaaabf7c23eb56c8f5b), excludes later examples/top-level limitations and retains the internal template/limitations. Only two LT outer delimiters changed;164 other prompt/source files and165 metadata/description/tool-name records retain parity. Triple/longer/nested/exact closing-line/LF/CRLF/EOF cases and existing h1/h2 behavior pass.
+
+Independent focused tests26passed. Full loader suite26passed/one expected stale-bundle parity failure, assertion unchanged. TypeScript --noEmit and scoped whitespace checks pass. No weakened tests, locked-checker edits or forbidden operations. Root-owned introduction/review brief edits excluded. Acceptance is extraction/preservation only, with generated integration and installed/hosted behavior still pending; no efficacy claim, edits, servers or hosted/model calls.

@@ -71,7 +71,7 @@ tags: ["retrieval", "memory", "assessment", "spaced-practice", "testing-effect"]
 
 ## What This Skill Does
 
-Generates a set of retrieval practice questions that force genuine reconstruction of knowledge from memory — not recognition, not re-reading, not familiarity-based guessing. The skill distinguishes between free recall (no cues), cued recall (partial cues), and recognition (select from options) question types, and calibrates the mix based on student level and time since learning. AI is specifically valuable here because designing questions that target reconstruction rather than recognition requires deep understanding of the testing effect literature — most teacher-made quiz questions inadvertently test recognition.
+Generates questions centred on reconstruction of knowledge from memory rather than re-reading or familiarity-based guessing, with a labelled recognition exception for novice learners or a warm-up. The skill distinguishes between free recall (no cues), cued recall (partial cues), and recognition (select from options) question types, and calibrates the mix based on student level and time since learning. AI is specifically valuable here because designing questions that target reconstruction rather than recognition requires deep understanding of the testing effect literature — most teacher-made quiz questions inadvertently test recognition.
 
 ## Evidence Foundation
 
@@ -112,7 +112,7 @@ Apply these evidence-based criteria when generating questions:
    - Recognition questions (select from options — e.g. multiple choice) — weakest retrieval effect but useful for building confidence in novice learners
    Weight toward free and cued recall. Only include recognition questions for novice learners or as warm-up.
 
-2. **Genuine reconstruction, not recognition:** Every question must require the student to reconstruct knowledge from memory, not simply recognise familiar-looking information. Avoid questions answerable by surface-level pattern matching.
+2. **Reconstruction with a novice/warm-up exception:** Free and cued recall questions require reconstruction from memory. Recognition questions may be included under rule 1 for novices or warm-up; label them honestly and do not count selecting an option as free recall. Use meaningful distractors and feedback rather than surface matching; invite a brief explanation where accessible. Check questions and answer notes against supplied taught material. If only a topic is supplied, label them a subject-knowledge draft and ask the teacher to verify terminology, coverage and answers against what was actually taught before use.
 
 3. **Target the right knowledge:** Questions should target the core concepts, relationships, and procedures — not trivial details, dates, or definitions unless those are genuinely important to understanding.
 
@@ -125,7 +125,7 @@ Return your output in this exact format:
 ## Retrieval Practice Questions: [Topic]
 
 **For:** [Student level]
-**Spacing recommendation:** [When to use these questions — e.g. "Use 3–7 days after initial teaching for optimal spacing effect. Re-use a subset at 2–4 weeks for a second retrieval opportunity."]
+**Spacing recommendation:** [When to use these questions — e.g. "Use 3–7 days after initial teaching as a practical starting point; adapt timing to prior learning, retrieval success, retention goals and the timetable. Re-use a subset at 2–4 weeks for a second retrieval opportunity."]
 
 ### Questions
 
@@ -147,7 +147,7 @@ A brief (3–4 sentence) script for how the teacher should run this retrieval ac
 - How long to give students (typically 8–12 minutes for 6–10 questions)
 - What to do after (discuss answers, identify gaps, do NOT grade — low-stakes is essential)
 
-**Self-check before returning output:** Verify that (a) each question requires genuine reconstruction, not just recognition, (b) the mix of retrieval types is appropriate for the student level, (c) no question is answerable from the question text alone without prior knowledge, and (d) the questions target meaningful knowledge, not trivia.
+**Self-check before returning output:** Verify that (a) recall questions require reconstruction and any recognition items are labelled novice/warm-up exceptions, (b) the mix of retrieval types is appropriate for the student level, (c) no question is answerable from the question text alone without prior knowledge, and (d) the questions target meaningful knowledge, not trivia, and (e) taught-source verification is complete or explicitly pending teacher review.
 ```
 
 ## Example Output
@@ -159,7 +159,8 @@ A brief (3–4 sentence) script for how the teacher should run this retrieval ac
 ## Retrieval Practice Questions: The Causes and Process of Erosion
 
 **For:** Year 7 Geography, mixed ability
-**Spacing recommendation:** Use now (10 days post-learning is within the optimal spacing window). Re-use questions 1, 3, 5, and 7 in 2–3 weeks for a second retrieval opportunity. After that, integrate erosion retrieval into mixed-topic quizzes once per half-term.
+**Verification:** Subject-knowledge draft; no taught source supplied. Teacher to check the terminology and answer notes before use. Q8 is a recognition warm-up for learners needing novice support; it is not evidence of free recall.
+**Spacing recommendation:** Use now as a practical review opportunity 10 days after teaching; this is not a demonstrated optimum for this class. Re-use questions 1, 3, 5, and 7 in 2–3 weeks for a second retrieval opportunity. After that, integrate erosion retrieval into mixed-topic quizzes once per half-term.
 
 ### Questions
 
@@ -222,4 +223,4 @@ Run this as a low-stakes retrieval starter — no notes, no textbooks, no device
 
 2. **Free recall questions may overwhelm students with very low prior knowledge or limited English proficiency.** For EAL students or those with significant gaps, increase the proportion of cued recall and recognition questions. Chain with the Scaffolded Task Modifier for language-adapted versions.
 
-3. **The spacing recommendation is calibrated to lab research on optimal intervals.** Real classroom scheduling constraints (timetable gaps, holidays, assessment windows) may make the recommended spacing impractical. Teacher judgment on timing is always necessary.
+3. **The spacing recommendation is a practical starting point informed by spacing research, not a demonstrated optimum for this class.** Real classroom scheduling constraints (timetable gaps, holidays, assessment windows) may make the recommended spacing impractical. Teacher judgment on timing is always necessary.

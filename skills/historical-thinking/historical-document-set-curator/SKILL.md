@@ -140,6 +140,8 @@ The following optional context may or may not be provided. Use whatever is avail
 **Historical topic:** {{historical_topic}}
 **Curriculum framework:** {{curriculum_framework}}
 
+Source-supply boundary: this skill designs a set; it cannot supply or certify documents merely by recommending them. Label each source within its existing description as supplied text, teacher-reported source (not inspected), or proposed/unverified recommendation. Mark unknown authors, dates, titles or availability as unverified; do not invent provenance, quotations, excerpts or working links. For proposed documents, describe the intended analytical contribution conditionally until the teacher locates and checks the actual passage. Before classroom use or handoff to Historical Source Adapter, obtain the actual text and verify attribution, content, reading level and access constraints. A design recommendation alone does not satisfy that adapter's original_source input.
+
 Design the following:
 
 1. **Document set design:** For each recommended document, provide:
@@ -181,7 +183,7 @@ Return your output in this exact format:
 **Set size:** [Number of documents]
 
 ### Document 1: [Brief title]
-**Source:** [Author, date, type]
+**Source:** [Author, date, type; supplied/teacher-reported/proposed status and what remains to verify]
 **Why it's here:** [What it contributes]
 **Supports:** [Which skills]
 **Role in sequence:** [What it adds at this point]
@@ -212,7 +214,7 @@ Return your output in this exact format:
 **Perspectives absent:** [Who doesn't, and why]
 **Suggestions:** [How to address gaps, or acknowledgement that the gap is itself historically significant]
 
-**Self-check before returning output:** Verify that (a) every document earns its place — remove any source that doesn't contribute something unique, (b) at least one clear analytical tension exists in the set, (c) the skill affordances are specific to the documents, not generic, (d) the sequencing has a rationale beyond chronological order, and (e) the representation audit is honest about whose voices are missing.
+**Self-check before returning output:** Verify that (a) every document earns its place — remove any source that doesn't contribute something unique, (b) at least one clear analytical tension exists in the set, (c) the skill affordances are specific to the documents, not generic, (d) the sequencing has a rationale beyond chronological order, and (e) the representation audit is honest about whose voices are missing, and (f) recommendations are labelled, unknown provenance is explicit, and no proposed text is presented as a document obtained or checked.
 ```
 
 ## Example Output
@@ -225,28 +227,29 @@ Return your output in this exact format:
 
 **Central question:** Did Pocahontas rescue John Smith?
 **Students:** Year 8, familiar with document-based inquiry
-**Set size:** 4 documents across 2 rounds
+**Set size:** 4 proposed documents across 2 rounds
+**Status:** Illustrative recommendations, not supplied or verified excerpts. Locate each document and check its metadata and the proposed comparisons before using this design; the quoted phrases below also require checking against the selected passages.
 
 ### Document 1: Smith's 1608 True Relation (adapted excerpt)
-**Source:** John Smith, 1608, *A True Relation*, report sent to England
+**Source:** Proposed/unverified — John Smith, 1608, *A True Relation*, report sent to England
 **Why it's here:** Establishes the baseline account — written closest to the event, with NO mention of threat or rescue. Uses language of friendship and generosity. Its significance is in what it does NOT say.
 **Supports:** Sourcing (date, purpose, audience); close reading (tone: "kindly," "friendship," "kindness")
 **Role in sequence:** Round 1 — the first source students encounter, establishing expectations that the second source will disrupt.
 
 ### Document 2: Smith's 1624 General History (adapted excerpt)
-**Source:** John Smith, 1624, *General History of Virginia*, published book
+**Source:** Proposed/unverified — John Smith, 1624, *General History of Virginia*, published book
 **Why it's here:** Creates the foundational contradiction. Same author, same event, completely different account — now with dramatic rescue, threatening language, and Pocahontas as heroine. The contrast with Document 1 IS the historical problem.
 **Supports:** Sourcing (17-year gap, different publication context); close reading (tone shift: "barbarous," "beat out his brains," "dearest daughter"); corroboration (direct contradiction with Document 1)
 **Role in sequence:** Round 1 — paired with Document 1 to create the central puzzle. Students should encounter both before any interpretive framework is offered.
 
 ### Document 3: Adams's 1867 critique (adapted summary)
-**Source:** Henry Adams, 1867, *The North American Review*, scholarly critique
+**Source:** Proposed/unverified — Henry Adams, 1867, *The North American Review*, scholarly critique
 **Why it's here:** Introduces historical interpretation — a trained historian who argues Smith's rescue story is fabricated, citing the contradictions between the two accounts. Shows students that historians use the SAME evidence they just examined to build arguments.
 **Supports:** Sourcing (Adams's identity as a great-grandson of John Adams, his political context — writing during Reconstruction); corroboration (his argument depends on comparing the two Smith accounts, modelling the skill students just practised)
 **Role in sequence:** Round 2 — after students have formed their own hypotheses from the primary sources, they encounter a historian who has done the same analysis. This validates and extends their thinking.
 
 ### Document 4: Lemay's 1991 defence (adapted summary)
-**Source:** J. A. Leo Lemay, 1991, *The American Dream of Captain John Smith*, scholarly interpretation
+**Source:** Proposed/unverified — J. A. Leo Lemay, 1991, *The American Dream of Captain John Smith*, scholarly interpretation
 **Why it's here:** Creates tension with Adams. Lemay argues Smith WAS truthful, that the two accounts differ because they had different purposes, and that the event was probably a ritual adoption ceremony rather than a genuine rescue. This prevents students from settling on Adams's scepticism as the final answer.
 **Supports:** Corroboration (direct disagreement with Adams using the same evidence); contextualisation (Lemay's interpretation draws on knowledge of Powhatan adoption rituals — context students may not have)
 **Role in sequence:** Round 2 — paired with Adams. Students must now weigh two historians who reach opposite conclusions from the same primary sources. The question cannot be resolved by choosing one source — it requires genuine weighing of evidence and argument.
